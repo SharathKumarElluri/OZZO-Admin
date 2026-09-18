@@ -1,0 +1,2457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Customer Reports"
+    >
+
+    <title>OZZO | Customer Reports</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CUSTOMER REPORTS CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="Customer-Reports.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================= -->
+
+<header
+    class="admin-mobile-header d-lg-none"
+>
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open menu"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+    <!-- LOGO -->
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <!-- USER -->
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SALES
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="../Sales/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="../Sales/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Sales/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="../Sales/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             CATALOG
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="../Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-box"></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-warehouse"></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="../Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Reviews/Reviews.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-star"></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Support/Support.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-comments"></i>
+
+            <span>
+                Support
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             MARKETING
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="../Coupons/Coupons.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-ticket"></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Offers/Offers.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Banners/Banners.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-image"></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Newsletter/Newsletter.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+
+        <a
+            href="#bulk-orders"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-handshake"></i>
+
+            <span>
+                Bulk Orders
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Partners/Partners.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-store"></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Franchise/Franchise.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             REPORTS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="../SalesReports/SalesReports.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="../ProductReports/ProductReports.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="./CustomerReports.html"
+            class="admin-nav-link active"
+        >
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SYSTEM
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-file-shield"></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="admin-main">
+
+
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
+
+    <header
+        class="admin-topbar d-none d-lg-flex"
+    >
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="adminSearch"
+                type="search"
+                placeholder="Search customers, cities, segments..."
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         NOTIFICATION PANEL
+    ====================================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <div>
+
+                <strong>
+                    186 new customers
+                </strong>
+
+                <small>
+                    Added this month
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <div>
+
+                <strong>
+                    VIP customer report updated
+                </strong>
+
+                <small>
+                    Customer segment refreshed
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <div>
+
+                <strong>
+                    Repeat purchase rate increased
+                </strong>
+
+                <small>
+                    Customer activity updated
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="admin-welcome">
+
+            <div>
+
+                <span>
+                    REPORTS &amp; ANALYTICS
+                </span>
+
+                <h1>
+                    Customer Reports
+                </h1>
+
+                <p>
+                    Understand customer growth, spending behaviour,
+                    retention and customer segments.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                September 2026
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FILTER CARD
+        ================================================== -->
+
+        <section class="report-filter-card">
+
+
+            <div class="report-filter-head">
+
+                <div>
+
+                    <span>
+                        CUSTOMER ANALYSIS
+                    </span>
+
+                    <strong>
+                        Customer Performance Report
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="export-btn"
+                    id="exportReport"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export Report
+
+                </button>
+
+            </div>
+
+
+            <div class="report-filter-grid">
+
+
+                <div>
+
+                    <label>
+                        Period
+                    </label>
+
+                    <select id="periodFilter">
+
+                        <option value="30">
+                            Last 30 Days
+                        </option>
+
+                        <option value="7">
+                            Last 7 Days
+                        </option>
+
+                        <option value="90">
+                            Last 90 Days
+                        </option>
+
+                        <option value="year">
+                            This Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Customer Segment
+                    </label>
+
+                    <select id="segmentFilter">
+
+                        <option value="">
+                            All Segments
+                        </option>
+
+                        <option value="VIP">
+                            VIP
+                        </option>
+
+                        <option value="Regular">
+                            Regular
+                        </option>
+
+                        <option value="New">
+                            New Customers
+                        </option>
+
+                        <option value="Inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Location
+                    </label>
+
+                    <select id="locationFilter">
+
+                        <option value="">
+                            All Locations
+                        </option>
+
+                        <option value="Hyderabad">
+                            Hyderabad
+                        </option>
+
+                        <option value="Bengaluru">
+                            Bengaluru
+                        </option>
+
+                        <option value="Mumbai">
+                            Mumbai
+                        </option>
+
+                        <option value="Chennai">
+                            Chennai
+                        </option>
+
+                        <option value="Pune">
+                            Pune
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="reset-btn"
+                    id="resetFilters"
+                    type="button"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STAT CARDS
+        ================================================== -->
+
+        <div class="row g-3">
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Customers
+                        </span>
+
+                        <strong>
+                            2,143
+                        </strong>
+
+                        <small>
+                            ↑ 8.9% this period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            New Customers
+                        </span>
+
+                        <strong>
+                            186
+                        </strong>
+
+                        <small>
+                            ↑ 12.6% this period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-repeat"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Repeat Customers
+                        </span>
+
+                        <strong>
+                            1,284
+                        </strong>
+
+                        <small>
+                            59.9% of customers
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Customer Revenue
+                        </span>
+
+                        <strong>
+                            ₹18,64,920
+                        </strong>
+
+                        <small>
+                            ↑ 15.7% this period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CUSTOMER GROWTH + SEGMENTS
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- CUSTOMER GROWTH -->
+
+            <div class="col-xl-8">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                CUSTOMER GROWTH
+                            </span>
+
+                            <h2>
+                                Customer Acquisition
+                            </h2>
+
+                        </div>
+
+
+                        <select id="growthPeriod">
+
+                            <option value="30">
+                                Last 30 Days
+                            </option>
+
+                            <option value="90">
+                                Last 90 Days
+                            </option>
+
+                            <option value="year">
+                                This Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="growth-summary">
+
+                        <div>
+
+                            <strong id="growthTotal">
+                                186
+                            </strong>
+
+                            <span>
+                                new customers
+                            </span>
+
+                        </div>
+
+
+                        <span class="growth-up">
+                            +12.6%
+                        </span>
+
+                    </div>
+
+
+                    <div class="growth-chart">
+
+
+                        <div class="growth-y-axis">
+
+                            <span>
+                                240
+                            </span>
+
+                            <span>
+                                180
+                            </span>
+
+                            <span>
+                                120
+                            </span>
+
+                            <span>
+                                60
+                            </span>
+
+                            <span>
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="growth-chart-area">
+
+
+                            <div class="growth-grid">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div
+                                class="growth-bars"
+                                id="growthBars"
+                            >
+
+                                <div class="growth-bar-item">
+
+                                    <div class="growth-value">
+                                        98
+                                    </div>
+
+                                    <div class="growth-bar">
+                                        <span style="height:41%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 1
+                                    </small>
+
+                                </div>
+
+
+                                <div class="growth-bar-item">
+
+                                    <div class="growth-value">
+                                        126
+                                    </div>
+
+                                    <div class="growth-bar">
+                                        <span style="height:53%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 2
+                                    </small>
+
+                                </div>
+
+
+                                <div class="growth-bar-item">
+
+                                    <div class="growth-value">
+                                        144
+                                    </div>
+
+                                    <div class="growth-bar">
+                                        <span style="height:60%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 3
+                                    </small>
+
+                                </div>
+
+
+                                <div class="growth-bar-item">
+
+                                    <div class="growth-value">
+                                        168
+                                    </div>
+
+                                    <div class="growth-bar">
+                                        <span style="height:70%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 4
+                                    </small>
+
+                                </div>
+
+
+                                <div class="growth-bar-item">
+
+                                    <div class="growth-value">
+                                        186
+                                    </div>
+
+                                    <div class="growth-bar">
+                                        <span style="height:78%"></span>
+                                    </div>
+
+                                    <small>
+                                        Current
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- CUSTOMER SEGMENTS -->
+
+            <div class="col-xl-4">
+
+                <section class="admin-card h-100">
+
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                CUSTOMER MIX
+                            </span>
+
+                            <h2>
+                                Customer Segments
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="segment-list">
+
+
+                        <div class="segment-item">
+
+                            <div class="segment-icon vip">
+
+                                <i class="fa-solid fa-crown"></i>
+
+                            </div>
+
+
+                            <div class="segment-info">
+
+                                <div>
+
+                                    <strong>
+                                        VIP Customers
+                                    </strong>
+
+                                    <span>
+                                        128
+                                    </span>
+
+                                </div>
+
+
+                                <div class="segment-progress">
+
+                                    <span
+                                        style="width:62%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    6.0% of customer base
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="segment-item">
+
+                            <div class="segment-icon regular">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+
+                            <div class="segment-info">
+
+                                <div>
+
+                                    <strong>
+                                        Regular
+                                    </strong>
+
+                                    <span>
+                                        1,218
+                                    </span>
+
+                                </div>
+
+
+                                <div class="segment-progress">
+
+                                    <span
+                                        style="width:94%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    56.8% of customer base
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="segment-item">
+
+                            <div class="segment-icon new">
+
+                                <i class="fa-solid fa-user-plus"></i>
+
+                            </div>
+
+
+                            <div class="segment-info">
+
+                                <div>
+
+                                    <strong>
+                                        New Customers
+                                    </strong>
+
+                                    <span>
+                                        186
+                                    </span>
+
+                                </div>
+
+
+                                <div class="segment-progress">
+
+                                    <span
+                                        style="width:36%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    8.7% of customer base
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="segment-item">
+
+                            <div class="segment-icon inactive">
+
+                                <i class="fa-solid fa-user-clock"></i>
+
+                            </div>
+
+
+                            <div class="segment-info">
+
+                                <div>
+
+                                    <strong>
+                                        Inactive
+                                    </strong>
+
+                                    <span>
+                                        611
+                                    </span>
+
+                                </div>
+
+
+                                <div class="segment-progress">
+
+                                    <span
+                                        style="width:47%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    28.5% of customer base
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CUSTOMER BEHAVIOUR + LOCATIONS
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- BEHAVIOUR -->
+
+            <div class="col-xl-7">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                CUSTOMER BEHAVIOUR
+                            </span>
+
+                            <h2>
+                                Purchase Behaviour
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="behaviour-grid">
+
+
+                        <div class="behaviour-card">
+
+                            <div class="behaviour-icon green">
+
+                                <i class="fa-solid fa-cart-shopping"></i>
+
+                            </div>
+
+                            <strong>
+                                1.8
+                            </strong>
+
+                            <span>
+                                Avg. Orders / Customer
+                            </span>
+
+                        </div>
+
+
+                        <div class="behaviour-card">
+
+                            <div class="behaviour-icon blue">
+
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            </div>
+
+                            <strong>
+                                ₹1,246
+                            </strong>
+
+                            <span>
+                                Avg. Customer Spend
+                            </span>
+
+                        </div>
+
+
+                        <div class="behaviour-card">
+
+                            <div class="behaviour-icon orange">
+
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            </div>
+
+                            <strong>
+                                38 days
+                            </strong>
+
+                            <span>
+                                Avg. Repeat Purchase
+                            </span>
+
+                        </div>
+
+
+                        <div class="behaviour-card">
+
+                            <div class="behaviour-icon purple">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </div>
+
+                            <strong>
+                                59.9%
+                            </strong>
+
+                            <span>
+                                Repeat Purchase Rate
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- LOCATIONS -->
+
+            <div class="col-xl-5">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                CUSTOMER LOCATION
+                            </span>
+
+                            <h2>
+                                Top Cities
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="city-list">
+
+
+                        <div class="city-item">
+
+                            <div class="city-number">
+                                01
+                            </div>
+
+                            <div class="city-info">
+
+                                <strong>
+                                    Hyderabad
+                                </strong>
+
+                                <small>
+                                    684 customers
+                                </small>
+
+                            </div>
+
+                            <div class="city-value">
+
+                                <strong>
+                                    31.9%
+                                </strong>
+
+                                <div class="city-progress">
+
+                                    <span
+                                        style="width:92%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="city-item">
+
+                            <div class="city-number">
+                                02
+                            </div>
+
+                            <div class="city-info">
+
+                                <strong>
+                                    Bengaluru
+                                </strong>
+
+                                <small>
+                                    482 customers
+                                </small>
+
+                            </div>
+
+                            <div class="city-value">
+
+                                <strong>
+                                    22.5%
+                                </strong>
+
+                                <div class="city-progress">
+
+                                    <span
+                                        style="width:72%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="city-item">
+
+                            <div class="city-number">
+                                03
+                            </div>
+
+                            <div class="city-info">
+
+                                <strong>
+                                    Mumbai
+                                </strong>
+
+                                <small>
+                                    346 customers
+                                </small>
+
+                            </div>
+
+                            <div class="city-value">
+
+                                <strong>
+                                    16.1%
+                                </strong>
+
+                                <div class="city-progress">
+
+                                    <span
+                                        style="width:54%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="city-item">
+
+                            <div class="city-number">
+                                04
+                            </div>
+
+                            <div class="city-info">
+
+                                <strong>
+                                    Chennai
+                                </strong>
+
+                                <small>
+                                    286 customers
+                                </small>
+
+                            </div>
+
+                            <div class="city-value">
+
+                                <strong>
+                                    13.3%
+                                </strong>
+
+                                <div class="city-progress">
+
+                                    <span
+                                        style="width:44%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TOP CUSTOMERS
+        ================================================== -->
+
+        <section class="admin-card mt-4">
+
+
+            <div class="admin-card-header">
+
+                <div>
+
+                    <span>
+                        CUSTOMER PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Top Customers
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="plain-link"
+                    id="exportCustomers"
+                    type="button"
+                >
+
+                    Export →
+
+                </button>
+
+            </div>
+
+
+            <div class="customer-table-wrapper">
+
+                <table class="customer-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Segment
+                            </th>
+
+                            <th>
+                                Orders
+                            </th>
+
+                            <th>
+                                Total Spent
+                            </th>
+
+                            <th>
+                                Last Order
+                            </th>
+
+                            <th>
+                                City
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="customerTableBody">
+
+
+                        <tr class="customer-row">
+
+                            <td>
+                                01
+                            </td>
+
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        RK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Kumar
+                                        </strong>
+
+                                        <small>
+                                            rahul@example.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-segment vip">
+                                    VIP
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                28
+                            </td>
+
+
+                            <td class="spent">
+                                ₹38,420
+                            </td>
+
+
+                            <td>
+                                18 Sep 2026
+                            </td>
+
+
+                            <td>
+                                Hyderabad
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="customer-row">
+
+                            <td>
+                                02
+                            </td>
+
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar blue">
+                                        PS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Sharma
+                                        </strong>
+
+                                        <small>
+                                            priya@example.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-segment regular">
+                                    Regular
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                22
+                            </td>
+
+
+                            <td class="spent">
+                                ₹31,860
+                            </td>
+
+
+                            <td>
+                                17 Sep 2026
+                            </td>
+
+
+                            <td>
+                                Bengaluru
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="customer-row">
+
+                            <td>
+                                03
+                            </td>
+
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar orange">
+                                        AR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Arjun Reddy
+                                        </strong>
+
+                                        <small>
+                                            arjun@example.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-segment regular">
+                                    Regular
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                19
+                            </td>
+
+
+                            <td class="spent">
+                                ₹27,680
+                            </td>
+
+
+                            <td>
+                                17 Sep 2026
+                            </td>
+
+
+                            <td>
+                                Hyderabad
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="customer-row">
+
+                            <td>
+                                04
+                            </td>
+
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar purple">
+                                        SP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Sneha Patel
+                                        </strong>
+
+                                        <small>
+                                            sneha@example.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-segment vip">
+                                    VIP
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                17
+                            </td>
+
+
+                            <td class="spent">
+                                ₹26,540
+                            </td>
+
+
+                            <td>
+                                16 Sep 2026
+                            </td>
+
+
+                            <td>
+                                Mumbai
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="customer-row">
+
+                            <td>
+                                05
+                            </td>
+
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        VS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Vikram Singh
+                                        </strong>
+
+                                        <small>
+                                            vikram@example.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-segment new">
+                                    New
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                8
+                            </td>
+
+
+                            <td class="spent">
+                                ₹12,840
+                            </td>
+
+
+                            <td>
+                                16 Sep 2026
+                            </td>
+
+
+                            <td>
+                                Chennai
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="customer-row">
+
+                            <td>
+                                06
+                            </td>
+
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar blue">
+                                        AM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Ananya Mehta
+                                        </strong>
+
+                                        <small>
+                                            ananya@example.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-segment regular">
+                                    Regular
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                14
+                            </td>
+
+
+                            <td class="spent">
+                                ₹21,460
+                            </td>
+
+
+                            <td>
+                                15 Sep 2026
+                            </td>
+
+
+                            <td>
+                                Pune
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon green">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Customer Growth
+                        </span>
+
+                        <strong>
+                            186 new customers
+                        </strong>
+
+                        <small>
+                            +12.6% vs previous period
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon orange">
+
+                        <i class="fa-solid fa-repeat"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Repeat Customers
+                        </span>
+
+                        <strong>
+                            1,284 customers
+                        </strong>
+
+                        <small>
+                            59.9% repeat purchase rate
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon purple">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            VIP Customers
+                        </span>
+
+                        <strong>
+                            128 customers
+                        </strong>
+
+                        <small>
+                            ₹6,84,620 generated
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+></div>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- =========================================================
+     CUSTOMER REPORTS JS
+========================================================= -->
+
+<script
+    src="Customer-Reports.js"
+></script>
+
+
+</body>
+</html>

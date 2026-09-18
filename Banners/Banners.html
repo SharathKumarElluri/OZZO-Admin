@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="OZZO Admin Banner Management"
+    >
+
+    <title>OZZO | Banners</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Banners CSS -->
+    <link rel="stylesheet" href="./Banners.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================= -->
+
+<header class="admin-mobile-header d-lg-none">
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open admin menu"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="mobile-brand">
+        <strong>OZZO</strong>
+        <small>ADMIN PANEL</small>
+    </div>
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+        <i class="fa-regular fa-bell"></i>
+        <span>4</span>
+    </button>
+
+</header>
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+    <div class="admin-logo">
+
+        <strong>OZZO</strong>
+
+        <span>ADMIN PANEL</span>
+
+    </div>
+
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+            <strong>Admin</strong>
+            <small>Super Admin</small>
+        </div>
+
+    </div>
+
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- MAIN -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Dashboard</span>
+        </a>
+
+
+        <!-- SALES -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+        <a href="/Orders/Orders.html" class="admin-nav-link">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Orders</span>
+            <b>18</b>
+        </a>
+
+        <a href="/Payments/Payments.html" class="admin-nav-link">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Payments</span>
+        </a>
+
+        <a href="/Returns/Returns.html" class="admin-nav-link">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Returns</span>
+            <b class="warning">5</b>
+        </a>
+
+        <a href="/Shipping/Shipping.html" class="admin-nav-link">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Shipping</span>
+        </a>
+
+
+        <!-- CATALOG -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+        <a
+            href="../Products/Products.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-box"></i>
+            <span>Products</span>
+        </a>
+
+        <a
+            href="../Categories/Categories.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Categories</span>
+        </a>
+
+        <a
+            href="../Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-warehouse"></i>
+            <span>Inventory</span>
+            <b class="warning">3</b>
+        </a>
+
+
+        <!-- CUSTOMERS -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+        <a
+            href="../Customers/Customers.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-users"></i>
+            <span>Customers</span>
+        </a>
+
+        <a
+            href="../Reviews/Reviews.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-regular fa-star"></i>
+            <span>Reviews</span>
+        </a>
+
+        <a
+            href="../Support/Support.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-regular fa-comments"></i>
+            <span>Support</span>
+            <b class="warning">12</b>
+        </a>
+
+
+        <!-- MARKETING -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+        <a
+            href="../Coupons/Coupons.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-ticket"></i>
+            <span>Coupons</span>
+        </a>
+
+        <a
+            href="../Offers/Offers.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-bullseye"></i>
+            <span>Offers</span>
+        </a>
+
+        <a
+            href="./Banners.html"
+            class="admin-nav-link active"
+            aria-current="page"
+        >
+            <i class="fa-regular fa-image"></i>
+            <span>Banners</span>
+        </a>
+
+        <a
+            href="#newsletter"
+            class="admin-nav-link"
+        >
+            <i class="fa-regular fa-envelope"></i>
+            <span>Newsletter</span>
+        </a>
+
+
+        <!-- BUSINESS -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+
+        <a
+            href="#partners"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-store"></i>
+            <span>Partners</span>
+        </a>
+
+        <a
+            href="#franchise"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-building"></i>
+            <span>Franchise</span>
+        </a>
+
+
+        <!-- REPORTS -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+        <a
+            href="#sales-reports"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Sales Reports</span>
+        </a>
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-chart-column"></i>
+            <span>Product Reports</span>
+        </a>
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-user-group"></i>
+            <span>Customer Reports</span>
+        </a>
+
+
+        <!-- SYSTEM -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-user-shield"></i>
+            <span>Staff &amp; Roles</span>
+        </a>
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-file-shield"></i>
+            <span>Audit Logs</span>
+        </a>
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Website</span>
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span>Logout</span>
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="admin-main">
+
+
+    <!-- TOPBAR -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="bannerSearchTop"
+                type="search"
+                placeholder="Search banners, campaigns..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+                <i class="fa-regular fa-bell"></i>
+                <span>4</span>
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- NOTIFICATION -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-regular fa-image"></i>
+
+            <div>
+                <strong>Homepage banner</strong>
+                <small>Festival Collection is live</small>
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+                <strong>Banner ending soon</strong>
+                <small>Weekend Sale expires in 2 days</small>
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <div>
+                <strong>Banner performance</strong>
+                <small>Fashion campaign reached 28K views</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="admin-content">
+
+
+        <!-- WELCOME -->
+
+        <section class="admin-welcome banners-welcome">
+
+            <div>
+
+                <span>
+                    MARKETING MANAGEMENT
+                </span>
+
+                <h1>
+                    Banners
+                </h1>
+
+                <p>
+                    Manage homepage banners, promotional creatives and campaign placements.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <span>
+                    September 2026
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <div class="row g-3 banners-stats">
+
+
+            <div class="col-xl-3 col-md-6">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-regular fa-image"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Banners
+                        </span>
+
+                        <strong>
+                            16
+                        </strong>
+
+                        <small>
+                            3 created this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-xl-3 col-md-6">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Active Banners
+                        </span>
+
+                        <strong>
+                            8
+                        </strong>
+
+                        <small>
+                            Currently visible
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-xl-3 col-md-6">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Views
+                        </span>
+
+                        <strong>
+                            48,620
+                        </strong>
+
+                        <small>
+                            ↑ 16.4% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-xl-3 col-md-6">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-arrow-pointer"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Clicks
+                        </span>
+
+                        <strong>
+                            8,426
+                        </strong>
+
+                        <small>
+                            17.3% click rate
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             BANNER MANAGEMENT
+        ================================================== -->
+
+        <section class="admin-card banners-card mt-4">
+
+
+            <!-- HEADER -->
+
+            <div class="admin-card-header banners-card-header">
+
+                <div>
+
+                    <span>
+                        PROMOTIONAL CREATIVES
+                    </span>
+
+                    <h2>
+                        Banner Management
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="banner-add-btn"
+                    id="addBannerBtn"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Create Banner
+
+                </button>
+
+            </div>
+
+
+            <!-- TOOLBAR -->
+
+            <div class="banners-toolbar">
+
+
+                <div class="banner-search-wrap">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="bannerSearch"
+                        type="search"
+                        placeholder="Search banner or campaign..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select id="bannerStatus">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Scheduled">
+                        Scheduled
+                    </option>
+
+                    <option value="Paused">
+                        Paused
+                    </option>
+
+                    <option value="Expired">
+                        Expired
+                    </option>
+
+                </select>
+
+
+                <select id="bannerPlacement">
+
+                    <option value="all">
+                        All Placements
+                    </option>
+
+                    <option value="Homepage Hero">
+                        Homepage Hero
+                    </option>
+
+                    <option value="Category">
+                        Category
+                    </option>
+
+                    <option value="Promotion">
+                        Promotion
+                    </option>
+
+                    <option value="Popup">
+                        Popup
+                    </option>
+
+                </select>
+
+
+                <select id="bannerCategory">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Fashion">
+                        Fashion
+                    </option>
+
+                    <option value="Books">
+                        Books
+                    </option>
+
+                    <option value="Stationery">
+                        Stationery
+                    </option>
+
+                    <option value="Pads & Personal Care">
+                        Pads &amp; Personal Care
+                    </option>
+
+                    <option value="All Products">
+                        All Products
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="banner-clear-btn"
+                    id="clearBannerFilters"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- SELECTION -->
+
+            <div class="banner-selection-bar">
+
+
+                <div class="banner-selection-left">
+
+                    <span id="resultLabel">
+                        8 banners found
+                    </span>
+
+                    <span
+                        class="selected-count"
+                        id="selectedCount"
+                    >
+                        0 selected
+                    </span>
+
+                </div>
+
+
+                <div class="banner-actions">
+
+
+                    <button
+                        class="banner-bulk-btn"
+                        id="activateSelected"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Activate
+
+                    </button>
+
+
+                    <button
+                        class="banner-bulk-btn"
+                        id="pauseSelected"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-pause"></i>
+
+                        Pause
+
+                    </button>
+
+
+                    <button
+                        class="banner-bulk-btn danger"
+                        id="deleteSelected"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete
+
+                    </button>
+
+
+                    <button
+                        class="banner-export-btn"
+                        id="exportBannersBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                        Export
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="banners-table-wrap">
+
+                <table class="banners-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+
+                                <input
+                                    type="checkbox"
+                                    id="selectAll"
+                                    aria-label="Select all banners"
+                                >
+
+                            </th>
+
+                            <th>
+                                Banner
+                            </th>
+
+                            <th>
+                                Placement
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Views
+                            </th>
+
+                            <th>
+                                Clicks
+                            </th>
+
+                            <th>
+                                Valid Until
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="bannersBody"></tbody>
+
+                </table>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-banners d-none"
+                    id="emptyState"
+                >
+
+                    <div class="empty-banners-icon">
+
+                        <i class="fa-regular fa-image"></i>
+
+                    </div>
+
+                    <h3>
+                        No banners found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="banners-footer">
+
+                <span id="footerResult">
+                    Showing 1–5 of 8 banners
+                </span>
+
+
+                <div class="banners-pagination">
+
+                    <button
+                        id="prevPage"
+                        type="button"
+                        aria-label="Previous page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <span id="currentPage">
+                        1
+                    </span>
+
+
+                    <button
+                        id="nextPage"
+                        type="button"
+                        aria-label="Next page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LOWER CARDS
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- TOP PERFORMERS -->
+
+            <div class="col-xl-7">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                BANNER PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Top Performing Banners
+                            </h2>
+
+                        </div>
+
+                        <span class="performance-note">
+                            This Month
+                        </span>
+
+                    </div>
+
+
+                    <div class="banner-performance-list">
+
+
+                        <div class="banner-performance-item">
+
+                            <div class="banner-mini-preview fashion-banner">
+                                <span>FASHION</span>
+                            </div>
+
+                            <div class="banner-performance-info">
+
+                                <strong>
+                                    Fashion Fest
+                                </strong>
+
+                                <small>
+                                    Homepage Hero
+                                </small>
+
+                                <div class="banner-performance-bar">
+
+                                    <span
+                                        style="width:92%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="banner-performance-value">
+                                <strong>28,420</strong>
+                                <small>views</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="banner-performance-item">
+
+                            <div class="banner-mini-preview books-banner">
+                                <span>BOOKS</span>
+                            </div>
+
+                            <div class="banner-performance-info">
+
+                                <strong>
+                                    Book Lovers
+                                </strong>
+
+                                <small>
+                                    Category Banner
+                                </small>
+
+                                <div class="banner-performance-bar">
+
+                                    <span
+                                        style="width:78%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="banner-performance-value">
+                                <strong>21,860</strong>
+                                <small>views</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="banner-performance-item">
+
+                            <div class="banner-mini-preview stationery-banner">
+                                <span>STATIONERY</span>
+                            </div>
+
+                            <div class="banner-performance-info">
+
+                                <strong>
+                                    Back To School
+                                </strong>
+
+                                <small>
+                                    Promotion Banner
+                                </small>
+
+                                <div class="banner-performance-bar">
+
+                                    <span
+                                        style="width:64%"
+                                    ></span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="banner-performance-value">
+                                <strong>18,240</strong>
+                                <small>views</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- PLACEMENT BREAKDOWN -->
+
+            <div class="col-xl-5">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                BANNER PLACEMENTS
+                            </span>
+
+                            <h2>
+                                Placement Breakdown
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="placement-breakdown">
+
+
+                        <div class="placement-row">
+
+                            <div>
+
+                                <span class="placement-dot hero"></span>
+
+                                <strong>
+                                    Homepage Hero
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                5
+                            </b>
+
+                        </div>
+
+
+                        <div class="placement-row">
+
+                            <div>
+
+                                <span class="placement-dot category"></span>
+
+                                <strong>
+                                    Category
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                4
+                            </b>
+
+                        </div>
+
+
+                        <div class="placement-row">
+
+                            <div>
+
+                                <span class="placement-dot promotion"></span>
+
+                                <strong>
+                                    Promotion
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                5
+                            </b>
+
+                        </div>
+
+
+                        <div class="placement-row">
+
+                            <div>
+
+                                <span class="placement-dot popup"></span>
+
+                                <strong>
+                                    Popup
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                2
+                            </b>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="placement-progress">
+
+                        <div class="placement-progress-track">
+
+                            <span style="width:31%"></span>
+                            <span style="width:25%"></span>
+                            <span style="width:31%"></span>
+                            <span style="width:13%"></span>
+
+                        </div>
+
+
+                        <div class="placement-total">
+
+                            <span>
+                                Total Banners
+                            </span>
+
+                            <strong>
+                                16
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     CREATE / EDIT BANNER MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="bannerModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content banner-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        MARKETING
+                    </span>
+
+                    <h2 id="bannerModalTitle">
+                        Create Banner
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <form id="bannerForm">
+
+                <div class="modal-body">
+
+                    <input
+                        type="hidden"
+                        id="editBannerId"
+                    >
+
+
+                    <div class="row g-3">
+
+
+                        <div class="col-md-6">
+
+                            <label for="bannerName">
+                                Banner Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerName"
+                                class="form-control"
+                                placeholder="e.g. Diwali Fashion Sale"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label for="bannerCampaign">
+                                Campaign Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerCampaign"
+                                class="form-control"
+                                placeholder="e.g. Festive Collection"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label for="bannerPlacementInput">
+                                Placement
+                            </label>
+
+                            <select
+                                id="bannerPlacementInput"
+                                class="form-control"
+                            >
+
+                                <option value="Homepage Hero">
+                                    Homepage Hero
+                                </option>
+
+                                <option value="Category">
+                                    Category
+                                </option>
+
+                                <option value="Promotion">
+                                    Promotion
+                                </option>
+
+                                <option value="Popup">
+                                    Popup
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label for="bannerCategoryInput">
+                                Category
+                            </label>
+
+                            <select
+                                id="bannerCategoryInput"
+                                class="form-control"
+                            >
+
+                                <option value="All Products">
+                                    All Products
+                                </option>
+
+                                <option value="Fashion">
+                                    Fashion
+                                </option>
+
+                                <option value="Books">
+                                    Books
+                                </option>
+
+                                <option value="Stationery">
+                                    Stationery
+                                </option>
+
+                                <option value="Pads & Personal Care">
+                                    Pads &amp; Personal Care
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label for="bannerStatusInput">
+                                Status
+                            </label>
+
+                            <select
+                                id="bannerStatusInput"
+                                class="form-control"
+                            >
+
+                                <option value="Active">
+                                    Active
+                                </option>
+
+                                <option value="Scheduled">
+                                    Scheduled
+                                </option>
+
+                                <option value="Paused">
+                                    Paused
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label for="bannerLink">
+                                Destination Link
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerLink"
+                                class="form-control"
+                                placeholder="e.g. Products.html"
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label for="bannerExpiry">
+                                Valid Until
+                            </label>
+
+                            <input
+                                type="date"
+                                id="bannerExpiry"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label for="bannerImage">
+                                Image URL
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerImage"
+                                class="form-control"
+                                placeholder="e.g. images/fashion-banner.jpg"
+                            >
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label for="bannerHeadline">
+                                Headline
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerHeadline"
+                                class="form-control"
+                                placeholder="e.g. Up to 40% Off Fashion"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="banner-secondary-btn"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="banner-save-btn"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Save Banner
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PREVIEW MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="previewModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content banner-preview-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        BANNER PREVIEW
+                    </span>
+
+                    <h2 id="previewTitle">
+                        Fashion Fest
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div
+                    class="preview-banner"
+                    id="previewBanner"
+                >
+
+                    <div class="preview-banner-content">
+
+                        <span id="previewCategory">
+                            FASHION
+                        </span>
+
+                        <h3 id="previewHeadline">
+                            Up to 40% Off Fashion
+                        </h3>
+
+                        <p id="previewCampaign">
+                            Festive Fashion Sale
+                        </p>
+
+                        <button
+                            type="button"
+                            class="preview-cta"
+                        >
+                            Shop Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="preview-details">
+
+                    <div>
+                        <span>Placement</span>
+                        <strong id="previewPlacement">
+                            Homepage Hero
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Views</span>
+                        <strong id="previewViews">
+                            28,420
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Clicks</span>
+                        <strong id="previewClicks">
+                            5,240
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="banner-secondary-btn"
+                    data-bs-dismiss="modal"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Banners JS -->
+
+<script src="./Banners.js"></script>
+
+</body>
+</html>

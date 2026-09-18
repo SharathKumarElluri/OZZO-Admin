@@ -770,17 +770,14 @@ button{
 
 
 .admin-stat-card strong{
-
     display:block;
-
     margin-top:5px;
-
     color:var(--navy);
-
-    font-family:
-        "Playfair Display",serif;
-
+    font-family:"DM Sans",sans-serif;
     font-size:24px;
+    font-weight:700;
+    line-height:1.2;
+    letter-spacing:0;
 }
 
 

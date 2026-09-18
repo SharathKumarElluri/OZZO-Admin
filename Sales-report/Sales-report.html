@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Sales Reports"
+    >
+
+    <title>OZZO | Sales Reports</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Sales Reports CSS -->
+    <link
+        rel="stylesheet"
+        href="Sales-report.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE HEADER
+====================================================== -->
+
+<header
+    class="admin-mobile-header d-lg-none"
+>
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open menu"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>OZZO</strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>4</span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- MAIN -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <!-- SALES -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="../Sales/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="../Sales/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Sales/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="../Sales/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+
+        <!-- CATALOG -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="../Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-box"></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-warehouse"></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+
+        <!-- CUSTOMERS -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="../Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Reviews/Reviews.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-star"></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Support/Support.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-comments"></i>
+
+            <span>
+                Support
+            </span>
+
+        </a>
+
+
+
+        <!-- MARKETING -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="../Coupons/Coupons.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-ticket"></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Offers/Offers.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Banners/Banners.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-image"></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Newsletter/Newsletter.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+
+        <!-- BUSINESS -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+
+        <a
+            href="#bulk-orders"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-handshake"></i>
+
+            <span>
+                Bulk Orders
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Partners/Partners.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-store"></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Franchise/Franchise.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+
+        <!-- REPORTS -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="./SalesReports.html"
+            class="admin-nav-link active"
+        >
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- SYSTEM -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-file-shield"></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main class="admin-main">
+
+
+    <!-- TOPBAR -->
+
+    <header
+        class="admin-topbar d-none d-lg-flex"
+    >
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="adminSearch"
+                type="search"
+                placeholder="Search sales reports, orders, products..."
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- NOTIFICATIONS -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <div>
+
+                <strong>
+                    Sales report updated
+                </strong>
+
+                <small>
+                    Today's sales have been refreshed
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <div>
+
+                <strong>
+                    18 new orders
+                </strong>
+
+                <small>
+                    Orders received today
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+            <div>
+
+                <strong>
+                    Revenue increased
+                </strong>
+
+                <small>
+                    Current month revenue updated
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="admin-welcome">
+
+            <div>
+
+                <span>
+                    REPORTS &amp; ANALYTICS
+                </span>
+
+                <h1>
+                    Sales Reports
+                </h1>
+
+                <p>
+                    Monitor revenue, orders, products and sales performance across OZZO.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                September 2026
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT FILTERS
+        ================================================== -->
+
+        <section class="report-filter-card">
+
+            <div class="report-filter-title">
+
+                <div>
+
+                    <span>
+                        REPORT PERIOD
+                    </span>
+
+                    <strong>
+                        Sales Analysis
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="export-btn"
+                    id="exportReport"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export Report
+
+                </button>
+
+            </div>
+
+
+            <div class="report-filters">
+
+
+                <div>
+
+                    <label for="dateRange">
+                        Date Range
+                    </label>
+
+                    <select
+                        id="dateRange"
+                    >
+
+                        <option value="7">
+                            Last 7 Days
+                        </option>
+
+                        <option value="30">
+                            Last 30 Days
+                        </option>
+
+                        <option value="90">
+                            Last 90 Days
+                        </option>
+
+                        <option value="year">
+                            This Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label for="categoryFilter">
+                        Category
+                    </label>
+
+                    <select
+                        id="categoryFilter"
+                    >
+
+                        <option value="">
+                            All Categories
+                        </option>
+
+                        <option value="Fashion">
+                            Fashion
+                        </option>
+
+                        <option value="Books">
+                            Books
+                        </option>
+
+                        <option value="Stationery">
+                            Stationery
+                        </option>
+
+                        <option value="Pads">
+                            Pads &amp; Personal Care
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label for="channelFilter">
+                        Sales Channel
+                    </label>
+
+                    <select
+                        id="channelFilter"
+                    >
+
+                        <option value="">
+                            All Channels
+                        </option>
+
+                        <option value="Online">
+                            Online Store
+                        </option>
+
+                        <option value="Marketplace">
+                            Marketplace
+                        </option>
+
+                        <option value="Franchise">
+                            Franchise
+                        </option>
+
+                        <option value="Partner">
+                            Partner
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="reset-btn"
+                    id="resetFilters"
+                    type="button"
+                >
+
+                    Reset
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STAT CARDS
+        ================================================== -->
+
+        <div class="row g-3">
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Gross Sales
+                        </span>
+
+                        <strong>
+                            ₹12,84,620
+                        </strong>
+
+                        <small>
+                            ↑ 16.8% from previous period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Net Sales
+                        </span>
+
+                        <strong>
+                            ₹11,92,480
+                        </strong>
+
+                        <small>
+                            ↑ 14.3% from previous period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Orders
+                        </span>
+
+                        <strong>
+                            1,486
+                        </strong>
+
+                        <small>
+                            ↑ 11.4% from previous period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Avg. Order Value
+                        </span>
+
+                        <strong>
+                            ₹802
+                        </strong>
+
+                        <small>
+                            ↑ 7.2% from previous period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SALES TREND + CATEGORY
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- SALES TREND -->
+
+            <div class="col-xl-8">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                SALES PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Revenue Trend
+                            </h2>
+
+                        </div>
+
+
+                        <select id="chartPeriod">
+
+                            <option value="7">
+                                Last 7 Days
+                            </option>
+
+                            <option value="30">
+                                Last 30 Days
+                            </option>
+
+                            <option value="6m">
+                                Last 6 Months
+                            </option>
+
+                            <option value="year">
+                                This Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="trend-summary">
+
+                        <div>
+
+                            <strong id="trendValue">
+                                ₹4,86,740
+                            </strong>
+
+                            <span>
+                                Total revenue
+                            </span>
+
+                        </div>
+
+
+                        <span class="trend-growth">
+                            +16.8%
+                        </span>
+
+                    </div>
+
+
+                    <div class="sales-report-chart">
+
+
+                        <div class="y-axis">
+
+                            <span>
+                                ₹6L
+                            </span>
+
+                            <span>
+                                ₹4L
+                            </span>
+
+                            <span>
+                                ₹2L
+                            </span>
+
+                            <span>
+                                ₹0
+                            </span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="horizontal-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div
+                                class="report-bars"
+                                id="reportBars"
+                            >
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹1.2L</div>
+                                    <div class="report-bar">
+                                        <span style="height:46%"></span>
+                                    </div>
+                                    <small>12 Sep</small>
+                                </div>
+
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹1.5L</div>
+                                    <div class="report-bar">
+                                        <span style="height:59%"></span>
+                                    </div>
+                                    <small>13 Sep</small>
+                                </div>
+
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹1.8L</div>
+                                    <div class="report-bar">
+                                        <span style="height:71%"></span>
+                                    </div>
+                                    <small>14 Sep</small>
+                                </div>
+
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹1.4L</div>
+                                    <div class="report-bar">
+                                        <span style="height:54%"></span>
+                                    </div>
+                                    <small>15 Sep</small>
+                                </div>
+
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹2.1L</div>
+                                    <div class="report-bar">
+                                        <span style="height:84%"></span>
+                                    </div>
+                                    <small>16 Sep</small>
+                                </div>
+
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹1.7L</div>
+                                    <div class="report-bar">
+                                        <span style="height:68%"></span>
+                                    </div>
+                                    <small>17 Sep</small>
+                                </div>
+
+
+                                <div class="report-bar-item">
+                                    <div class="report-bar-value">₹2.3L</div>
+                                    <div class="report-bar">
+                                        <span style="height:92%"></span>
+                                    </div>
+                                    <small>18 Sep</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- CATEGORY BREAKDOWN -->
+
+            <div class="col-xl-4">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                SALES MIX
+                            </span>
+
+                            <h2>
+                                By Category
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-sales-list">
+
+
+                        <div class="category-sales-item">
+
+                            <div class="category-sales-icon fashion">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+
+                            <div class="category-sales-info">
+
+                                <div>
+
+                                    <strong>
+                                        Fashion
+                                    </strong>
+
+                                    <span>
+                                        ₹4,28,640
+                                    </span>
+
+                                </div>
+
+                                <div class="category-progress">
+                                    <span style="width:82%"></span>
+                                </div>
+
+                                <small>
+                                    35.9% of net sales
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-sales-item">
+
+                            <div class="category-sales-icon books">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+
+                            <div class="category-sales-info">
+
+                                <div>
+
+                                    <strong>
+                                        Books
+                                    </strong>
+
+                                    <span>
+                                        ₹3,12,860
+                                    </span>
+
+                                </div>
+
+                                <div class="category-progress">
+                                    <span style="width:64%"></span>
+                                </div>
+
+                                <small>
+                                    26.2% of net sales
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-sales-item">
+
+                            <div class="category-sales-icon stationery">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+
+                            <div class="category-sales-info">
+
+                                <div>
+
+                                    <strong>
+                                        Stationery
+                                    </strong>
+
+                                    <span>
+                                        ₹2,36,480
+                                    </span>
+
+                                </div>
+
+                                <div class="category-progress">
+                                    <span style="width:49%"></span>
+                                </div>
+
+                                <small>
+                                    19.8% of net sales
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-sales-item">
+
+                            <div class="category-sales-icon pads">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <div class="category-sales-info">
+
+                                <div>
+
+                                    <strong>
+                                        Pads
+                                    </strong>
+
+                                    <span>
+                                        ₹2,14,500
+                                    </span>
+
+                                </div>
+
+                                <div class="category-progress">
+                                    <span style="width:43%"></span>
+                                </div>
+
+                                <small>
+                                    18.1% of net sales
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SALES CHANNEL + PAYMENT
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <div class="col-xl-7">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                CHANNEL ANALYSIS
+                            </span>
+
+                            <h2>
+                                Sales By Channel
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="channel-grid">
+
+
+                        <div class="channel-card">
+
+                            <div class="channel-icon online">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Online Store
+                                </strong>
+
+                                <span>
+                                    ₹6,48,220
+                                </span>
+
+                                <small>
+                                    52.3% · 784 orders
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="channel-card">
+
+                            <div class="channel-icon marketplace">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Marketplace
+                                </strong>
+
+                                <span>
+                                    ₹2,86,740
+                                </span>
+
+                                <small>
+                                    23.1% · 322 orders
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="channel-card">
+
+                            <div class="channel-icon franchise">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Franchise
+                                </strong>
+
+                                <span>
+                                    ₹1,84,620
+                                </span>
+
+                                <small>
+                                    14.9% · 218 orders
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="channel-card">
+
+                            <div class="channel-icon partner">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Partners
+                                </strong>
+
+                                <span>
+                                    ₹1,02,900
+                                </span>
+
+                                <small>
+                                    9.7% · 162 orders
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <div class="col-xl-5">
+
+                <section class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                PAYMENT MIX
+                            </span>
+
+                            <h2>
+                                Payment Methods
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-list">
+
+
+                        <div class="payment-item">
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>
+                                    UPI
+                                </strong>
+
+                                <div class="payment-track">
+                                    <span style="width:76%"></span>
+                                </div>
+
+                            </div>
+
+                            <span class="payment-percent">
+                                42%
+                            </span>
+
+                        </div>
+
+
+                        <div class="payment-item">
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>
+                                    Cards
+                                </strong>
+
+                                <div class="payment-track">
+                                    <span style="width:56%"></span>
+                                </div>
+
+                            </div>
+
+                            <span class="payment-percent">
+                                31%
+                            </span>
+
+                        </div>
+
+
+                        <div class="payment-item">
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>
+                                    Net Banking
+                                </strong>
+
+                                <div class="payment-track">
+                                    <span style="width:30%"></span>
+                                </div>
+
+                            </div>
+
+                            <span class="payment-percent">
+                                16%
+                            </span>
+
+                        </div>
+
+
+                        <div class="payment-item">
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-money-bill"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>
+                                    Cash / COD
+                                </strong>
+
+                                <div class="payment-track">
+                                    <span style="width:20%"></span>
+                                </div>
+
+                            </div>
+
+                            <span class="payment-percent">
+                                11%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TOP PRODUCTS TABLE
+        ================================================== -->
+
+        <section class="admin-card mt-4">
+
+
+            <div class="admin-card-header">
+
+                <div>
+
+                    <span>
+                        PRODUCT PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Top Selling Products
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="plain-link"
+                    id="exportProducts"
+                    type="button"
+                >
+                    Export →
+                </button>
+
+            </div>
+
+
+            <div class="sales-table-wrapper">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Product
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Units Sold
+                            </th>
+
+                            <th>
+                                Revenue
+                            </th>
+
+                            <th>
+                                Share
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr class="searchable-row">
+
+                            <td>
+                                01
+                            </td>
+
+                            <td>
+
+                                <div class="sales-product">
+
+                                    <img
+                                        src="../women shirt.jpg"
+                                        alt="Classic Oversized Shirt"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Classic Oversized Shirt
+                                        </strong>
+
+                                        <small>
+                                            Women's Fashion
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Fashion
+                            </td>
+
+                            <td>
+                                428
+                            </td>
+
+                            <td class="revenue">
+                                ₹5,56,720
+                            </td>
+
+                            <td>
+                                43.3%
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="searchable-row">
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+
+                                <div class="sales-product">
+
+                                    <img
+                                        src="../book.jpg"
+                                        alt="Atomic Habits"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Atomic Habits
+                                        </strong>
+
+                                        <small>
+                                            Self Help
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Books
+                            </td>
+
+                            <td>
+                                371
+                            </td>
+
+                            <td class="revenue">
+                                ₹1,85,129
+                            </td>
+
+                            <td>
+                                14.4%
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="searchable-row">
+
+                            <td>
+                                03
+                            </td>
+
+                            <td>
+
+                                <div class="sales-product">
+
+                                    <img
+                                        src="../books set.jpg"
+                                        alt="Notebook Set"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Notebook Set
+                                        </strong>
+
+                                        <small>
+                                            Stationery
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Stationery
+                            </td>
+
+                            <td>
+                                324
+                            </td>
+
+                            <td class="revenue">
+                                ₹1,29,840
+                            </td>
+
+                            <td>
+                                10.1%
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="searchable-row">
+
+                            <td>
+                                04
+                            </td>
+
+                            <td>
+
+                                <div class="sales-product">
+
+                                    <img
+                                        src="../pads.jpg"
+                                        alt="Ultra Thin Day Pads"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Ultra Thin Day Pads
+                                        </strong>
+
+                                        <small>
+                                            Personal Care
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Pads
+                            </td>
+
+                            <td>
+                                289
+                            </td>
+
+                            <td class="revenue">
+                                ₹1,21,280
+                            </td>
+
+                            <td>
+                                9.4%
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="searchable-row">
+
+                            <td>
+                                05
+                            </td>
+
+                            <td>
+
+                                <div class="sales-product">
+
+                                    <img
+                                        src="../hoddie.jpg"
+                                        alt="Urban Hoodie"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Urban Hoodie
+                                        </strong>
+
+                                        <small>
+                                            Men's Fashion
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Fashion
+                            </td>
+
+                            <td>
+                                214
+                            </td>
+
+                            <td class="revenue">
+                                ₹98,440
+                            </td>
+
+                            <td>
+                                7.7%
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon green">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Best Sales Day
+                        </span>
+
+                        <strong>
+                            18 Sep 2026
+                        </strong>
+
+                        <small>
+                            ₹2,31,480
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon blue">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Highest Orders
+                        </span>
+
+                        <strong>
+                            18 Sep 2026
+                        </strong>
+
+                        <small>
+                            264 orders
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon purple">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            New Customers
+                        </span>
+
+                        <strong>
+                            186
+                        </strong>
+
+                        <small>
+                            During selected period
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+></div>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Sales Reports JS -->
+
+<script
+    src="Sales-report.js"
+></script>
+
+</body>
+</html>

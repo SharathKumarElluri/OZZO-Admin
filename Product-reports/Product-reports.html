@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Product Reports"
+    >
+
+    <title>OZZO | Product Reports</title>
+
+
+    <!-- BOOTSTRAP -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="Product-reports.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE HEADER
+====================================================== -->
+
+<header
+    class="admin-mobile-header d-lg-none"
+>
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open menu"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- MAIN -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- SALES -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="../Sales/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="../Sales/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Sales/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="../Sales/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- CATALOG -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="../Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-box"></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-warehouse"></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- CUSTOMERS -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="../Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Reviews/Reviews.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-star"></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Support/Support.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-comments"></i>
+
+            <span>
+                Support
+            </span>
+
+        </a>
+
+
+        <!-- MARKETING -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="../Coupons/Coupons.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-ticket"></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Offers/Offers.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Banners/Banners.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-image"></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Newsletter/Newsletter.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- BUSINESS -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+
+        <a
+            href="#bulk-orders"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-handshake"></i>
+
+            <span>
+                Bulk Orders
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Partners/Partners.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-store"></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="../Franchise/Franchise.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- REPORTS -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="../SalesReports/SalesReports.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="./ProductReports.html"
+            class="admin-nav-link active"
+        >
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- SYSTEM -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-file-shield"></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main class="admin-main">
+
+
+    <!-- TOPBAR -->
+
+    <header
+        class="admin-topbar d-none d-lg-flex"
+    >
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="adminSearch"
+                type="search"
+                placeholder="Search products, SKUs, categories..."
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- NOTIFICATIONS -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-box"></i>
+
+            <div>
+
+                <strong>
+                    3 products low in stock
+                </strong>
+
+                <small>
+                    Inventory attention required
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+            <div>
+
+                <strong>
+                    Fashion sales increased
+                </strong>
+
+                <small>
+                    Product performance updated
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-star"></i>
+
+            <div>
+
+                <strong>
+                    18 new reviews
+                </strong>
+
+                <small>
+                    Product reviews received today
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="admin-welcome">
+
+            <div>
+
+                <span>
+                    REPORTS &amp; ANALYTICS
+                </span>
+
+                <h1>
+                    Product Reports
+                </h1>
+
+                <p>
+                    Analyze product performance, inventory movement, sales and customer demand.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                September 2026
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FILTER -->
+
+        <section class="report-filter-card">
+
+
+            <div class="report-filter-head">
+
+                <div>
+
+                    <span>
+                        PRODUCT ANALYSIS
+                    </span>
+
+                    <strong>
+                        Product Performance Report
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="export-btn"
+                    id="exportReport"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export Report
+
+                </button>
+
+            </div>
+
+
+            <div class="report-filter-grid">
+
+
+                <div>
+
+                    <label>
+                        Period
+                    </label>
+
+                    <select id="periodFilter">
+
+                        <option value="30">
+                            Last 30 Days
+                        </option>
+
+                        <option value="7">
+                            Last 7 Days
+                        </option>
+
+                        <option value="90">
+                            Last 90 Days
+                        </option>
+
+                        <option value="year">
+                            This Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="categoryFilter">
+
+                        <option value="">
+                            All Categories
+                        </option>
+
+                        <option value="Fashion">
+                            Fashion
+                        </option>
+
+                        <option value="Books">
+                            Books
+                        </option>
+
+                        <option value="Stationery">
+                            Stationery
+                        </option>
+
+                        <option value="Pads">
+                            Pads &amp; Personal Care
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Product Status
+                    </label>
+
+                    <select id="statusFilter">
+
+                        <option value="">
+                            All Products
+                        </option>
+
+                        <option value="Best Seller">
+                            Best Sellers
+                        </option>
+
+                        <option value="Low Stock">
+                            Low Stock
+                        </option>
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="reset-btn"
+                    id="resetFilters"
+                    type="button"
+                >
+
+                    Reset
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STAT CARDS -->
+
+        <div class="row g-3">
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-box"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Products
+                        </span>
+
+                        <strong>
+                            46
+                        </strong>
+
+                        <small>
+                            4 added this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Units Sold
+                        </span>
+
+                        <strong>
+                            8,426
+                        </strong>
+
+                        <small>
+                            ↑ 14.8% this period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Product Revenue
+                        </span>
+
+                        <strong>
+                            ₹12,48,620
+                        </strong>
+
+                        <small>
+                            ↑ 16.4% this period
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Avg. Rating
+                        </span>
+
+                        <strong>
+                            4.7
+                        </strong>
+
+                        <small>
+                            1,284 product reviews
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT PERFORMANCE + CATEGORY -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- PRODUCT SALES TREND -->
+
+            <div class="col-xl-8">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                PRODUCT PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Units Sold Trend
+                            </h2>
+
+                        </div>
+
+
+                        <select id="trendFilter">
+
+                            <option value="30">
+                                Last 30 Days
+                            </option>
+
+                            <option value="90">
+                                Last 90 Days
+                            </option>
+
+                            <option value="year">
+                                This Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="trend-summary">
+
+                        <div>
+
+                            <strong id="unitsValue">
+                                8,426
+                            </strong>
+
+                            <span>
+                                Units sold
+                            </span>
+
+                        </div>
+
+
+                        <span class="trend-growth">
+                            +14.8%
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-chart">
+
+                        <div class="chart-y-axis">
+
+                            <span>
+                                2K
+                            </span>
+
+                            <span>
+                                1.5K
+                            </span>
+
+                            <span>
+                                1K
+                            </span>
+
+                            <span>
+                                500
+                            </span>
+
+                            <span>
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="product-chart-area">
+
+                            <div class="chart-grid-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div
+                                class="product-bars"
+                                id="productBars"
+                            >
+
+                                <div class="product-bar-item">
+
+                                    <div class="product-bar">
+                                        <span style="height:43%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 1
+                                    </small>
+
+                                </div>
+
+
+                                <div class="product-bar-item">
+
+                                    <div class="product-bar">
+                                        <span style="height:58%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 2
+                                    </small>
+
+                                </div>
+
+
+                                <div class="product-bar-item">
+
+                                    <div class="product-bar">
+                                        <span style="height:49%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 3
+                                    </small>
+
+                                </div>
+
+
+                                <div class="product-bar-item">
+
+                                    <div class="product-bar">
+                                        <span style="height:70%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 4
+                                    </small>
+
+                                </div>
+
+
+                                <div class="product-bar-item">
+
+                                    <div class="product-bar">
+                                        <span style="height:82%"></span>
+                                    </div>
+
+                                    <small>
+                                        Week 5
+                                    </small>
+
+                                </div>
+
+
+                                <div class="product-bar-item">
+
+                                    <div class="product-bar">
+                                        <span style="height:91%"></span>
+                                    </div>
+
+                                    <small>
+                                        Current
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- CATEGORY PERFORMANCE -->
+
+            <div class="col-xl-4">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                CATEGORY PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Product Mix
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-performance">
+
+
+                        <div class="category-performance-item">
+
+                            <div class="category-icon fashion">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+
+
+                            <div class="category-data">
+
+                                <div>
+
+                                    <strong>
+                                        Fashion
+                                    </strong>
+
+                                    <span>
+                                        36%
+                                    </span>
+
+                                </div>
+
+
+                                <div class="category-track">
+
+                                    <span
+                                        style="width:82%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    3,042 units
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-performance-item">
+
+                            <div class="category-icon books">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+
+
+                            <div class="category-data">
+
+                                <div>
+
+                                    <strong>
+                                        Books
+                                    </strong>
+
+                                    <span>
+                                        27%
+                                    </span>
+
+                                </div>
+
+
+                                <div class="category-track">
+
+                                    <span
+                                        style="width:65%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    2,276 units
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-performance-item">
+
+                            <div class="category-icon stationery">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+
+
+                            <div class="category-data">
+
+                                <div>
+
+                                    <strong>
+                                        Stationery
+                                    </strong>
+
+                                    <span>
+                                        22%
+                                    </span>
+
+                                </div>
+
+
+                                <div class="category-track">
+
+                                    <span
+                                        style="width:52%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    1,854 units
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-performance-item">
+
+                            <div class="category-icon pads">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+
+                            <div class="category-data">
+
+                                <div>
+
+                                    <strong>
+                                        Pads
+                                    </strong>
+
+                                    <span>
+                                        15%
+                                    </span>
+
+                                </div>
+
+
+                                <div class="category-track">
+
+                                    <span
+                                        style="width:39%"
+                                    ></span>
+
+                                </div>
+
+
+                                <small>
+                                    1,254 units
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TOP PRODUCTS -->
+
+        <section class="admin-card mt-4">
+
+
+            <div class="admin-card-header">
+
+                <div>
+
+                    <span>
+                        PRODUCT RANKING
+                    </span>
+
+                    <h2>
+                        Top Performing Products
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="plain-link"
+                    id="exportProducts"
+                    type="button"
+                >
+
+                    Export →
+
+                </button>
+
+            </div>
+
+
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Product
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Units Sold
+                            </th>
+
+                            <th>
+                                Revenue
+                            </th>
+
+                            <th>
+                                Rating
+                            </th>
+
+                            <th>
+                                Stock
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="productTableBody">
+
+
+                        <tr class="product-row">
+
+                            <td>
+                                01
+                            </td>
+
+
+                            <td>
+
+                                <div class="product-cell">
+
+                                    <img
+                                        src="../women shirt.jpg"
+                                        alt="Classic Oversized Shirt"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Classic Oversized Shirt
+                                        </strong>
+
+                                        <small>
+                                            SKU: FSH-001
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Fashion
+                            </td>
+
+
+                            <td>
+                                428
+                            </td>
+
+
+                            <td class="product-revenue">
+                                ₹5,56,720
+                            </td>
+
+
+                            <td>
+
+                                <span class="rating">
+                                    ★ 4.9
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock active">
+                                    In Stock
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="product-row">
+
+                            <td>
+                                02
+                            </td>
+
+
+                            <td>
+
+                                <div class="product-cell">
+
+                                    <img
+                                        src="../book.jpg"
+                                        alt="Atomic Habits"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Atomic Habits
+                                        </strong>
+
+                                        <small>
+                                            SKU: BOK-001
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Books
+                            </td>
+
+
+                            <td>
+                                371
+                            </td>
+
+
+                            <td class="product-revenue">
+                                ₹1,85,129
+                            </td>
+
+
+                            <td>
+
+                                <span class="rating">
+                                    ★ 4.8
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock active">
+                                    In Stock
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="product-row">
+
+                            <td>
+                                03
+                            </td>
+
+
+                            <td>
+
+                                <div class="product-cell">
+
+                                    <img
+                                        src="../books set.jpg"
+                                        alt="Notebook Set"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Notebook Set
+                                        </strong>
+
+                                        <small>
+                                            SKU: STN-001
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Stationery
+                            </td>
+
+
+                            <td>
+                                324
+                            </td>
+
+
+                            <td class="product-revenue">
+                                ₹1,29,840
+                            </td>
+
+
+                            <td>
+
+                                <span class="rating">
+                                    ★ 4.7
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock low">
+                                    Low Stock
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="product-row">
+
+                            <td>
+                                04
+                            </td>
+
+
+                            <td>
+
+                                <div class="product-cell">
+
+                                    <img
+                                        src="../pads.jpg"
+                                        alt="Ultra Thin Day Pads"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Ultra Thin Day Pads
+                                        </strong>
+
+                                        <small>
+                                            SKU: PAD-001
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Pads
+                            </td>
+
+
+                            <td>
+                                289
+                            </td>
+
+
+                            <td class="product-revenue">
+                                ₹1,21,280
+                            </td>
+
+
+                            <td>
+
+                                <span class="rating">
+                                    ★ 4.6
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock active">
+                                    In Stock
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="product-row">
+
+                            <td>
+                                05
+                            </td>
+
+
+                            <td>
+
+                                <div class="product-cell">
+
+                                    <img
+                                        src="../hoddie.jpg"
+                                        alt="Urban Hoodie"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Urban Hoodie
+                                        </strong>
+
+                                        <small>
+                                            SKU: FSH-002
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Fashion
+                            </td>
+
+
+                            <td>
+                                214
+                            </td>
+
+
+                            <td class="product-revenue">
+                                ₹98,440
+                            </td>
+
+
+                            <td>
+
+                                <span class="rating">
+                                    ★ 4.5
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock low">
+                                    Low Stock
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="product-row">
+
+                            <td>
+                                06
+                            </td>
+
+
+                            <td>
+
+                                <div class="product-cell">
+
+                                    <img
+                                        src="../pens.jpg"
+                                        alt="Gel Pen Set"
+                                    >
+
+                                    <div>
+
+                                        <strong>
+                                            Gel Pen Set
+                                        </strong>
+
+                                        <small>
+                                            SKU: STN-002
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Stationery
+                            </td>
+
+
+                            <td>
+                                192
+                            </td>
+
+
+                            <td class="product-revenue">
+                                ₹82,360
+                            </td>
+
+
+                            <td>
+
+                                <span class="rating">
+                                    ★ 4.4
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock low">
+                                    Low Stock
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PERFORMANCE SUMMARY -->
+
+        <div class="row g-4 mt-1">
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon green">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Best Seller
+                        </span>
+
+                        <strong>
+                            Classic Oversized Shirt
+                        </strong>
+
+                        <small>
+                            428 units sold
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon orange">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Fastest Growing
+                        </span>
+
+                        <strong>
+                            Ultra Thin Day Pads
+                        </strong>
+
+                        <small>
+                            +24.6% sales growth
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="summary-box">
+
+                    <div class="summary-icon purple">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Inventory Alert
+                        </span>
+
+                        <strong>
+                            5 products
+                        </strong>
+
+                        <small>
+                            Need stock replenishment
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- TOAST -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+></div>
+
+
+
+<!-- BOOTSTRAP JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- PAGE JS -->
+
+<script
+    src="Product-reports.js"
+></script>
+
+
+</body>
+</html>
