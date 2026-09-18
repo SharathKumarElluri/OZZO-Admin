@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Support Management"
+    >
+
+    <title>
+        Support | OZZO Admin
+    </title>
+
+
+    <!-- BOOTSTRAP -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- SUPPORT CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./Support.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE HEADER
+===================================================== -->
+
+<header class="admin-mobile-header d-lg-none">
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open admin menu"
+        title="Open admin menu"
+    >
+
+        <i
+            class="fa-solid fa-bars"
+            aria-hidden="true"
+        ></i>
+
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+        title="Notifications"
+    >
+
+        <i
+            class="fa-regular fa-bell"
+            aria-hidden="true"
+        ></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<!-- =====================================================
+     SIDEBAR OVERLAY
+===================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+
+    <!-- LOGO -->
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <!-- ADMIN -->
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-pie"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SALES
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bag-shopping"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-credit-card"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-rotate-left"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-truck-fast"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             CATALOG
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="/Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-box"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-layer-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-warehouse"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="/Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-users"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Reviews/Reviews.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-star"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <!-- SUPPORT ACTIVE -->
+
+        <a
+            href="./Support.html"
+            class="admin-nav-link active"
+            aria-current="page"
+        >
+
+            <i
+                class="fa-regular fa-comments"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Support
+            </span>
+
+            <b class="warning">
+                12
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             MARKETING
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="#coupons"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-ticket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="#offers"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bullseye"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="#banners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-image"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#newsletter"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-envelope"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+        <a
+            href="#partners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-store"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#franchise"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-building"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             REPORTS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="#sales-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-line"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-column"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SYSTEM
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-file-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-gear"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../../index.html"
+            class="admin-nav-link"
+            id="viewWebsiteBtn"
+        >
+
+            <i
+                class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i
+                class="fa-solid fa-arrow-right-from-bracket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </nav>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="admin-main">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================== -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+
+        <div class="admin-search">
+
+            <i
+                class="fa-solid fa-magnifying-glass"
+                aria-hidden="true"
+            ></i>
+
+            <input
+                id="supportGlobalSearch"
+                type="search"
+                placeholder="Search tickets, customers, orders..."
+                autocomplete="off"
+                aria-label="Search support tickets"
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+                title="Notifications"
+            >
+
+                <i
+                    class="fa-regular fa-bell"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+                <i
+                    class="fa-solid fa-chevron-down"
+                    aria-hidden="true"
+                ></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         NOTIFICATION PANEL
+    ================================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+                aria-label="Close notifications"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <div>
+
+                <strong>
+                    12 tickets pending
+                </strong>
+
+                <small>
+                    Need support team attention
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+            <div>
+
+                <strong>
+                    3 high priority tickets
+                </strong>
+
+                <small>
+                    Require immediate response
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-message"></i>
+
+            <div>
+
+                <strong>
+                    8 customer replies
+                </strong>
+
+                <small>
+                    Received in the last hour
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         CONTENT
+    ================================================== -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="admin-welcome">
+
+            <div>
+
+                <span>
+                    CUSTOMER SUPPORT
+                </span>
+
+
+                <h1>
+                    Support Center
+                </h1>
+
+
+                <p>
+                    Manage customer tickets, conversations and support requests.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i
+                    class="fa-regular fa-calendar"
+                    aria-hidden="true"
+                ></i>
+
+                <span id="currentDate">
+                    September 2026
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STAT CARDS
+        ================================================== -->
+
+        <div class="row g-3">
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i
+                            class="fa-solid fa-ticket"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Tickets
+                        </span>
+
+                        <strong id="totalTickets">
+                            486
+                        </strong>
+
+                        <small>
+                            ↑ 8.4% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i
+                            class="fa-solid fa-clock"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Open Tickets
+                        </span>
+
+                        <strong id="openTickets">
+                            38
+                        </strong>
+
+                        <small>
+                            12 need attention
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i
+                            class="fa-solid fa-circle-check"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Resolved
+                        </span>
+
+                        <strong id="resolvedTickets">
+                            421
+                        </strong>
+
+                        <small>
+                            86.6% resolution rate
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="col-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i
+                            class="fa-solid fa-stopwatch"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Avg. Response
+                        </span>
+
+                        <strong>
+                            18m
+                        </strong>
+
+                        <small>
+                            6m faster this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             OVERVIEW
+        ================================================== -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- PERFORMANCE -->
+
+            <div class="col-xl-7">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                SUPPORT PERFORMANCE
+                            </span>
+
+                            <h2>
+                                Ticket Overview
+                            </h2>
+
+                        </div>
+
+
+                        <select
+                            id="supportRange"
+                            aria-label="Support period"
+                        >
+
+                            <option value="7">
+                                Last 7 Days
+                            </option>
+
+                            <option value="30">
+                                Last 30 Days
+                            </option>
+
+                            <option value="6m">
+                                Last 6 Months
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="support-performance">
+
+
+                        <div class="performance-score">
+
+                            <strong>
+                                86.6%
+                            </strong>
+
+                            <span>
+                                Resolution rate
+                            </span>
+
+
+                            <div class="performance-progress">
+
+                                <span
+                                    style="width:86.6%"
+                                ></span>
+
+                            </div>
+
+
+                            <small>
+                                Excellent ticket closure performance
+                            </small>
+
+                        </div>
+
+
+                        <div class="performance-items">
+
+
+                            <div class="performance-item">
+
+                                <div class="performance-icon green">
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Resolved
+                                    </strong>
+
+                                    <span>
+                                        421 tickets
+                                    </span>
+
+                                </div>
+
+                                <b>
+                                    86.6%
+                                </b>
+
+                            </div>
+
+
+                            <div class="performance-item">
+
+                                <div class="performance-icon orange">
+
+                                    <i
+                                        class="fa-solid fa-hourglass-half"
+                                    ></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        In Progress
+                                    </strong>
+
+                                    <span>
+                                        27 tickets
+                                    </span>
+
+                                </div>
+
+                                <b>
+                                    5.6%
+                                </b>
+
+                            </div>
+
+
+                            <div class="performance-item">
+
+                                <div class="performance-icon red">
+
+                                    <i
+                                        class="fa-solid fa-circle-exclamation"
+                                    ></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Escalated
+                                    </strong>
+
+                                    <span>
+                                        12 tickets
+                                    </span>
+
+                                </div>
+
+                                <b>
+                                    2.5%
+                                </b>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- TEAM -->
+
+            <div class="col-xl-5">
+
+                <section class="admin-card h-100">
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span>
+                                SUPPORT TEAM
+                            </span>
+
+                            <h2>
+                                Team Activity
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="team-list">
+
+
+                        <div class="team-member">
+
+                            <div class="team-avatar">
+                                AS
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Ananya Shah
+                                </strong>
+
+                                <small>
+                                    18 tickets resolved
+                                </small>
+
+                            </div>
+
+                            <span>
+                                Online
+                            </span>
+
+                        </div>
+
+
+                        <div class="team-member">
+
+                            <div class="team-avatar">
+                                RK
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Rahul Kumar
+                                </strong>
+
+                                <small>
+                                    15 tickets resolved
+                                </small>
+
+                            </div>
+
+                            <span>
+                                Online
+                            </span>
+
+                        </div>
+
+
+                        <div class="team-member">
+
+                            <div class="team-avatar">
+                                NM
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Neha Mehta
+                                </strong>
+
+                                <small>
+                                    12 tickets resolved
+                                </small>
+
+                            </div>
+
+                            <span class="away">
+                                Away
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CUSTOMER TICKETS
+        ================================================== -->
+
+        <section class="admin-card mt-4">
+
+
+            <div class="admin-card-header">
+
+                <div>
+
+                    <span>
+                        SUPPORT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Customer Tickets
+                    </h2>
+
+                </div>
+
+
+                <div class="support-header-actions">
+
+                    <button
+                        class="support-tool-btn"
+                        id="refreshTickets"
+                        type="button"
+                        title="Refresh tickets"
+                    >
+
+                        <i
+                            class="fa-solid fa-arrows-rotate"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+
+                    <button
+                        class="support-export-btn"
+                        id="exportTickets"
+                        type="button"
+                    >
+
+                        <i
+                            class="fa-solid fa-download"
+                            aria-hidden="true"
+                        ></i>
+
+                        Export
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="support-filter-bar">
+
+
+                <div class="support-search-box">
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        id="ticketSearch"
+                        type="search"
+                        placeholder="Search ticket, customer or order..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select
+                    id="ticketStatusFilter"
+                    class="support-filter"
+                >
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Open">
+                        Open
+                    </option>
+
+                    <option value="In Progress">
+                        In Progress
+                    </option>
+
+                    <option value="Resolved">
+                        Resolved
+                    </option>
+
+                    <option value="Escalated">
+                        Escalated
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="priorityFilter"
+                    class="support-filter"
+                >
+
+                    <option value="all">
+                        All Priority
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="categoryFilter"
+                    class="support-filter"
+                >
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Order">
+                        Order
+                    </option>
+
+                    <option value="Payment">
+                        Payment
+                    </option>
+
+                    <option value="Return">
+                        Return
+                    </option>
+
+                    <option value="Product">
+                        Product
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table support-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Ticket
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Subject
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Priority
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Updated
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="ticketTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="support-empty d-none"
+                id="supportEmpty"
+            >
+
+                <div class="support-empty-icon">
+
+                    <i
+                        class="fa-regular fa-comments"
+                    ></i>
+
+                </div>
+
+                <h3>
+                    No tickets found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="support-table-footer">
+
+                <div id="ticketShowingText">
+                    Showing 1–8 of 16 tickets
+                </div>
+
+
+                <div class="support-pagination">
+
+
+                    <button
+                        id="ticketPrev"
+                        type="button"
+                        aria-label="Previous page"
+                    >
+
+                        <i
+                            class="fa-solid fa-chevron-left"
+                        ></i>
+
+                    </button>
+
+
+                    <div
+                        id="ticketPages"
+                        class="ticket-pages"
+                    ></div>
+
+
+                    <button
+                        id="ticketNext"
+                        type="button"
+                        aria-label="Next page"
+                    >
+
+                        <i
+                            class="fa-solid fa-chevron-right"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     TICKET MODAL
+===================================================== -->
+
+<div
+    class="modal fade"
+    id="ticketModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content support-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span>
+                        SUPPORT TICKET
+                    </span>
+
+                    <h3>
+                        Ticket Details
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="ticket-customer">
+
+                    <div
+                        class="ticket-modal-avatar"
+                        id="modalTicketAvatar"
+                    >
+                        AM
+                    </div>
+
+
+                    <div>
+
+                        <strong id="modalTicketCustomer">
+                            Aarav Mehta
+                        </strong>
+
+                        <small id="modalTicketEmail">
+                            aarav.mehta@example.com
+                        </small>
+
+                    </div>
+
+
+                    <span
+                        id="modalTicketStatus"
+                        class="modal-ticket-status"
+                    >
+                        Open
+                    </span>
+
+                </div>
+
+
+                <div class="ticket-main-info">
+
+
+                    <div>
+
+                        <span>
+                            TICKET ID
+                        </span>
+
+                        <strong id="modalTicketId">
+                            TKT-00486
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ORDER
+                        </span>
+
+                        <strong id="modalTicketOrder">
+                            #OZZO1028
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            CATEGORY
+                        </span>
+
+                        <strong id="modalTicketCategory">
+                            Order
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            PRIORITY
+                        </span>
+
+                        <strong id="modalTicketPriority">
+                            High
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ticket-conversation">
+
+                    <span>
+                        CUSTOMER MESSAGE
+                    </span>
+
+
+                    <h4 id="modalTicketSubject">
+                        Order has not arrived yet
+                    </h4>
+
+
+                    <p id="modalTicketMessage">
+                        My order was supposed to arrive yesterday,
+                        but I have not received it yet. Please check
+                        the current delivery status.
+                    </p>
+
+                </div>
+
+
+                <div class="ticket-reply-box">
+
+                    <label for="ticketReply">
+                        Reply to customer
+                    </label>
+
+
+                    <textarea
+                        id="ticketReply"
+                        rows="5"
+                        placeholder="Write a professional response..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="support-modal-close"
+                    data-bs-dismiss="modal"
+                >
+                    Close
+                </button>
+
+
+                <button
+                    type="button"
+                    class="support-modal-save"
+                    id="sendTicketReply"
+                >
+
+                    <i
+                        class="fa-solid fa-paper-plane"
+                    ></i>
+
+                    Send Reply
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- BOOTSTRAP -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- SUPPORT JS -->
+
+<script src="./Support.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Shipping Management"
+    >
+
+    <title>OZZO | Shipping</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         SHIPPING CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./Shipping.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================= -->
+
+<header class="admin-mobile-header d-lg-none">
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open admin menu"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+
+    <!-- LOGO -->
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <!-- ADMIN -->
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-pie"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SALES
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bag-shopping"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-credit-card"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-rotate-left"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Shipping/Shipping.html"
+            class="admin-nav-link active"
+            aria-current="page"
+        >
+
+            <i
+                class="fa-solid fa-truck-fast"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             CATALOG
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="/Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-box"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-layer-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-warehouse"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="/Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-users"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Reviews/Reviews.html"
+            class="admin-nav-link "
+           
+        >
+
+            <i
+                class="fa-regular fa-star"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <!-- SUPPORT ACTIVE -->
+
+        <a
+            href="/Support/Support.html"
+            class="admin-nav-link"
+           
+        >
+
+            <i
+                class="fa-regular fa-comments"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Support
+            </span>
+
+            <b class="warning">
+                12
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             MARKETING
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="#coupons"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-ticket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="#offers"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bullseye"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="#banners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-image"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#newsletter"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-envelope"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+        <a
+            href="#partners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-store"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#franchise"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-building"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             REPORTS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="#sales-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-line"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-column"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SYSTEM
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-file-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-gear"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../../index.html"
+            class="admin-nav-link"
+            id="viewWebsiteBtn"
+        >
+
+            <i
+                class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i
+                class="fa-solid fa-arrow-right-from-bracket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="admin-main">
+
+
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="shippingSearch"
+                type="search"
+                placeholder="Search shipments, orders, tracking..."
+                autocomplete="off"
+                aria-label="Search shipments"
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         NOTIFICATION PANEL
+    ====================================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+                aria-label="Close notifications"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <div>
+
+                <strong>
+                    Shipment delayed
+                </strong>
+
+                <small>
+                    OZZO1024 needs delivery attention.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-box"></i>
+
+            <div>
+
+                <strong>
+                    Pickup scheduled
+                </strong>
+
+                <small>
+                    OZZO1026 pickup is scheduled.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <div>
+
+                <strong>
+                    Shipment in transit
+                </strong>
+
+                <small>
+                    OZZO1027 reached Bengaluru hub.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE WELCOME -->
+
+        <div class="admin-welcome shipping-welcome">
+
+            <div>
+
+                <span>
+                    SALES / SHIPPING
+                </span>
+
+
+                <h1>
+                    Shipping
+                </h1>
+
+
+                <p>
+                    Track shipments, manage delivery status, and monitor dispatch operations.
+                </p>
+
+            </div>
+
+
+            <div class="admin-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <span>
+                    September 2026
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <div class="row g-3 shipping-stats">
+
+
+            <!-- TOTAL -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Shipments
+                        </span>
+
+                        <strong id="totalShipmentsCount">
+                            1,284
+                        </strong>
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.4% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IN TRANSIT -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            In Transit
+                        </span>
+
+                        <strong id="inTransitCount">
+                            184
+                        </strong>
+
+                        <small>
+                            Currently moving
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OUT FOR DELIVERY -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Out for Delivery
+                        </span>
+
+                        <strong id="outDeliveryCount">
+                            36
+                        </strong>
+
+                        <small>
+                            Expected today
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERED -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Delivered
+                        </span>
+
+                        <strong id="deliveredCount">
+                            1,021
+                        </strong>
+
+                        <small>
+                            94.8% success rate
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SHIPPING CARD
+        ================================================== -->
+
+        <section class="admin-card shipping-card mt-3">
+
+
+            <!-- HEADER -->
+
+            <div class="admin-card-header shipping-card-header">
+
+                <div>
+
+                    <span>
+                        SHIPPING
+                    </span>
+
+                    <h2>
+                        Shipment Tracking
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="shipping-export-btn"
+                    id="exportShippingBtn"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Export Shipments
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 FILTER TOOLBAR
+            ================================================== -->
+
+            <div class="shipping-toolbar">
+
+
+                <div class="shipping-search-wrap">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="tableSearch"
+                        type="search"
+                        placeholder="Search order, customer or tracking..."
+                        autocomplete="off"
+                        aria-label="Search shipment table"
+                    >
+
+                </div>
+
+
+                <select
+                    id="shippingStatus"
+                    aria-label="Shipping status"
+                >
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Pending Pickup">
+                        Pending Pickup
+                    </option>
+
+                    <option value="Packed">
+                        Packed
+                    </option>
+
+                    <option value="In Transit">
+                        In Transit
+                    </option>
+
+                    <option value="Out for Delivery">
+                        Out for Delivery
+                    </option>
+
+                    <option value="Delivered">
+                        Delivered
+                    </option>
+
+                    <option value="Delayed">
+                        Delayed
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="shippingCourier"
+                    aria-label="Courier"
+                >
+
+                    <option value="all">
+                        All Couriers
+                    </option>
+
+                    <option value="Delhivery">
+                        Delhivery
+                    </option>
+
+                    <option value="Blue Dart">
+                        Blue Dart
+                    </option>
+
+                    <option value="DTDC">
+                        DTDC
+                    </option>
+
+                    <option value="Ecom Express">
+                        Ecom Express
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="shippingDate"
+                    aria-label="Shipping date"
+                >
+
+                    <option value="all">
+                        All Dates
+                    </option>
+
+                    <option value="today">
+                        Today
+                    </option>
+
+                    <option value="7">
+                        Last 7 Days
+                    </option>
+
+                    <option value="30">
+                        Last 30 Days
+                    </option>
+
+                    <option value="90">
+                        Last 90 Days
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="shipping-clear-btn"
+                    id="clearFilters"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 SELECTION BAR
+            ================================================== -->
+
+            <div class="shipping-selection-bar">
+
+                <div class="shipping-selection-left">
+
+                    <span id="resultLabel">
+                        10 shipments found
+                    </span>
+
+
+                    <span
+                        class="shipping-selection-label"
+                        id="selectionLabel"
+                    >
+                        0 selected
+                    </span>
+
+                </div>
+
+
+                <div class="shipping-actions">
+
+
+                    <button
+                        class="shipping-bulk-btn"
+                        id="markPackedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-box"></i>
+
+                        Mark Packed
+
+                    </button>
+
+
+                    <button
+                        class="shipping-bulk-btn"
+                        id="markTransitBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                        In Transit
+
+                    </button>
+
+
+                    <button
+                        class="shipping-bulk-btn"
+                        id="markDeliveredBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Delivered
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TABLE
+            ================================================== -->
+
+            <div class="shipping-table-wrap">
+
+                <table
+                    class="shipping-table"
+                    id="shippingTable"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+
+                                <input
+                                    type="checkbox"
+                                    id="selectAll"
+                                    aria-label="Select all shipments"
+                                >
+
+                            </th>
+
+
+                            <th>
+                                Shipment
+                            </th>
+
+
+                            <th>
+                                Order
+                            </th>
+
+
+                            <th>
+                                Customer
+                            </th>
+
+
+                            <th>
+                                Courier
+                            </th>
+
+
+                            <th>
+                                Tracking
+                            </th>
+
+
+                            <th>
+                                Status
+                            </th>
+
+
+                            <th>
+                                Expected
+                            </th>
+
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="shippingBody">
+                    </tbody>
+
+                </table>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-shipping d-none"
+                    id="emptyState"
+                >
+
+                    <div class="empty-shipping-icon">
+
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+
+                    </div>
+
+
+                    <h3>
+                        No shipments found
+                    </h3>
+
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <div class="shipping-footer">
+
+                <span id="footerResult">
+                    Showing 1–7 of 10 shipments
+                </span>
+
+
+                <div class="shipping-pagination">
+
+
+                    <button
+                        id="prevPage"
+                        type="button"
+                        aria-label="Previous page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <span id="currentPage">
+                        1
+                    </span>
+
+
+                    <button
+                        id="nextPage"
+                        type="button"
+                        aria-label="Next page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     SHIPPING MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="shippingModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content shipping-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        SHIPMENT DETAILS
+                    </span>
+
+
+                    <h2 id="modalShipmentId">
+                        #SHP90881
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="shipping-detail-grid">
+
+
+                    <div class="shipping-detail-box">
+
+                        <span>
+                            Order
+                        </span>
+
+                        <strong id="modalOrder">
+                            #OZZO1028
+                        </strong>
+
+                    </div>
+
+
+                    <div class="shipping-detail-box">
+
+                        <span>
+                            Customer
+                        </span>
+
+                        <strong id="modalCustomer">
+                            Aarav Mehta
+                        </strong>
+
+                    </div>
+
+
+                    <div class="shipping-detail-box">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong id="modalStatus">
+                            In Transit
+                        </strong>
+
+                    </div>
+
+
+                    <div class="shipping-detail-box">
+
+                        <span>
+                            Courier
+                        </span>
+
+                        <strong id="modalCourier">
+                            Delhivery
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="shipping-modal-section">
+
+                    <div class="shipping-modal-title">
+
+                        <strong>
+                            Tracking Number
+                        </strong>
+
+                    </div>
+
+
+                    <div class="shipping-tracking-box">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="modalTracking">
+                            DEL12390881
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-modal-section">
+
+                    <div class="shipping-modal-title">
+
+                        <strong>
+                            Delivery Information
+                        </strong>
+
+                        <span id="modalExpected">
+                            20 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <div class="shipping-address-box">
+
+                        <p id="modalAddress">
+                            12 Lake View Road,
+                            Jubilee Hills,
+                            Hyderabad,
+                            Telangana
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+                <button
+                    type="button"
+                    class="shipping-secondary-btn"
+                    id="printShippingBtn"
+                >
+
+                    <i class="fa-solid fa-print"></i>
+
+                    Print
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="shipping-secondary-btn"
+                    data-bs-dismiss="modal"
+                >
+
+                    Close
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Shipping JS -->
+
+<script src="./Shipping.js"></script>
+
+
+</body>
+</html>

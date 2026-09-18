@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Inventory Management"
+    >
+
+    <title>OZZO | Inventory</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Inventory CSS -->
+    <link
+        rel="stylesheet"
+        href="./Inventory.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================= -->
+
+<header class="admin-mobile-header d-lg-none">
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open admin menu"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-pie"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SALES
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bag-shopping"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-credit-card"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-rotate-left"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-truck-fast"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             CATALOG
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="/Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-box"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-layer-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Inventory/Inventory.html"
+            class="admin-nav-link active"
+            aria-current="page"
+        >
+
+            <i
+                class="fa-solid fa-warehouse"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="/Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-users"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Reviews/Reviews.html"
+            class="admin-nav-link "
+           
+        >
+
+            <i
+                class="fa-regular fa-star"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <!-- SUPPORT ACTIVE -->
+
+        <a
+            href="/Support/Support.html"
+            class="admin-nav-link"
+           
+        >
+
+            <i
+                class="fa-regular fa-comments"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Support
+            </span>
+
+            <b class="warning">
+                12
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             MARKETING
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="#coupons"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-ticket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="#offers"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bullseye"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="#banners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-image"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#newsletter"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-envelope"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+        <a
+            href="#partners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-store"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#franchise"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-building"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             REPORTS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="#sales-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-line"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-column"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SYSTEM
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-file-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-gear"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../../index.html"
+            class="admin-nav-link"
+            id="viewWebsiteBtn"
+        >
+
+            <i
+                class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i
+                class="fa-solid fa-arrow-right-from-bracket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="admin-main">
+
+
+    <!-- TOPBAR -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="globalInventorySearch"
+                type="search"
+                placeholder="Search products, SKU, stock..."
+                autocomplete="off"
+                aria-label="Search inventory"
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         NOTIFICATION PANEL
+    ====================================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+
+            <button
+                id="closeNotifications"
+                type="button"
+                aria-label="Close notifications"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <div>
+
+                <strong>
+                    Low stock alert
+                </strong>
+
+                <small>
+                    Ultra Thin Day Pads need restocking.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-box"></i>
+
+            <div>
+
+                <strong>
+                    Stock updated
+                </strong>
+
+                <small>
+                    Stationery inventory was updated.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-arrow-down"></i>
+
+            <div>
+
+                <strong>
+                    Stock threshold
+                </strong>
+
+                <small>
+                    3 products are below threshold.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="admin-welcome inventory-welcome">
+
+            <div>
+
+                <span>
+                    CATALOG / INVENTORY
+                </span>
+
+
+                <h1>
+                    Inventory
+                </h1>
+
+
+                <p>
+                    Monitor OZZO stock levels, restocking needs and inventory movement.
+                </p>
+
+            </div>
+
+
+            <div class="inventory-welcome-actions">
+
+                <div class="admin-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span>
+                        September 2026
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="stock-adjust-btn"
+                    id="openAdjustModal"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-plus-minus"></i>
+
+                    Adjust Stock
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <div class="row g-3 inventory-stats">
+
+
+            <!-- TOTAL UNITS -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-cubes"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Units
+                        </span>
+
+
+                        <strong id="totalUnitsCount">
+                            1,842
+                        </strong>
+
+
+                        <small>
+                            Across all products
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IN STOCK -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Healthy Stock
+                        </span>
+
+
+                        <strong id="healthyStockCount">
+                            38
+                        </strong>
+
+
+                        <small>
+                            Products well stocked
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOW STOCK -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Low Stock
+                        </span>
+
+
+                        <strong id="lowStockCount">
+                            5
+                        </strong>
+
+
+                        <small>
+                            Need restocking soon
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OUT OF STOCK -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Out of Stock
+                        </span>
+
+
+                        <strong id="outOfStockCount">
+                            3
+                        </strong>
+
+
+                        <small>
+                            Need immediate action
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             INVENTORY CARD
+        ================================================== -->
+
+        <section class="admin-card inventory-card mt-3">
+
+
+            <!-- HEADER -->
+
+            <div class="admin-card-header inventory-card-header">
+
+                <div>
+
+                    <span>
+                        INVENTORY
+                    </span>
+
+
+                    <h2>
+                        Stock Management
+                    </h2>
+
+                </div>
+
+
+                <div class="inventory-header-actions">
+
+
+                    <button
+                        class="secondary-inventory-btn"
+                        id="exportInventoryBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                        Export
+
+                    </button>
+
+
+                    <button
+                        class="stock-adjust-btn small"
+                        id="openAdjustModal2"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-plus-minus"></i>
+
+                        Adjust Stock
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FILTERS
+            ================================================== -->
+
+            <div class="inventory-toolbar">
+
+
+                <div class="inventory-search-wrap">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                    <input
+                        id="inventorySearch"
+                        type="search"
+                        placeholder="Search product or SKU..."
+                        autocomplete="off"
+                        aria-label="Search inventory"
+                    >
+
+                </div>
+
+
+                <select
+                    id="inventoryCategory"
+                    aria-label="Inventory category"
+                >
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Fashion">
+                        Fashion
+                    </option>
+
+                    <option value="Books">
+                        Books
+                    </option>
+
+                    <option value="Stationery">
+                        Stationery
+                    </option>
+
+                    <option value="Pads & Personal Care">
+                        Pads & Personal Care
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="inventoryStock"
+                    aria-label="Inventory stock status"
+                >
+
+                    <option value="all">
+                        All Stock
+                    </option>
+
+                    <option value="Healthy">
+                        Healthy
+                    </option>
+
+                    <option value="Low Stock">
+                        Low Stock
+                    </option>
+
+                    <option value="Out of Stock">
+                        Out of Stock
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="inventoryWarehouse"
+                    aria-label="Warehouse"
+                >
+
+                    <option value="all">
+                        All Warehouses
+                    </option>
+
+                    <option value="Hyderabad">
+                        Hyderabad
+                    </option>
+
+                    <option value="Bengaluru">
+                        Bengaluru
+                    </option>
+
+                    <option value="Mumbai">
+                        Mumbai
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="clear-inventory-btn"
+                    id="clearFilters"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 SELECTION BAR
+            ================================================== -->
+
+            <div class="inventory-selection-bar">
+
+                <div class="inventory-selection-left">
+
+                    <span id="resultLabel">
+                        10 inventory items found
+                    </span>
+
+
+                    <span
+                        class="inventory-selection-label"
+                        id="selectionLabel"
+                    >
+                        0 selected
+                    </span>
+
+                </div>
+
+
+                <div class="inventory-bulk-actions">
+
+
+                    <button
+                        class="inventory-bulk-btn"
+                        id="restockSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                        Restock
+
+                    </button>
+
+
+                    <button
+                        class="inventory-bulk-btn"
+                        id="adjustSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-plus-minus"></i>
+
+                        Adjust
+
+                    </button>
+
+
+                    <button
+                        class="inventory-bulk-btn danger"
+                        id="markOutSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-ban"></i>
+
+                        Mark Out
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TABLE
+            ================================================== -->
+
+            <div class="inventory-table-wrap">
+
+                <table
+                    class="inventory-table"
+                    id="inventoryTable"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+
+                                <input
+                                    type="checkbox"
+                                    id="selectAll"
+                                    aria-label="Select all inventory"
+                                >
+
+                            </th>
+
+
+                            <th>
+                                Product
+                            </th>
+
+
+                            <th>
+                                SKU
+                            </th>
+
+
+                            <th>
+                                Category
+                            </th>
+
+
+                            <th>
+                                Warehouse
+                            </th>
+
+
+                            <th>
+                                Available
+                            </th>
+
+
+                            <th>
+                                Reserved
+                            </th>
+
+
+                            <th>
+                                Reorder Level
+                            </th>
+
+
+                            <th>
+                                Stock Status
+                            </th>
+
+
+                            <th>
+                                Updated
+                            </th>
+
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="inventoryBody">
+                    </tbody>
+
+                </table>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-inventory d-none"
+                    id="emptyState"
+                >
+
+                    <div class="empty-inventory-icon">
+
+                        <i class="fa-solid fa-warehouse"></i>
+
+                    </div>
+
+
+                    <h3>
+                        No inventory found
+                    </h3>
+
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="inventory-footer">
+
+                <span id="footerResult">
+                    Showing 1–7 of 10 inventory items
+                </span>
+
+
+                <div class="inventory-pagination">
+
+
+                    <button
+                        id="prevPage"
+                        type="button"
+                        aria-label="Previous page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <span id="currentPage">
+                        1
+                    </span>
+
+
+                    <button
+                        id="nextPage"
+                        type="button"
+                        aria-label="Next page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     STOCK ADJUSTMENT MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="adjustModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content inventory-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        INVENTORY MANAGEMENT
+                    </span>
+
+
+                    <h2>
+                        Adjust Stock
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <form id="adjustForm">
+
+
+                <div class="modal-body">
+
+
+                    <div class="inventory-form-group">
+
+                        <label
+                            for="adjustProduct"
+                            class="inventory-label"
+                        >
+                            Product
+                        </label>
+
+
+                        <select
+                            id="adjustProduct"
+                            class="inventory-input"
+                            required
+                        >
+
+                            <option value="">
+                                Select product
+                            </option>
+
+                            <option value="Classic Casual Shirt">
+                                Classic Casual Shirt
+                            </option>
+
+                            <option value="Atomic Habits">
+                                Atomic Habits
+                            </option>
+
+                            <option value="Notebook Set">
+                                Notebook Set
+                            </option>
+
+                            <option value="Ultra Thin Day Pads">
+                                Ultra Thin Day Pads
+                            </option>
+
+                            <option value="Elegant Rose Silk Saree">
+                                Elegant Rose Silk Saree
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="inventory-form-grid">
+
+
+                        <div>
+
+                            <label
+                                for="adjustType"
+                                class="inventory-label"
+                            >
+                                Adjustment
+                            </label>
+
+
+                            <select
+                                id="adjustType"
+                                class="inventory-input"
+                                required
+                            >
+
+                                <option value="add">
+                                    Add Stock
+                                </option>
+
+                                <option value="remove">
+                                    Remove Stock
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div>
+
+                            <label
+                                for="adjustQuantity"
+                                class="inventory-label"
+                            >
+                                Quantity
+                            </label>
+
+
+                            <input
+                                id="adjustQuantity"
+                                class="inventory-input"
+                                type="number"
+                                min="1"
+                                placeholder="0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inventory-form-group">
+
+                        <label
+                            for="adjustReason"
+                            class="inventory-label"
+                        >
+                            Reason
+                        </label>
+
+
+                        <select
+                            id="adjustReason"
+                            class="inventory-input"
+                            required
+                        >
+
+                            <option value="">
+                                Select reason
+                            </option>
+
+                            <option value="New Purchase">
+                                New Purchase
+                            </option>
+
+                            <option value="Damaged">
+                                Damaged
+                            </option>
+
+                            <option value="Stock Correction">
+                                Stock Correction
+                            </option>
+
+                            <option value="Customer Return">
+                                Customer Return
+                            </option>
+
+                            <option value="Internal Use">
+                                Internal Use
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="inventory-form-group">
+
+                        <label
+                            for="adjustNote"
+                            class="inventory-label"
+                        >
+                            Notes
+                        </label>
+
+
+                        <textarea
+                            id="adjustNote"
+                            class="inventory-input inventory-textarea"
+                            rows="4"
+                            placeholder="Add an optional note..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+
+                    <button
+                        type="button"
+                        class="secondary-inventory-btn"
+                        data-bs-dismiss="modal"
+                    >
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="stock-adjust-btn"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Save Adjustment
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     STOCK DETAILS MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="inventoryDetailsModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content inventory-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        STOCK DETAILS
+                    </span>
+
+
+                    <h2 id="detailsProduct">
+                        Atomic Habits
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="inventory-details-grid">
+
+
+                    <div class="inventory-detail-box">
+
+                        <span>
+                            SKU
+                        </span>
+
+                        <strong id="detailsSku">
+                            OZZO-B001
+                        </strong>
+
+                    </div>
+
+
+                    <div class="inventory-detail-box">
+
+                        <span>
+                            Warehouse
+                        </span>
+
+                        <strong id="detailsWarehouse">
+                            Hyderabad
+                        </strong>
+
+                    </div>
+
+
+                    <div class="inventory-detail-box">
+
+                        <span>
+                            Available
+                        </span>
+
+                        <strong id="detailsAvailable">
+                            36
+                        </strong>
+
+                    </div>
+
+
+                    <div class="inventory-detail-box">
+
+                        <span>
+                            Reserved
+                        </span>
+
+                        <strong id="detailsReserved">
+                            5
+                        </strong>
+
+                    </div>
+
+
+                    <div class="inventory-detail-box">
+
+                        <span>
+                            Reorder Level
+                        </span>
+
+                        <strong id="detailsReorder">
+                            10
+                        </strong>
+
+                    </div>
+
+
+                    <div class="inventory-detail-box">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong id="detailsStatus">
+                            Healthy
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-detail-section">
+
+                    <div class="inventory-modal-title">
+
+                        <strong>
+                            Inventory Health
+                        </strong>
+
+                    </div>
+
+
+                    <div class="inventory-health">
+
+                        <div
+                            class="inventory-health-bar"
+                            id="inventoryHealthBar"
+                        ></div>
+
+                    </div>
+
+
+                    <p
+                        class="inventory-health-text"
+                        id="inventoryHealthText"
+                    >
+                        Stock level is healthy.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="secondary-inventory-btn"
+                    data-bs-dismiss="modal"
+                >
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Inventory JS -->
+
+<script src="./Inventory.js"></script>
+
+
+</body>
+</html>

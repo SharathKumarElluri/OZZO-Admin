@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OZZO Admin Dashboard">
+    <title>OZZO | Admin Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- =====================================================
+     MOBILE HEADER
+===================================================== -->
+<header class="admin-mobile-header d-lg-none">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open admin menu" title="Open admin menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <div class="mobile-brand">
+        <strong>OZZO</strong>
+        <small>ADMIN PANEL</small>
+    </div>
+
+    <button class="mobile-notification" id="mobileNotificationBtn" type="button" aria-label="Notifications" title="Notifications">
+        <i class="fa-regular fa-bell" aria-hidden="true"></i>
+        <span>4</span>
+    </button>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+<aside class="admin-sidebar" id="adminSidebar">
+
+    <div class="admin-logo">
+        <strong>OZZO</strong>
+        <span>ADMIN PANEL</span>
+    </div>
+
+    <div class="admin-user">
+        <div class="admin-avatar">A</div>
+        <div>
+            <strong>Admin</strong>
+            <small>Super Admin</small>
+        </div>
+    </div>
+
+    <nav class="admin-nav" aria-label="Admin navigation">
+
+        <div class="admin-nav-heading">MAIN</div>
+        <a href="#dashboard" class="admin-nav-link active" data-section="dashboard">
+            <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <div class="admin-nav-heading">SALES</div>
+        <a href="/Orders/Orders.html" class="admin-nav-link" data-section="orders">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <span>Orders</span>
+            <b>18</b>
+        </a>
+        <a href="/Payments/Payments.html" class="admin-nav-link" data-section="payments">
+            <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
+            <span>Payments</span>
+        </a>
+        <a href="/Returns/Returns.html" class="admin-nav-link" data-section="returns">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+            <span>Returns</span>
+            <b class="warning">5</b>
+        </a>
+        <a href="/Shipping/Shipping.html" class="admin-nav-link" data-section="shipping">
+            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+            <span>Shipping</span>
+        </a>
+
+        <div class="admin-nav-heading">CATALOG</div>
+        <a href="/Products/Products.html" class="admin-nav-link" data-section="products">
+            <i class="fa-solid fa-box" aria-hidden="true"></i>
+            <span>Products</span>
+        </a>
+        <a href="/Categories/Categories.html" class="admin-nav-link" data-section="categories">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            <span>Categories</span>
+        </a>
+        <a href="/Inventory/Inventory.html" class="admin-nav-link" data-section="inventory">
+            <i class="fa-solid fa-warehouse" aria-hidden="true"></i>
+            <span>Inventory</span>
+            <b class="warning">3</b>
+        </a>
+
+        <div class="admin-nav-heading">CUSTOMERS</div>
+        <a href="/Customers/Customers.html" class="admin-nav-link" data-section="customers">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            <span>Customers</span>
+        </a>
+        <a href="/Reviews/Reviews.html" class="admin-nav-link" data-section="reviews">
+            <i class="fa-regular fa-star" aria-hidden="true"></i>
+            <span>Reviews</span>
+        </a>
+        <a href="/Support/Support.html" class="admin-nav-link" data-section="support">
+            <i class="fa-regular fa-comments" aria-hidden="true"></i>
+            <span>Support</span>
+        </a>
+
+        <div class="admin-nav-heading">MARKETING</div>
+        <a href="#coupons" class="admin-nav-link" data-section="coupons">
+            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+            <span>Coupons</span>
+        </a>
+        <a href="#offers" class="admin-nav-link" data-section="offers">
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+            <span>Offers</span>
+        </a>
+        <a href="#banners" class="admin-nav-link" data-section="banners">
+            <i class="fa-regular fa-image" aria-hidden="true"></i>
+            <span>Banners</span>
+        </a>
+        <a href="#newsletter" class="admin-nav-link" data-section="newsletter">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span>Newsletter</span>
+        </a>
+
+        <div class="admin-nav-heading">BUSINESS</div>
+        <a href="#bulk-orders" class="admin-nav-link" data-section="bulk-orders">
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            <span>Bulk Orders</span>
+        </a>
+        <a href="#partners" class="admin-nav-link" data-section="partners">
+            <i class="fa-solid fa-store" aria-hidden="true"></i>
+            <span>Partners</span>
+        </a>
+        <a href="#franchise" class="admin-nav-link" data-section="franchise">
+            <i class="fa-solid fa-building" aria-hidden="true"></i>
+            <span>Franchise</span>
+        </a>
+
+        <div class="admin-nav-heading">REPORTS</div>
+        <a href="#sales-reports" class="admin-nav-link" data-section="sales-reports">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            <span>Sales Reports</span>
+        </a>
+        <a href="#product-reports" class="admin-nav-link" data-section="product-reports">
+            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+            <span>Product Reports</span>
+        </a>
+        <a href="#customer-reports" class="admin-nav-link" data-section="customer-reports">
+            <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+            <span>Customer Reports</span>
+        </a>
+
+        <div class="admin-nav-heading">SYSTEM</div>
+        <a href="#staff" class="admin-nav-link" data-section="staff">
+            <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+            <span>Staff &amp; Roles</span>
+        </a>
+        <a href="#audit" class="admin-nav-link" data-section="audit">
+            <i class="fa-solid fa-file-shield" aria-hidden="true"></i>
+            <span>Audit Logs</span>
+        </a>
+        <a href="#settings" class="admin-nav-link" data-section="settings">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+            <span>Settings</span>
+        </a>
+
+        <div class="admin-nav-divider"></div>
+
+        <a href="../index.html" class="admin-nav-link">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span>View Website</span>
+        </a>
+        <button class="admin-nav-link admin-logout" id="logoutBtn" type="button">
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+            <span>Logout</span>
+        </button>
+    </nav>
+</aside>
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+<main class="admin-main" id="dashboard">
+
+    <header class="admin-topbar d-none d-lg-flex">
+        <div class="admin-search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="adminSearch" type="search" placeholder="Search orders, products, customers..." aria-label="Search admin dashboard">
+        </div>
+
+        <div class="admin-top-right">
+            <button class="admin-top-icon" id="notificationBtn" type="button" aria-label="Notifications" title="Notifications">
+                <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                <span>4</span>
+            </button>
+
+            <div class="admin-profile">
+                <div class="admin-small-avatar">A</div>
+                <div>
+                    <strong>Admin</strong>
+                    <small>Super Admin</small>
+                </div>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-panel-head">
+            <strong>Notifications</strong>
+            <button id="closeNotifications" type="button" aria-label="Close notifications" title="Close notifications">×</button>
+        </div>
+        <div class="notification-item">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div><strong>3 products</strong><small>need inventory attention</small></div>
+        </div>
+        <div class="notification-item">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <div><strong>18 new orders</strong><small>received today</small></div>
+        </div>
+        <div class="notification-item">
+            <i class="fa-solid fa-ticket"></i>
+            <div><strong>OZZO10</strong><small>coupon expires tomorrow</small></div>
+        </div>
+    </div>
+
+    <div class="admin-content">
+
+        <!-- WELCOME -->
+        <section class="admin-welcome">
+            <div>
+                <span>OZZO MANAGEMENT</span>
+                <h1>Dashboard <span>👋</span></h1>
+                <p>Track sales, products, customers and daily store activity.</p>
+            </div>
+
+            <div class="admin-date">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                <span id="currentDate">September 2026</span>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <div class="row g-3">
+            <div class="col-6 col-xl-3">
+                <article class="admin-stat-card">
+                    <div class="admin-stat-icon green"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i></div>
+                    <div>
+                        <span>Revenue</span>
+                        <strong>₹4,86,740</strong>
+                        <small>↑ 16.8% from last month</small>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-6 col-xl-3">
+                <article class="admin-stat-card">
+                    <div class="admin-stat-icon orange"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
+                    <div>
+                        <span>Orders</span>
+                        <strong>1,486</strong>
+                        <small>↑ 11.4% from last month</small>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-6 col-xl-3">
+                <article class="admin-stat-card">
+                    <div class="admin-stat-icon blue"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+                    <div>
+                        <span>Customers</span>
+                        <strong>2,143</strong>
+                        <small>↑ 8.9% from last month</small>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-6 col-xl-3">
+                <article class="admin-stat-card">
+                    <div class="admin-stat-icon purple"><i class="fa-solid fa-box" aria-hidden="true"></i></div>
+                    <div>
+                        <span>Products</span>
+                        <strong>46</strong>
+                        <small>4 new this month</small>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- SALES + TOP PRODUCTS -->
+        <div class="row g-4 mt-1">
+            <div class="col-xl-8">
+                <section class="admin-card h-100">
+                    <div class="admin-card-header">
+                        <div>
+                            <span>BUSINESS PERFORMANCE</span>
+                            <h2>Sales Overview</h2>
+                        </div>
+                        <label class="visually-hidden" for="salesRange">Sales range</label>
+                        <select id="salesRange" aria-label="Sales range">
+                            <option value="7">Last 7 Days</option>
+                            <option value="30">Last 30 Days</option>
+                            <option value="6m">Last 6 Months</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+
+                    <div class="sales-summary">
+                        <div>
+                            <strong id="chartRevenue">₹1,46,820</strong>
+                            <span>Sales in selected period</span>
+                        </div>
+                        <span class="sales-up">+14.3%</span>
+                    </div>
+
+                    <div class="sales-chart">
+                        <div class="chart-labels" aria-hidden="true">
+                            <span>₹1.5L</span>
+                            <span>₹1.0L</span>
+                            <span>₹75K</span>
+                            <span>₹50K</span>
+                            <span>₹0</span>
+                        </div>
+
+                        <div class="chart">
+                            <div class="chart-lines" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+
+                            <svg viewBox="0 0 700 260" preserveAspectRatio="none" role="img" aria-label="Sales trend chart">
+                                <defs>
+                                    <linearGradient id="ozzoArea" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-opacity=".22"></stop>
+                                        <stop offset="100%" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path id="salesArea" class="area" d="M0,215 C70,205 95,185 150,175 C205,165 220,145 270,150 C325,155 345,122 400,130 C450,140 470,95 520,106 C575,117 595,70 700,52 L700,260 L0,260 Z"></path>
+                                <path id="salesLine" class="line" d="M0,215 C70,205 95,185 150,175 C205,165 220,145 270,150 C325,155 345,122 400,130 C450,140 470,95 520,106 C575,117 595,70 700,52"></path>
+                            </svg>
+
+                            <div class="chart-days" id="chartDays">
+                                <span>12 Sep</span><span>13 Sep</span><span>14 Sep</span><span>15 Sep</span><span>16 Sep</span><span>17 Sep</span><span>18 Sep</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-xl-4">
+                <section class="admin-card h-100">
+                    <div class="admin-card-header">
+                        <div>
+                            <span>BEST SELLERS</span>
+                            <h2>Top Products</h2>
+                        </div>
+                        <button class="plain-link action-placeholder" type="button" data-action="Top products">View All</button>
+                    </div>
+
+                    <div class="top-products">
+                        <div class="top-product dashboard-search-item">
+                            <img src="../women shirt.jpg" alt="Classic Oversized Shirt">
+                            <div>
+                                <strong>Classic Oversized Shirt</strong>
+                                <small>Women's Fashion · 428 sold</small>
+                                <div class="progress-bar"><span style="width:92%"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="top-product dashboard-search-item">
+                            <img src="../book.jpg" alt="Atomic Habits">
+                            <div>
+                                <strong>Atomic Habits</strong>
+                                <small>Books · 371 sold</small>
+                                <div class="progress-bar"><span style="width:82%"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="top-product dashboard-search-item">
+                            <img src="../books set.jpg" alt="Notebook Set">
+                            <div>
+                                <strong>Notebook Set</strong>
+                                <small>Stationery · 324 sold</small>
+                                <div class="progress-bar"><span style="width:74%"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="top-product dashboard-search-item">
+                            <img src="../pads.jpg" alt="Ultra Thin Day Pads">
+                            <div>
+                                <strong>Ultra Thin Day Pads</strong>
+                                <small>Pads &amp; Personal Care · 289 sold</small>
+                                <div class="progress-bar"><span style="width:66%"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ORDERS + QUICK ACTIONS -->
+        <div class="row g-4 mt-1">
+            <div class="col-xl-8">
+                <section class="admin-card">
+                    <div class="admin-card-header">
+                        <div>
+                            <span>SALES</span>
+                            <h2>Recent Orders</h2>
+                        </div>
+                        <button class="plain-link action-placeholder" type="button" data-action="Orders">View All →</button>
+                    </div>
+
+                    <div class="admin-table-wrapper">
+                        <table class="admin-table" id="ordersTable">
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Customer</th>
+                                    <th>Items</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="dashboard-search-item">
+                                    <td><strong>#OZZO1028</strong></td>
+                                    <td>Rahul Kumar</td>
+                                    <td>2</td>
+                                    <td>₹2,598</td>
+                                    <td><span class="order-status processing">Processing</span></td>
+                                    <td>18 Sep</td>
+                                    <td><button class="admin-view-btn action-placeholder" type="button" data-action="Order #OZZO1028">View</button></td>
+                                </tr>
+                                <tr class="dashboard-search-item">
+                                    <td><strong>#OZZO1027</strong></td>
+                                    <td>Priya Sharma</td>
+                                    <td>3</td>
+                                    <td>₹3,147</td>
+                                    <td><span class="order-status shipped">Shipped</span></td>
+                                    <td>18 Sep</td>
+                                    <td><button class="admin-view-btn action-placeholder" type="button" data-action="Order #OZZO1027">View</button></td>
+                                </tr>
+                                <tr class="dashboard-search-item">
+                                    <td><strong>#OZZO1026</strong></td>
+                                    <td>Arjun Reddy</td>
+                                    <td>1</td>
+                                    <td>₹1,899</td>
+                                    <td><span class="order-status delivered">Delivered</span></td>
+                                    <td>17 Sep</td>
+                                    <td><button class="admin-view-btn action-placeholder" type="button" data-action="Order #OZZO1026">View</button></td>
+                                </tr>
+                                <tr class="dashboard-search-item">
+                                    <td><strong>#OZZO1025</strong></td>
+                                    <td>Sneha Patel</td>
+                                    <td>4</td>
+                                    <td>₹4,696</td>
+                                    <td><span class="order-status delivered">Delivered</span></td>
+                                    <td>17 Sep</td>
+                                    <td><button class="admin-view-btn action-placeholder" type="button" data-action="Order #OZZO1025">View</button></td>
+                                </tr>
+                                <tr class="dashboard-search-item">
+                                    <td><strong>#OZZO1024</strong></td>
+                                    <td>Vikram Singh</td>
+                                    <td>2</td>
+                                    <td>₹1,928</td>
+                                    <td><span class="order-status processing">Processing</span></td>
+                                    <td>16 Sep</td>
+                                    <td><button class="admin-view-btn action-placeholder" type="button" data-action="Order #OZZO1024">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-xl-4">
+                <section class="admin-card h-100">
+                    <div class="admin-card-header">
+                        <div>
+                            <span>MANAGEMENT</span>
+                            <h2>Quick Actions</h2>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button class="quick-action action-placeholder" type="button" data-action="Add Product">
+                            <span class="quick-icon green"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                            <strong>Add Product</strong>
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <button class="quick-action action-placeholder" type="button" data-action="Manage Orders">
+                            <span class="quick-icon orange"><i class="fa-solid fa-box" aria-hidden="true"></i></span>
+                            <strong>Manage Orders</strong>
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <button class="quick-action action-placeholder" type="button" data-action="View Customers">
+                            <span class="quick-icon blue"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+                            <strong>View Customers</strong>
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <button class="quick-action action-placeholder" type="button" data-action="Create Coupon">
+                            <span class="quick-icon purple"><i class="fa-solid fa-ticket" aria-hidden="true"></i></span>
+                            <strong>Create Coupon</strong>
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- LOW STOCK -->
+        <section class="admin-card mt-4">
+            <div class="admin-card-header">
+                <div>
+                    <span>INVENTORY</span>
+                    <h2>Low Stock Alerts</h2>
+                </div>
+                <button class="plain-link action-placeholder" type="button" data-action="Inventory">Manage Inventory →</button>
+            </div>
+
+            <div class="low-stock-grid">
+                <div class="stock-card dashboard-search-item">
+                    <img src="../pens.jpg" alt="Gel Pen Set">
+                    <div>
+                        <strong>Gel Pen Set</strong>
+                        <small>8 units remaining</small>
+                    </div>
+                    <span>LOW</span>
+                </div>
+
+                <div class="stock-card dashboard-search-item">
+                    <img src="../hoddie.jpg" alt="Kids Summer Outfit">
+                    <div>
+                        <strong>Kids Summer Outfit</strong>
+                        <small>11 units remaining</small>
+                    </div>
+                    <span>LOW</span>
+                </div>
+
+                <div class="stock-card dashboard-search-item">
+                    <img src="../pads.jpg" alt="Ultra Thin Day Pads">
+                    <div>
+                        <strong>Ultra Thin Day Pads</strong>
+                        <small>14 units remaining</small>
+                    </div>
+                    <span>LOW</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORY SNAPSHOT -->
+        <section class="admin-card mt-4">
+            <div class="admin-card-header">
+                <div>
+                    <span>CATALOG MIX</span>
+                    <h2>Category Snapshot</h2>
+                </div>
+                <button class="plain-link action-placeholder" type="button" data-action="Categories">Manage Categories →</button>
+            </div>
+
+            <div class="category-snapshot-grid">
+                <div class="category-summary">
+                    <div class="category-summary-top">
+                        <span class="snapshot-icon fashion"><i class="fa-solid fa-shirt" aria-hidden="true"></i></span>
+                        <div><strong>Fashion</strong><small>16 products</small></div>
+                    </div>
+                    <div class="snapshot-bar"><span style="width:68%"></span></div>
+                    <div class="snapshot-footer"><span>₹1,78,420 sales</span><strong>36%</strong></div>
+                </div>
+
+                <div class="category-summary">
+                    <div class="category-summary-top">
+                        <span class="snapshot-icon books"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
+                        <div><strong>Books</strong><small>12 products</small></div>
+                    </div>
+                    <div class="snapshot-bar"><span style="width:56%"></span></div>
+                    <div class="snapshot-footer"><span>₹1,14,860 sales</span><strong>24%</strong></div>
+                </div>
+
+                <div class="category-summary">
+                    <div class="category-summary-top">
+                        <span class="snapshot-icon stationery"><i class="fa-solid fa-pen" aria-hidden="true"></i></span>
+                        <div><strong>Stationery</strong><small>11 products</small></div>
+                    </div>
+                    <div class="snapshot-bar"><span style="width:49%"></span></div>
+                    <div class="snapshot-footer"><span>₹1,02,300 sales</span><strong>21%</strong></div>
+                </div>
+
+                <div class="category-summary">
+                    <div class="category-summary-top">
+                        <span class="snapshot-icon pads"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+                        <div><strong>Pads</strong><small>7 products</small></div>
+                    </div>
+                    <div class="snapshot-bar"><span style="width:34%"></span></div>
+                    <div class="snapshot-footer"><span>₹91,160 sales</span><strong>19%</strong></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<div class="admin-toast" id="adminToast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

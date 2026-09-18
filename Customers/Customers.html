@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Customer Management"
+    >
+
+    <title>OZZO | Customers</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CUSTOM CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./Customers.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================= -->
+
+<header class="admin-mobile-header d-lg-none">
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open admin menu"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+
+    <!-- LOGO -->
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <!-- ADMIN -->
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-pie"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SALES
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bag-shopping"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-credit-card"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-rotate-left"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-truck-fast"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             CATALOG
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="/Products/Products.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-box"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-layer-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-warehouse"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="/Customers/Customers.html"
+            class="admin-nav-link active"
+            aria-current="page"
+        >
+
+            <i
+                class="fa-solid fa-users"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Reviews/Reviews.html"
+            class="admin-nav-link "
+    
+        >
+
+            <i
+                class="fa-regular fa-star"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <!-- SUPPORT ACTIVE -->
+
+        <a
+            href="/Support/Support.html"
+            class="admin-nav-link"
+           
+        >
+
+            <i
+                class="fa-regular fa-comments"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Support
+            </span>
+
+            <b class="warning">
+                12
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             MARKETING
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="#coupons"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-ticket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="#offers"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bullseye"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="#banners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-image"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#newsletter"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-envelope"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+        <a
+            href="#partners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-store"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#franchise"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-building"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             REPORTS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="#sales-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-line"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-column"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SYSTEM
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-file-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-gear"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../../index.html"
+            class="admin-nav-link"
+            id="viewWebsiteBtn"
+        >
+
+            <i
+                class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i
+                class="fa-solid fa-arrow-right-from-bracket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="admin-main">
+
+
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="globalCustomerSearch"
+                type="search"
+                placeholder="Search customers, email, phone..."
+                autocomplete="off"
+                aria-label="Search customers"
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         NOTIFICATIONS
+    ====================================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+
+            <button
+                id="closeNotifications"
+                type="button"
+                aria-label="Close notifications"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <div>
+
+                <strong>
+                    New customer
+                </strong>
+
+                <small>
+                    14 new customers joined today.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-star"></i>
+
+            <div>
+
+                <strong>
+                    Customer review
+                </strong>
+
+                <small>
+                    A new review needs attention.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+
+                <strong>
+                    Repeat customer
+                </strong>
+
+                <small>
+                    A returning customer placed an order.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="admin-welcome customers-welcome">
+
+            <div>
+
+                <span>
+                    CUSTOMERS / MANAGEMENT
+                </span>
+
+
+                <h1>
+                    Customers
+                </h1>
+
+
+                <p>
+                    Manage OZZO customer profiles, activity, orders and account status.
+                </p>
+
+            </div>
+
+
+            <div class="customers-welcome-actions">
+
+                <div class="admin-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span>
+                        September 2026
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="add-customer-btn"
+                    id="openCustomerModal"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add Customer
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             STAT CARDS
+        ================================================== -->
+
+        <div class="row g-3 customers-stats">
+
+
+            <!-- TOTAL CUSTOMERS -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Customers
+                        </span>
+
+
+                        <strong id="totalCustomersCount">
+                            2,143
+                        </strong>
+
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.6% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVE -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Active Customers
+                        </span>
+
+
+                        <strong id="activeCustomersCount">
+                            1,846
+                        </strong>
+
+
+                        <small>
+                            86.1% of customer base
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEW CUSTOMERS -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            New This Month
+                        </span>
+
+
+                        <strong id="newCustomersCount">
+                            186
+                        </strong>
+
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            14.2% growth
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIP -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            VIP Customers
+                        </span>
+
+
+                        <strong id="vipCustomersCount">
+                            128
+                        </strong>
+
+
+                        <small>
+                            High-value customers
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CUSTOMER CARD
+        ================================================== -->
+
+        <section class="admin-card customers-card mt-3">
+
+
+            <!-- HEADER -->
+
+            <div class="admin-card-header customers-card-header">
+
+                <div>
+
+                    <span>
+                        CUSTOMER MANAGEMENT
+                    </span>
+
+
+                    <h2>
+                        Customer Directory
+                    </h2>
+
+                </div>
+
+
+                <div class="customer-header-actions">
+
+
+                    <button
+                        class="secondary-customer-btn"
+                        id="exportCustomersBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                        Export
+
+                    </button>
+
+
+                    <button
+                        class="add-customer-btn small"
+                        id="openCustomerModal2"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Add Customer
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FILTER TOOLBAR
+            ================================================== -->
+
+            <div class="customers-toolbar">
+
+
+                <div class="customer-search-wrap">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                    <input
+                        id="customerSearch"
+                        type="search"
+                        placeholder="Search customer, email or phone..."
+                        autocomplete="off"
+                        aria-label="Search customer directory"
+                    >
+
+                </div>
+
+
+                <select
+                    id="customerStatus"
+                    aria-label="Customer status"
+                >
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Inactive">
+                        Inactive
+                    </option>
+
+                    <option value="Blocked">
+                        Blocked
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="customerType"
+                    aria-label="Customer type"
+                >
+
+                    <option value="all">
+                        All Customers
+                    </option>
+
+                    <option value="Regular">
+                        Regular
+                    </option>
+
+                    <option value="VIP">
+                        VIP
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="customerOrders"
+                    aria-label="Customer orders"
+                >
+
+                    <option value="all">
+                        All Orders
+                    </option>
+
+                    <option value="0">
+                        No Orders
+                    </option>
+
+                    <option value="1-5">
+                        1–5 Orders
+                    </option>
+
+                    <option value="6+">
+                        6+ Orders
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="clear-customer-btn"
+                    id="clearFilters"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 SELECTION BAR
+            ================================================== -->
+
+            <div class="customer-selection-bar">
+
+
+                <div class="customer-selection-left">
+
+                    <span id="resultLabel">
+                        10 customers found
+                    </span>
+
+
+                    <span
+                        class="customer-selection-label"
+                        id="selectionLabel"
+                    >
+                        0 selected
+                    </span>
+
+                </div>
+
+
+                <div class="customer-bulk-actions">
+
+
+                    <button
+                        class="customer-bulk-btn"
+                        id="activateSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        Activate
+
+                    </button>
+
+
+                    <button
+                        class="customer-bulk-btn"
+                        id="deactivateSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-user-slash"></i>
+
+                        Deactivate
+
+                    </button>
+
+
+                    <button
+                        class="customer-bulk-btn danger"
+                        id="deleteSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TABLE
+            ================================================== -->
+
+            <div class="customers-table-wrap">
+
+
+                <table
+                    class="customers-table"
+                    id="customersTable"
+                >
+
+                    <thead>
+
+                        <tr>
+
+
+                            <th>
+
+                                <input
+                                    type="checkbox"
+                                    id="selectAll"
+                                    aria-label="Select all customers"
+                                >
+
+                            </th>
+
+
+                            <th>
+                                Customer
+                            </th>
+
+
+                            <th>
+                                Customer ID
+                            </th>
+
+
+                            <th>
+                                Phone
+                            </th>
+
+
+                            <th>
+                                Orders
+                            </th>
+
+
+                            <th>
+                                Spent
+                            </th>
+
+
+                            <th>
+                                Type
+                            </th>
+
+
+                            <th>
+                                Status
+                            </th>
+
+
+                            <th>
+                                Joined
+                            </th>
+
+
+                            <th>
+                                Action
+                            </th>
+
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="customersBody">
+                    </tbody>
+
+                </table>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-customers d-none"
+                    id="emptyState"
+                >
+
+                    <div class="empty-customers-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <h3>
+                        No customers found
+                    </h3>
+
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="customers-footer">
+
+
+                <span id="footerResult">
+                    Showing 1–7 of 10 customers
+                </span>
+
+
+                <div class="customers-pagination">
+
+
+                    <button
+                        id="prevPage"
+                        type="button"
+                        aria-label="Previous page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <span id="currentPage">
+                        1
+                    </span>
+
+
+                    <button
+                        id="nextPage"
+                        type="button"
+                        aria-label="Next page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     CUSTOMER DETAILS MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="customerDetailsModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content customer-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        CUSTOMER PROFILE
+                    </span>
+
+
+                    <h2 id="detailsCustomerName">
+                        Aarav Mehta
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="customer-profile-head">
+
+
+                    <div
+                        class="customer-profile-avatar"
+                        id="detailsAvatar"
+                    >
+                        AM
+                    </div>
+
+
+                    <div>
+
+                        <strong id="detailsFullName">
+                            Aarav Mehta
+                        </strong>
+
+
+                        <span id="detailsEmail">
+                            aarav.mehta@gmail.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-detail-grid">
+
+
+                    <div class="customer-detail-box">
+
+                        <span>
+                            Customer ID
+                        </span>
+
+                        <strong id="detailsId">
+                            CUST-2143
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-detail-box">
+
+                        <span>
+                            Phone
+                        </span>
+
+                        <strong id="detailsPhone">
+                            +91 98765 43210
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-detail-box">
+
+                        <span>
+                            Orders
+                        </span>
+
+                        <strong id="detailsOrders">
+                            8
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-detail-box">
+
+                        <span>
+                            Total Spent
+                        </span>
+
+                        <strong id="detailsSpent">
+                            ₹24,860
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-detail-box">
+
+                        <span>
+                            Customer Type
+                        </span>
+
+                        <strong id="detailsType">
+                            VIP
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-detail-box">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong id="detailsStatus">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-modal-section">
+
+
+                    <div class="customer-modal-title">
+
+                        <strong>
+                            Address
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-address-box">
+
+                        <p id="detailsAddress">
+                            12 Lake View Road,
+                            Jubilee Hills,
+                            Hyderabad,
+                            Telangana
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-modal-section">
+
+
+                    <div class="customer-modal-title">
+
+                        <strong>
+                            Last Activity
+                        </strong>
+
+                        <span id="detailsLastActivity">
+                            Today
+                        </span>
+
+                    </div>
+
+
+                    <div class="customer-activity-box">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        <span id="detailsActivity">
+                            Placed an order for Classic Oversized Shirt.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+                <button
+                    type="button"
+                    class="secondary-customer-btn"
+                    data-bs-dismiss="modal"
+                >
+
+                    Close
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="add-customer-btn"
+                    id="editFromDetailsBtn"
+                >
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Edit Customer
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ADD CUSTOMER MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="customerFormModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content customer-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        CUSTOMER MANAGEMENT
+                    </span>
+
+
+                    <h2>
+                        Add New Customer
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <form id="customerForm">
+
+
+                <div class="modal-body">
+
+
+                    <div class="row g-3">
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="customerName"
+                                class="customer-label"
+                            >
+                                Full Name
+                            </label>
+
+
+                            <input
+                                id="customerName"
+                                class="customer-input"
+                                type="text"
+                                placeholder="Enter full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="customerEmail"
+                                class="customer-label"
+                            >
+                                Email Address
+                            </label>
+
+
+                            <input
+                                id="customerEmail"
+                                class="customer-input"
+                                type="email"
+                                placeholder="name@example.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="customerPhoneInput"
+                                class="customer-label"
+                            >
+                                Phone Number
+                            </label>
+
+
+                            <input
+                                id="customerPhoneInput"
+                                class="customer-input"
+                                type="tel"
+                                placeholder="+91 98765 43210"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="customerTypeInput"
+                                class="customer-label"
+                            >
+                                Customer Type
+                            </label>
+
+
+                            <select
+                                id="customerTypeInput"
+                                class="customer-input"
+                            >
+
+                                <option value="Regular">
+                                    Regular
+                                </option>
+
+                                <option value="VIP">
+                                    VIP
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label
+                                for="customerAddressInput"
+                                class="customer-label"
+                            >
+                                Address
+                            </label>
+
+
+                            <textarea
+                                id="customerAddressInput"
+                                class="customer-input customer-textarea"
+                                rows="4"
+                                placeholder="Enter customer address..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+
+                    <button
+                        type="button"
+                        class="secondary-customer-btn"
+                        data-bs-dismiss="modal"
+                    >
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="add-customer-btn"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Save Customer
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Customers JS -->
+
+<script src="./Customers.js"></script>
+
+
+</body>
+</html>

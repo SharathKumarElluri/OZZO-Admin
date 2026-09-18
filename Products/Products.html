@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OZZO Admin Product Management"
+    >
+
+    <title>OZZO | Products</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Products CSS -->
+    <link
+        rel="stylesheet"
+        href="./Products.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================= -->
+
+<header class="admin-mobile-header d-lg-none">
+
+    <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open admin menu"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <small>
+            ADMIN PANEL
+        </small>
+
+    </div>
+
+
+    <button
+        class="mobile-notification"
+        id="mobileNotificationBtn"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span>
+            4
+        </span>
+
+    </button>
+
+</header>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside
+    class="admin-sidebar"
+    id="adminSidebar"
+>
+
+
+    <!-- LOGO -->
+
+    <div class="admin-logo">
+
+        <strong>
+            OZZO
+        </strong>
+
+        <span>
+            ADMIN PANEL
+        </span>
+
+    </div>
+
+
+    <!-- ADMIN -->
+
+    <div class="admin-user">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Super Admin
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MAIN
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-pie"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SALES
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SALES
+        </div>
+
+
+        <a
+            href="/Orders/Orders.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bag-shopping"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Orders
+            </span>
+
+            <b>
+                18
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Payments/Payments.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-credit-card"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Payments
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Returns/Returns.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-rotate-left"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Returns
+            </span>
+
+            <b class="warning">
+                5
+            </b>
+
+        </a>
+
+
+        <a
+            href="/Shipping/Shipping.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-truck-fast"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Shipping
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             CATALOG
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CATALOG
+        </div>
+
+
+        <a
+            href="/Products/Products.html"
+           class="admin-nav-link active"
+            aria-current="page"
+        >
+
+            <i
+                class="fa-solid fa-box"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Products
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Categories/Categories.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-layer-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Inventory/Inventory.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-warehouse"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Inventory
+            </span>
+
+            <b class="warning">
+                3
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            CUSTOMERS
+        </div>
+
+
+        <a
+            href="/Customers/Customers.html"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-users"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customers
+            </span>
+
+        </a>
+
+
+        <a
+            href="/Reviews/Reviews.html"
+            class="admin-nav-link"
+          
+        >
+
+            <i
+                class="fa-regular fa-star"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Reviews
+            </span>
+
+        </a>
+
+
+        <!-- SUPPORT ACTIVE -->
+
+        <a
+            href="/Support/Support.html"
+            class="admin-nav-link"
+           
+        >
+
+            <i
+                class="fa-regular fa-comments"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Support
+            </span>
+
+            <b class="warning">
+                12
+            </b>
+
+        </a>
+
+
+        <!-- =================================================
+             MARKETING
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            MARKETING
+        </div>
+
+
+        <a
+            href="#coupons"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-ticket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Coupons
+            </span>
+
+        </a>
+
+
+        <a
+            href="#offers"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-bullseye"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Offers
+            </span>
+
+        </a>
+
+
+        <a
+            href="#banners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-image"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Banners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#newsletter"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-regular fa-envelope"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Newsletter
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            BUSINESS
+        </div>
+
+        <a
+            href="#partners"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-store"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Partners
+            </span>
+
+        </a>
+
+
+        <a
+            href="#franchise"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-building"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Franchise
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             REPORTS
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            REPORTS
+        </div>
+
+
+        <a
+            href="#sales-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-line"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Sales Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#product-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-chart-column"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Product Reports
+            </span>
+
+        </a>
+
+
+        <a
+            href="#customer-reports"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-group"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Customer Reports
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             SYSTEM
+        ================================================== -->
+
+        <div class="admin-nav-heading">
+            SYSTEM
+        </div>
+
+
+        <a
+            href="#staff"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-user-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Staff &amp; Roles
+            </span>
+
+        </a>
+
+
+        <a
+            href="#audit"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-file-shield"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Audit Logs
+            </span>
+
+        </a>
+
+
+        <a
+            href="#settings"
+            class="admin-nav-link"
+        >
+
+            <i
+                class="fa-solid fa-gear"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+        <div class="admin-nav-divider"></div>
+
+
+        <a
+            href="../../index.html"
+            class="admin-nav-link"
+            id="viewWebsiteBtn"
+        >
+
+            <i
+                class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                View Website
+            </span>
+
+        </a>
+
+
+        <button
+            class="admin-nav-link admin-logout"
+            id="logoutBtn"
+            type="button"
+        >
+
+            <i
+                class="fa-solid fa-arrow-right-from-bracket"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="admin-main">
+
+
+    <!-- TOPBAR -->
+
+    <header class="admin-topbar d-none d-lg-flex">
+
+        <div class="admin-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="globalProductSearch"
+                type="search"
+                placeholder="Search products, SKU, categories..."
+                autocomplete="off"
+                aria-label="Search products"
+            >
+
+        </div>
+
+
+        <div class="admin-top-right">
+
+
+            <button
+                class="admin-top-icon"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>
+                    4
+                </span>
+
+            </button>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-small-avatar">
+                    A
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Super Admin
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- NOTIFICATION -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-panel-head">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                id="closeNotifications"
+                type="button"
+                aria-label="Close notifications"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-box"></i>
+
+            <div>
+
+                <strong>
+                    Low stock alert
+                </strong>
+
+                <small>
+                    Ultra Thin Day Pads are running low.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <div>
+
+                <strong>
+                    Product added
+                </strong>
+
+                <small>
+                    New product is ready to publish.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-star"></i>
+
+            <div>
+
+                <strong>
+                    New review
+                </strong>
+
+                <small>
+                    A customer reviewed Atomic Habits.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <div class="admin-content">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="admin-welcome products-welcome">
+
+            <div>
+
+                <span>
+                    CATALOG / PRODUCTS
+                </span>
+
+
+                <h1>
+                    Products
+                </h1>
+
+
+                <p>
+                    Manage OZZO fashion, books, stationery and personal care products.
+                </p>
+
+            </div>
+
+
+            <div class="admin-welcome-actions">
+
+                <div class="admin-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span>
+                        September 2026
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="add-product-btn"
+                    id="openProductModal"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Product
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <div class="row g-3 products-stats">
+
+
+            <!-- TOTAL PRODUCTS -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Products
+                        </span>
+
+                        <strong id="totalProductsCount">
+                            46
+                        </strong>
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            6 added this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IN STOCK -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            In Stock
+                        </span>
+
+                        <strong id="inStockCount">
+                            38
+                        </strong>
+
+                        <small>
+                            82.6% of catalog
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOW STOCK -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Low Stock
+                        </span>
+
+                        <strong id="lowStockCount">
+                            5
+                        </strong>
+
+                        <small>
+                            Requires attention
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OUT OF STOCK -->
+
+            <div class="col-xl-3 col-md-6">
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Out of Stock
+                        </span>
+
+                        <strong id="outStockCount">
+                            3
+                        </strong>
+
+                        <small>
+                            Currently unavailable
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCTS CARD
+        ================================================== -->
+
+        <section class="admin-card products-card mt-3">
+
+
+            <!-- HEADER -->
+
+            <div class="admin-card-header products-card-header">
+
+                <div>
+
+                    <span>
+                        CATALOG
+                    </span>
+
+                    <h2>
+                        Product Management
+                    </h2>
+
+                </div>
+
+
+                <div class="product-header-actions">
+
+                    <button
+                        class="secondary-product-btn"
+                        id="exportProductsBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                        Export
+
+                    </button>
+
+
+                    <button
+                        class="add-product-btn small"
+                        id="openProductModal2"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Product
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="products-toolbar">
+
+
+                <div class="product-search-wrap">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="productSearch"
+                        type="search"
+                        placeholder="Search product or SKU..."
+                        autocomplete="off"
+                        aria-label="Search products"
+                    >
+
+                </div>
+
+
+                <select
+                    id="categoryFilter"
+                    aria-label="Category filter"
+                >
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Fashion">
+                        Fashion
+                    </option>
+
+                    <option value="Books">
+                        Books
+                    </option>
+
+                    <option value="Stationery">
+                        Stationery
+                    </option>
+
+                    <option value="Pads & Personal Care">
+                        Pads & Personal Care
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="stockFilter"
+                    aria-label="Stock filter"
+                >
+
+                    <option value="all">
+                        All Stock
+                    </option>
+
+                    <option value="In Stock">
+                        In Stock
+                    </option>
+
+                    <option value="Low Stock">
+                        Low Stock
+                    </option>
+
+                    <option value="Out of Stock">
+                        Out of Stock
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="statusFilter"
+                    aria-label="Product status filter"
+                >
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Draft">
+                        Draft
+                    </option>
+
+                    <option value="Archived">
+                        Archived
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="clear-product-btn"
+                    id="clearFilters"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- SELECTION BAR -->
+
+            <div class="product-selection-bar">
+
+                <div class="product-selection-left">
+
+                    <span id="resultLabel">
+                        10 products found
+                    </span>
+
+
+                    <span
+                        class="product-selection-label"
+                        id="selectionLabel"
+                    >
+                        0 selected
+                    </span>
+
+                </div>
+
+
+                <div class="product-bulk-actions">
+
+                    <button
+                        class="product-bulk-btn"
+                        id="publishSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Publish
+
+                    </button>
+
+
+                    <button
+                        class="product-bulk-btn"
+                        id="archiveSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-box-archive"></i>
+
+                        Archive
+
+                    </button>
+
+
+                    <button
+                        class="product-bulk-btn danger"
+                        id="deleteSelectedBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="products-table-wrap">
+
+                <table
+                    class="products-table"
+                    id="productsTable"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+
+                                <input
+                                    type="checkbox"
+                                    id="selectAll"
+                                    aria-label="Select all products"
+                                >
+
+                            </th>
+
+
+                            <th>
+                                Product
+                            </th>
+
+
+                            <th>
+                                SKU
+                            </th>
+
+
+                            <th>
+                                Category
+                            </th>
+
+
+                            <th>
+                                Price
+                            </th>
+
+
+                            <th>
+                                Stock
+                            </th>
+
+
+                            <th>
+                                Status
+                            </th>
+
+
+                            <th>
+                                Updated
+                            </th>
+
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="productsBody">
+                    </tbody>
+
+                </table>
+
+
+                <div
+                    class="empty-products d-none"
+                    id="emptyState"
+                >
+
+                    <div class="empty-products-icon">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                    </div>
+
+
+                    <h3>
+                        No products found
+                    </h3>
+
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="products-footer">
+
+                <span id="footerResult">
+                    Showing 1–7 of 10 products
+                </span>
+
+
+                <div class="products-pagination">
+
+                    <button
+                        id="prevPage"
+                        type="button"
+                        aria-label="Previous page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <span id="currentPage">
+                        1
+                    </span>
+
+
+                    <button
+                        id="nextPage"
+                        type="button"
+                        aria-label="Next page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     PRODUCT MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="productModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content product-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-kicker">
+                        PRODUCT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Add New Product
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <form id="productForm">
+
+                <div class="modal-body">
+
+
+                    <div class="row g-3">
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="productName"
+                                class="product-label"
+                            >
+                                Product Name
+                            </label>
+
+                            <input
+                                id="productName"
+                                class="product-input"
+                                type="text"
+                                placeholder="Enter product name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="productSku"
+                                class="product-label"
+                            >
+                                SKU
+                            </label>
+
+                            <input
+                                id="productSku"
+                                class="product-input"
+                                type="text"
+                                placeholder="OZZO-XXX-001"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="productCategory"
+                                class="product-label"
+                            >
+                                Category
+                            </label>
+
+                            <select
+                                id="productCategory"
+                                class="product-input"
+                                required
+                            >
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option value="Fashion">
+                                    Fashion
+                                </option>
+
+                                <option value="Books">
+                                    Books
+                                </option>
+
+                                <option value="Stationery">
+                                    Stationery
+                                </option>
+
+                                <option value="Pads & Personal Care">
+                                    Pads & Personal Care
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="productPrice"
+                                class="product-label"
+                            >
+                                Selling Price
+                            </label>
+
+                            <input
+                                id="productPrice"
+                                class="product-input"
+                                type="number"
+                                min="0"
+                                placeholder="₹0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="productMrp"
+                                class="product-label"
+                            >
+                                MRP
+                            </label>
+
+                            <input
+                                id="productMrp"
+                                class="product-input"
+                                type="number"
+                                min="0"
+                                placeholder="₹0"
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="productStock"
+                                class="product-label"
+                            >
+                                Stock Quantity
+                            </label>
+
+                            <input
+                                id="productStock"
+                                class="product-input"
+                                type="number"
+                                min="0"
+                                placeholder="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label
+                                for="productDescription"
+                                class="product-label"
+                            >
+                                Description
+                            </label>
+
+                            <textarea
+                                id="productDescription"
+                                class="product-input product-textarea"
+                                rows="4"
+                                placeholder="Enter product description..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="secondary-product-btn"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="add-product-btn"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Save Product
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Products JS -->
+
+<script src="./Products.js"></script>
+
+
+</body>
+</html>

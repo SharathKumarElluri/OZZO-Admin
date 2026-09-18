@@ -1,0 +1,639 @@
+/* =========================================================
+   OZZO ORDERS PAGE
+   Uses the EXACT OZZO Admin base layout from index.css
+========================================================= */
+
+.orders-welcome{ margin-bottom:22px; }
+
+.orders-summary{ margin-bottom:18px; }
+
+.order-stat-card{ min-height:116px; }
+
+/* =========================================================
+   ORDERS CARD
+========================================================= */
+
+.orders-card{
+    overflow:visible;
+}
+
+.orders-card-header{
+    padding-bottom:17px;
+}
+
+.order-export-btn,
+.order-secondary-btn,
+.order-clear-btn,
+.bulk-btn{
+    min-height:34px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    border-radius:7px;
+    font-size:8px;
+    font-weight:700;
+    transition:.2s ease;
+}
+
+.order-export-btn{
+    padding:0 13px;
+    border:1px solid var(--navy);
+    background:var(--navy);
+    color:#fff;
+}
+
+.order-export-btn:hover{
+    background:var(--navy-dark);
+    color:#fff;
+}
+
+.order-toolbar{
+    display:grid;
+    grid-template-columns:minmax(220px,1.5fr) 1fr 1fr 1fr auto;
+    gap:8px;
+    padding:14px 20px;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    background:rgba(19,36,56,.018);
+}
+
+.order-toolbar-search{
+    position:relative;
+    min-width:0;
+}
+
+.order-toolbar-search i{
+    position:absolute;
+    left:13px;
+    top:50%;
+    transform:translateY(-50%);
+    color:var(--muted);
+    font-size:9px;
+}
+
+.order-toolbar-search input,
+.order-toolbar select{
+    width:100%;
+    height:36px;
+    border:1px solid var(--border);
+    border-radius:7px;
+    background:#fff;
+    color:var(--text);
+    outline:none;
+    font-size:8px;
+}
+
+.order-toolbar-search input{
+    padding:0 10px 0 32px;
+}
+
+.order-toolbar select{
+    padding:0 9px;
+}
+
+.order-toolbar-search input:focus,
+.order-toolbar select:focus{
+    border-color:#bec9d3;
+    box-shadow:0 0 0 3px rgba(19,36,56,.03);
+}
+
+.order-clear-btn{
+    padding:0 13px;
+    border:1px solid var(--border);
+    background:#fff;
+    color:var(--navy);
+}
+
+.order-clear-btn:hover{
+    background:var(--surface);
+}
+
+/* =========================================================
+   SELECTED TOOLBAR
+========================================================= */
+
+.selected-toolbar{
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:0 20px;
+}
+
+.selected-toolbar > div:first-child{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.selected-toolbar #resultLabel{
+    color:var(--muted);
+    font-size:8px;
+}
+
+.selection-label{
+    padding:4px 8px;
+    border-radius:50px;
+    background:var(--blue);
+    color:#4b687b;
+    font-size:7px;
+    font-weight:700;
+}
+
+.selected-actions{
+    display:flex;
+    gap:6px;
+}
+
+.bulk-btn{
+    padding:0 10px;
+    min-height:29px;
+    border:1px solid var(--border);
+    background:#fff;
+    color:var(--navy);
+}
+
+.bulk-btn:hover{
+    background:var(--surface);
+}
+
+/* =========================================================
+   ORDERS TABLE
+========================================================= */
+
+.orders-table{
+    min-width:980px;
+}
+
+.orders-table th,
+.orders-table td{
+    white-space:nowrap;
+}
+
+.orders-table th.check-cell,
+.orders-table td.check-cell{
+    width:42px;
+    padding-left:20px;
+}
+
+.orders-table input[type="checkbox"]{
+    width:13px;
+    height:13px;
+    accent-color:var(--navy);
+    cursor:pointer;
+}
+
+.order-id-cell strong{
+    color:var(--navy);
+    font-size:8px;
+}
+
+.customer-main,
+.product-main{
+    display:block;
+    color:var(--navy);
+    font-weight:700;
+    font-size:8px;
+}
+
+.customer-sub,
+.product-sub{
+    display:block;
+    margin-top:3px;
+    color:var(--muted);
+    font-size:7px;
+}
+
+.order-total{
+    color:var(--navy) !important;
+    font-weight:700;
+}
+
+.payment-state{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    color:var(--muted);
+    font-size:7px;
+    font-weight:600;
+}
+
+.payment-dot{
+    width:6px;
+    height:6px;
+    flex:0 0 6px;
+    border-radius:50%;
+    background:var(--success);
+}
+
+.payment-state.unpaid .payment-dot{
+    background:var(--warning);
+}
+
+.order-status-pill{
+    min-height:21px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 8px;
+    border-radius:50px;
+    font-size:7px;
+    font-weight:700;
+}
+
+.order-status-pill.pending{
+    background:#f7ecd8;
+    color:#8d661e;
+}
+
+.order-status-pill.processing{
+    background:var(--purple);
+    color:#745c89;
+}
+
+.order-status-pill.shipped{
+    background:var(--blue);
+    color:#4e6f82;
+}
+
+.order-status-pill.delivered{
+    background:var(--green);
+    color:#3f7053;
+}
+
+.order-status-pill.cancelled{
+    background:#f7dfe1;
+    color:var(--danger);
+}
+
+.order-view-btn{
+    min-width:47px;
+    height:26px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    padding:0 8px;
+    border:1px solid var(--border);
+    border-radius:6px;
+    background:#fff;
+    color:var(--navy);
+    font-size:7px;
+    font-weight:700;
+}
+
+.order-view-btn:hover{
+    background:var(--navy);
+    color:#fff;
+    border-color:var(--navy);
+}
+
+.orders-table tbody tr:hover td{
+    background:rgba(19,36,56,.018);
+}
+
+.orders-table-wrapper{
+    border-top:0;
+}
+
+/* =========================================================
+   EMPTY STATE / FOOTER
+========================================================= */
+
+.empty-orders{
+    padding:45px 20px;
+    text-align:center;
+}
+
+.empty-orders-icon{
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 10px;
+    border-radius:50%;
+    background:var(--surface);
+    color:var(--muted);
+}
+
+.empty-orders h3{
+    margin:0;
+    color:var(--navy);
+    font-size:14px;
+}
+
+.empty-orders p{
+    margin:5px 0 0;
+    color:var(--muted);
+    font-size:8px;
+}
+
+.orders-footer{
+    min-height:57px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:0 20px;
+    border-top:1px solid var(--border);
+}
+
+.orders-footer > span{
+    color:var(--muted);
+    font-size:8px;
+}
+
+.orders-pagination{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.orders-pagination button,
+.orders-pagination span{
+    width:29px;
+    height:29px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--border);
+    border-radius:6px;
+    background:#fff;
+    color:var(--navy);
+    font-size:8px;
+}
+
+.orders-pagination span{
+    border-color:var(--navy);
+    background:var(--navy);
+    color:#fff;
+    font-weight:700;
+}
+
+.orders-pagination button:hover:not(:disabled){
+    background:var(--surface);
+}
+
+.orders-pagination button:disabled{
+    opacity:.38;
+    cursor:not-allowed;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.order-modal{
+    border:1px solid var(--border);
+    border-radius:17px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(13,29,45,.17);
+}
+
+.order-modal .modal-header{
+    padding:20px 21px;
+    border-bottom:1px solid var(--border);
+}
+
+.modal-kicker{
+    color:var(--navy);
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:1.4px;
+}
+
+.order-modal .modal-header h2{
+    margin:5px 0 0;
+    color:var(--navy);
+    font-family:"Playfair Display",serif;
+    font-size:23px;
+}
+
+.order-modal .modal-body{
+    padding:21px;
+}
+
+.detail-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.detail-box{
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:var(--surface);
+}
+
+.detail-box span{
+    display:block;
+    color:var(--muted);
+    font-size:7px;
+}
+
+.detail-box strong{
+    display:block;
+    margin-top:5px;
+    color:var(--navy);
+    font-size:9px;
+}
+
+.modal-section{
+    margin-top:17px;
+}
+
+.modal-section-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+
+.modal-section-title strong{
+    color:var(--navy);
+    font-size:9px;
+}
+
+.modal-section-title span{
+    color:var(--muted);
+    font-size:7px;
+}
+
+.modal-product-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:10px;
+}
+
+.modal-product-row strong{
+    color:var(--navy);
+    font-size:9px;
+}
+
+.modal-product-row small{
+    display:block;
+    margin-top:4px;
+    color:var(--muted);
+    font-size:7px;
+}
+
+.modal-address{
+    margin-top:13px;
+    padding:13px;
+    border-radius:10px;
+    background:var(--surface);
+}
+
+.modal-address span{
+    color:var(--muted);
+    font-size:7px;
+}
+
+.modal-address p{
+    margin:5px 0 0;
+    color:var(--text);
+    font-size:8px;
+    line-height:1.6;
+}
+
+.order-modal .modal-footer{
+    padding:13px 21px;
+    border-top:1px solid var(--border);
+}
+
+.order-secondary-btn{
+    padding:0 13px;
+    border:1px solid var(--border);
+    background:#fff;
+    color:var(--navy);
+}
+
+.order-secondary-btn:hover{
+    background:var(--surface);
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    .admin-sidebar,
+    .admin-topbar,
+    .admin-mobile-header,
+    .sidebar-overlay,
+    .notification-panel,
+    .order-toolbar,
+    .selected-toolbar,
+    .orders-footer,
+    .modal-footer{
+        display:none !important;
+    }
+
+    .admin-main{
+        margin:0 !important;
+    }
+
+    .admin-content{
+        padding:0 !important;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:991.98px){
+
+    .orders-card-header{
+        align-items:flex-start;
+    }
+
+    .order-toolbar{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .order-toolbar-search{
+        grid-column:1 / -1;
+    }
+
+    .selected-toolbar{
+        align-items:flex-start;
+        flex-direction:column;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    .selected-actions{
+        width:100%;
+    }
+
+    .bulk-btn{
+        flex:1;
+    }
+
+    .detail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:575.98px){
+
+    .orders-welcome{
+        margin-bottom:18px;
+    }
+
+    .order-export-btn{
+        width:100%;
+    }
+
+    .orders-card-header{
+        gap:12px;
+    }
+
+    .order-toolbar{
+        grid-template-columns:1fr;
+        padding:13px 14px;
+    }
+
+    .order-toolbar-search{
+        grid-column:auto;
+    }
+
+    .order-clear-btn{
+        width:100%;
+    }
+
+    .selected-toolbar{
+        padding-left:14px;
+        padding-right:14px;
+    }
+
+    .bulk-btn{
+        font-size:7px;
+        padding:0 7px;
+    }
+
+    .orders-footer{
+        padding:0 14px;
+    }
+
+    .detail-grid{
+        grid-template-columns:1fr;
+    }
+
+    .order-modal .modal-header,
+    .order-modal .modal-body,
+    .order-modal .modal-footer{
+        padding-left:16px;
+        padding-right:16px;
+    }
+}
