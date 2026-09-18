@@ -48,7 +48,18 @@ body{
     font-family:"DM Sans",sans-serif;
     overflow-x:hidden;
 }
+/* =========================================================
+   ALLOW NORMAL TEXT SELECTION
+========================================================= */
 
+html,
+body,
+body *{
+    -webkit-user-select:text;
+    -moz-user-select:text;
+    -ms-user-select:text;
+    user-select:text;
+}
 a{
     text-decoration:none;
     color:inherit;
@@ -60,8 +71,20 @@ select{
     font:inherit;
 }
 
-button{
-    cursor:pointer;
+/* =========================================================
+   BUTTONS / LINKS SHOULD NOT SELECT TEXT
+========================================================= */
+
+button,
+a,
+.admin-nav-link,
+.admin-view-btn,
+.quick-action,
+.plain-link{
+    -webkit-user-select:none !important;
+    -moz-user-select:none !important;
+    -ms-user-select:none !important;
+    user-select:none !important;
 }
 
 /* =========================================================
