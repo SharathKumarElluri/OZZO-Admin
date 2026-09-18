@@ -1,20 +1,93 @@
-/* =========================================================
-   OZZO ADMIN
-   STAFF & ROLES
-========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
+    /* =========================================================
+       STAFF DATA
+    ========================================================= */
+
+    const staffData = [
+
+        {
+            name: "Anjali Rao",
+            email: "anjali.rao@ozzo.com",
+            initials: "AR",
+            role: "Super Admin",
+            department: "Management",
+            status: "Active",
+            lastActive: "Today 10:42 AM"
+        },
+
+        {
+            name: "Rahul Mehta",
+            email: "rahul.mehta@ozzo.com",
+            initials: "RM",
+            role: "Admin",
+            department: "Operations",
+            status: "Active",
+            lastActive: "Today 9:58 AM"
+        },
+
+        {
+            name: "Priya Sharma",
+            email: "priya.sharma@ozzo.com",
+            initials: "PS",
+            role: "Manager",
+            department: "Sales",
+            status: "Active",
+            lastActive: "Today 9:31 AM"
+        },
+
+        {
+            name: "Vikram Singh",
+            email: "vikram.singh@ozzo.com",
+            initials: "VS",
+            role: "Support",
+            department: "Customer Support",
+            status: "Active",
+            lastActive: "Today 8:47 AM"
+        },
+
+        {
+            name: "Sneha Patel",
+            email: "sneha.patel@ozzo.com",
+            initials: "SP",
+            role: "Operations",
+            department: "Inventory",
+            status: "Active",
+            lastActive: "Yesterday 6:14 PM"
+        },
+
+        {
+            name: "Arjun Kumar",
+            email: "arjun.kumar@ozzo.com",
+            initials: "AK",
+            role: "Admin",
+            department: "Catalog",
+            status: "Inactive",
+            lastActive: "15 Sep 7:26 PM"
+        },
+
+        {
+            name: "Neha Reddy",
+            email: "neha.reddy@ozzo.com",
+            initials: "NR",
+            role: "Manager",
+            department: "Marketing",
+            status: "Pending",
+            lastActive: "Invitation sent 16 Sep"
+        }
+
+    ];
 
 
-    /* =====================================================
+    /* =========================================================
        ELEMENTS
-    ===================================================== */
+    ========================================================= */
 
     const sidebar =
         document.getElementById("adminSidebar");
 
     const overlay =
-        document.getElementById("adminOverlay");
+        document.getElementById("sidebarOverlay");
 
     const mobileMenuBtn =
         document.getElementById("mobileMenuBtn");
@@ -28,14 +101,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const notificationPanel =
         document.getElementById("notificationPanel");
 
-    const closeNotifications =
-        document.getElementById("closeNotifications");
+    const logoutBtn =
+        document.getElementById("logoutBtn");
 
-    const adminSearch =
-        document.getElementById("adminSearch");
+    const adminToast =
+        document.getElementById("adminToast");
 
     const staffSearch =
         document.getElementById("staffSearch");
+
+    const topSearch =
+        document.getElementById("topSearch");
 
     const roleFilter =
         document.getElementById("roleFilter");
@@ -43,14 +119,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const statusFilter =
         document.getElementById("statusFilter");
 
-    const staffTableBody =
-        document.getElementById("staffTableBody");
+    const resultCount =
+        document.getElementById("resultCount");
 
-    const staffCount =
-        document.getElementById("staffCount");
+    const staffModal =
+        document.getElementById("staffModal");
 
-    const clearFiltersBtn =
-        document.getElementById("clearFiltersBtn");
+    const addStaffModal =
+        document.getElementById("addStaffModal");
 
     const addStaffBtn =
         document.getElementById("addStaffBtn");
@@ -58,304 +134,139 @@ document.addEventListener("DOMContentLoaded", function () {
     const manageRolesBtn =
         document.getElementById("manageRolesBtn");
 
-    const logoutBtn =
-        document.getElementById("logoutBtn");
+    const auditLogsBtn =
+        document.getElementById("auditLogsBtn");
 
-    const currentDate =
-        document.getElementById("currentDate");
+    const closeStaffModal =
+        document.getElementById("closeStaffModal");
 
-    const staffModalElement =
-        document.getElementById("staffModal");
+    const cancelModalBtn =
+        document.getElementById("cancelModalBtn");
 
-    const staffForm =
-        document.getElementById("staffForm");
+    const closeAddStaffModal =
+        document.getElementById("closeAddStaffModal");
 
-    const staffModalTitle =
-        document.getElementById("staffModalTitle");
+    const cancelAddStaff =
+        document.getElementById("cancelAddStaff");
 
-    const saveStaffBtn =
-        document.getElementById("saveStaffBtn");
+    const editStaffBtn =
+        document.getElementById("editStaffBtn");
 
-
-    let staffModal = null;
-
-    if (staffModalElement) {
-
-        staffModal =
-            new bootstrap.Modal(
-                staffModalElement
-            );
-
-    }
+    const addStaffForm =
+        document.getElementById("addStaffForm");
 
 
-    let editingId = null;
+    /* =========================================================
+       TOAST
+    ========================================================= */
+
+    let toastTimer = null;
 
 
-    /* =====================================================
-       STAFF DATA
-    ===================================================== */
+    function showToast(message) {
 
-    const staffData = [
+        if (!adminToast) return;
 
-        {
-            id:1,
-            name:"Anjali Rao",
-            email:"anjali@ozzo.com",
-            role:"super-admin",
-            department:"Administration",
-            status:"active",
-            lastLogin:"Today, 10:42 AM"
-        },
+        adminToast.textContent = message;
 
-        {
-            id:2,
-            name:"Rahul Mehta",
-            email:"rahul@ozzo.com",
-            role:"admin",
-            department:"Operations",
-            status:"active",
-            lastLogin:"Today, 09:18 AM"
-        },
+        adminToast.classList.add("show");
 
-        {
-            id:3,
-            name:"Priya Sharma",
-            email:"priya@ozzo.com",
-            role:"manager",
-            department:"Sales",
-            status:"active",
-            lastLogin:"Today, 08:56 AM"
-        },
+        clearTimeout(toastTimer);
 
-        {
-            id:4,
-            name:"Vikram Singh",
-            email:"vikram@ozzo.com",
-            role:"support",
-            department:"Customer Care",
-            status:"active",
-            lastLogin:"Yesterday, 06:34 PM"
-        },
+        toastTimer = setTimeout(() => {
 
-        {
-            id:5,
-            name:"Sneha Patel",
-            email:"sneha@ozzo.com",
-            role:"operations",
-            department:"Logistics",
-            status:"pending",
-            lastLogin:"Never"
-        },
+            adminToast.classList.remove("show");
 
-        {
-            id:6,
-            name:"Arjun Kumar",
-            email:"arjun@ozzo.com",
-            role:"manager",
-            department:"Marketing",
-            status:"active",
-            lastLogin:"Yesterday, 04:18 PM"
-        },
-
-        {
-            id:7,
-            name:"Neha Reddy",
-            email:"neha@ozzo.com",
-            role:"support",
-            department:"Customer Care",
-            status:"inactive",
-            lastLogin:"Aug 28, 2026"
-        }
-
-    ];
-
-
-    /* =====================================================
-       DATE
-    ===================================================== */
-
-    if (currentDate) {
-
-        const now =
-            new Date();
-
-        currentDate.textContent =
-            now.toLocaleDateString(
-                "en-IN",
-                {
-                    month:"long",
-                    year:"numeric"
-                }
-            );
+        }, 2400);
 
     }
 
 
-    /* =====================================================
+    /* =========================================================
        MOBILE SIDEBAR
-    ===================================================== */
+    ========================================================= */
 
     function openSidebar() {
 
-        if (!sidebar || !overlay) {
-            return;
-        }
+        sidebar?.classList.add("show");
 
-        sidebar.classList.add("open");
+        overlay?.classList.add("show");
 
-        overlay.classList.add("show");
+        document.body.style.overflow = "hidden";
 
     }
 
 
     function closeSidebar() {
 
-        if (!sidebar || !overlay) {
-            return;
-        }
+        sidebar?.classList.remove("show");
 
-        sidebar.classList.remove("open");
+        overlay?.classList.remove("show");
 
-        overlay.classList.remove("show");
+        document.body.style.overflow = "";
 
     }
 
 
-    if (mobileMenuBtn) {
-
-        mobileMenuBtn.addEventListener(
-            "click",
-            openSidebar
-        );
-
-    }
+    mobileMenuBtn?.addEventListener(
+        "click",
+        openSidebar
+    );
 
 
-    if (overlay) {
-
-        overlay.addEventListener(
-            "click",
-            closeSidebar
-        );
-
-    }
+    overlay?.addEventListener(
+        "click",
+        closeSidebar
+    );
 
 
-    document
-        .querySelectorAll(".admin-nav-link")
-        .forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    if (
-                        window.innerWidth <= 991.98
-                    ) {
-
-                        closeSidebar();
-
-                    }
-
-                }
-            );
-
-        });
-
-
-    /* =====================================================
+    /* =========================================================
        NOTIFICATIONS
-    ===================================================== */
+    ========================================================= */
 
     function toggleNotifications() {
 
-        if (!notificationPanel) {
-            return;
+        notificationPanel?.classList.toggle("show");
+
+    }
+
+
+    notificationBtn?.addEventListener(
+        "click",
+        (event) => {
+
+            event.stopPropagation();
+
+            toggleNotifications();
+
         }
-
-        notificationPanel.classList.toggle(
-            "show"
-        );
-
-    }
+    );
 
 
-    function hideNotifications() {
+    mobileNotificationBtn?.addEventListener(
+        "click",
+        (event) => {
 
-        if (!notificationPanel) {
-            return;
+            event.stopPropagation();
+
+            toggleNotifications();
+
         }
-
-        notificationPanel.classList.remove(
-            "show"
-        );
-
-    }
-
-
-    if (notificationBtn) {
-
-        notificationBtn.addEventListener(
-            "click",
-            toggleNotifications
-        );
-
-    }
-
-
-    if (mobileNotificationBtn) {
-
-        mobileNotificationBtn.addEventListener(
-            "click",
-            toggleNotifications
-        );
-
-    }
-
-
-    if (closeNotifications) {
-
-        closeNotifications.addEventListener(
-            "click",
-            hideNotifications
-        );
-
-    }
+    );
 
 
     document.addEventListener(
         "click",
-        function (event) {
-
-            if (!notificationPanel) {
-                return;
-            }
-
-            const insidePanel =
-                notificationPanel.contains(
-                    event.target
-                );
-
-            const desktopButton =
-                notificationBtn &&
-                notificationBtn.contains(
-                    event.target
-                );
-
-            const mobileButton =
-                mobileNotificationBtn &&
-                mobileNotificationBtn.contains(
-                    event.target
-                );
+        (event) => {
 
             if (
-                !insidePanel &&
-                !desktopButton &&
-                !mobileButton
+                notificationPanel &&
+                !notificationPanel.contains(event.target) &&
+                event.target !== notificationBtn &&
+                event.target !== mobileNotificationBtn
             ) {
 
-                hideNotifications();
+                notificationPanel.classList.remove("show");
 
             }
 
@@ -363,47 +274,59 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* =====================================================
-       STAFF FILTERS
-    ===================================================== */
+    /* =========================================================
+       LOGOUT
+    ========================================================= */
 
-    function applyFilters() {
+    logoutBtn?.addEventListener(
+        "click",
+        () => {
 
-        if (!staffTableBody) {
-            return;
-        }
-
-
-        const searchValue =
-            staffSearch
-                ? staffSearch.value
-                    .trim()
-                    .toLowerCase()
-                : "";
-
-
-        const selectedRole =
-            roleFilter
-                ? roleFilter.value
-                : "all";
-
-
-        const selectedStatus =
-            statusFilter
-                ? statusFilter.value
-                : "all";
-
-
-        const rows =
-            staffTableBody.querySelectorAll(
-                "tr"
+            showToast(
+                "Logout action triggered."
             );
 
+        }
+    );
+
+
+    /* =========================================================
+       TABLE FILTER
+    ========================================================= */
+
+    const rows =
+        Array.from(
+            document.querySelectorAll(
+                "#staffTable tbody tr"
+            )
+        );
+
+
+    function filterStaff() {
+
+        const searchValue =
+            (staffSearch?.value || "")
+                .trim()
+                .toLowerCase();
+
+        const topSearchValue =
+            (topSearch?.value || "")
+                .trim()
+                .toLowerCase();
+
+        const searchText =
+            searchValue || topSearchValue;
+
+        const selectedRole =
+            roleFilter?.value || "all";
+
+        const selectedStatus =
+            statusFilter?.value || "all";
 
         let visibleCount = 0;
 
 
-        rows.forEach(function (row) {
+        rows.forEach((row) => {
 
             const name =
                 (row.dataset.name || "")
@@ -415,14 +338,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const status =
                 row.dataset.status || "";
 
-            const fullText =
-                row.textContent.toLowerCase();
-
 
             const matchesSearch =
-                !searchValue ||
-                name.includes(searchValue) ||
-                fullText.includes(searchValue);
+                !searchText ||
+                name.includes(searchText) ||
+                role.toLowerCase().includes(searchText) ||
+                status.toLowerCase().includes(searchText);
 
 
             const matchesRole =
@@ -435,736 +356,468 @@ document.addEventListener("DOMContentLoaded", function () {
                 status === selectedStatus;
 
 
-            if (
+            const visible =
                 matchesSearch &&
                 matchesRole &&
-                matchesStatus
-            ) {
+                matchesStatus;
 
-                row.style.display = "";
 
+            row.classList.toggle(
+                "staff-row-hidden",
+                !visible
+            );
+
+
+            if (visible) {
                 visibleCount++;
-
-            } else {
-
-                row.style.display = "none";
-
             }
 
         });
 
 
-        if (staffCount) {
+        if (resultCount) {
 
-            staffCount.textContent =
-                `Showing ${visibleCount} staff members`;
-
-        }
-
-    }
-
-
-    if (staffSearch) {
-
-        staffSearch.addEventListener(
-            "input",
-            applyFilters
-        );
-
-    }
-
-
-    if (roleFilter) {
-
-        roleFilter.addEventListener(
-            "change",
-            applyFilters
-        );
-
-    }
-
-
-    if (statusFilter) {
-
-        statusFilter.addEventListener(
-            "change",
-            applyFilters
-        );
-
-    }
-
-
-    /* =====================================================
-       CLEAR FILTERS
-    ===================================================== */
-
-    if (clearFiltersBtn) {
-
-        clearFiltersBtn.addEventListener(
-            "click",
-            function () {
-
-                if (staffSearch) {
-                    staffSearch.value = "";
-                }
-
-                if (roleFilter) {
-                    roleFilter.value = "all";
-                }
-
-                if (statusFilter) {
-                    statusFilter.value = "all";
-                }
-
-                applyFilters();
-
-                showToast(
-                    "Filters Cleared",
-                    "All staff filters have been reset."
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       TOP SEARCH
-    ===================================================== */
-
-    if (adminSearch) {
-
-        adminSearch.addEventListener(
-            "input",
-            function () {
-
-                const value =
-                    adminSearch.value
-                        .trim()
-                        .toLowerCase();
-
-
-                if (!value) {
-                    return;
-                }
-
-
-                const matches =
-                    staffData.filter(
-                        function (staff) {
-
-                            const searchable =
-                                `${staff.name} ${staff.email} ${staff.role} ${staff.department}`
-                                    .toLowerCase();
-
-                            return searchable.includes(
-                                value
-                            );
-
-                        }
-                    );
-
-
-                showToast(
-                    "Search",
-                    `${matches.length} staff record(s) found.`
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       MODAL RESET
-    ===================================================== */
-
-    function resetForm() {
-
-        if (staffForm) {
-            staffForm.reset();
-        }
-
-        editingId = null;
-
-
-        if (staffModalTitle) {
-
-            staffModalTitle.textContent =
-                "Add Staff Member";
-
-        }
-
-
-        if (saveStaffBtn) {
-
-            saveStaffBtn.textContent =
-                "Save Staff";
+            resultCount.textContent =
+                `Showing ${visibleCount} of 24 staff members`;
 
         }
 
     }
 
 
-    /* =====================================================
-       ADD STAFF
-    ===================================================== */
-
-    if (addStaffBtn) {
-
-        addStaffBtn.addEventListener(
-            "click",
-            function () {
-
-                resetForm();
-
-                if (staffModal) {
-                    staffModal.show();
-                }
-
-            }
-        );
-
-    }
+    staffSearch?.addEventListener(
+        "input",
+        filterStaff
+    );
 
 
-    /* =====================================================
-       EDIT STAFF
-    ===================================================== */
+    topSearch?.addEventListener(
+        "input",
+        filterStaff
+    );
 
-    function editStaff(id) {
+
+    roleFilter?.addEventListener(
+        "change",
+        filterStaff
+    );
+
+
+    statusFilter?.addEventListener(
+        "change",
+        filterStaff
+    );
+
+
+    /* =========================================================
+       STAFF MODAL
+    ========================================================= */
+
+    const modalAvatar =
+        document.getElementById("modalAvatar");
+
+    const modalName =
+        document.getElementById("modalName");
+
+    const modalEmail =
+        document.getElementById("modalEmail");
+
+    const modalRole =
+        document.getElementById("modalRole");
+
+    const modalDepartment =
+        document.getElementById("modalDepartment");
+
+    const modalStatus =
+        document.getElementById("modalStatus");
+
+    const modalLastActive =
+        document.getElementById("modalLastActive");
+
+
+    function openStaffModal(index) {
 
         const staff =
-            staffData.find(
-                function (item) {
+            staffData[index];
 
-                    return item.id === id;
-
-                }
-            );
+        if (!staff) return;
 
 
-        if (!staff) {
-            return;
+        if (modalAvatar) {
+
+            modalAvatar.textContent =
+                staff.initials;
+
         }
 
 
-        editingId = id;
+        if (modalName) {
 
-
-        const nameInput =
-            document.getElementById(
-                "staffName"
-            );
-
-        const emailInput =
-            document.getElementById(
-                "staffEmail"
-            );
-
-        const roleInput =
-            document.getElementById(
-                "staffRole"
-            );
-
-        const statusInput =
-            document.getElementById(
-                "staffStatus"
-            );
-
-        const departmentInput =
-            document.getElementById(
-                "staffDepartment"
-            );
-
-
-        if (nameInput) {
-            nameInput.value =
+            modalName.textContent =
                 staff.name;
+
         }
 
 
-        if (emailInput) {
-            emailInput.value =
+        if (modalEmail) {
+
+            modalEmail.textContent =
                 staff.email;
+
         }
 
 
-        if (roleInput) {
-            roleInput.value =
+        if (modalRole) {
+
+            modalRole.textContent =
                 staff.role;
+
         }
 
 
-        if (statusInput) {
-            statusInput.value =
-                staff.status;
-        }
+        if (modalDepartment) {
 
-
-        if (departmentInput) {
-            departmentInput.value =
+            modalDepartment.textContent =
                 staff.department;
-        }
-
-
-        if (staffModalTitle) {
-
-            staffModalTitle.textContent =
-                "Edit Staff Member";
 
         }
 
 
-        if (saveStaffBtn) {
+        if (modalStatus) {
 
-            saveStaffBtn.textContent =
-                "Update Staff";
+            modalStatus.textContent =
+                staff.status;
 
         }
 
 
-        if (staffModal) {
-            staffModal.show();
+        if (modalLastActive) {
+
+            modalLastActive.textContent =
+                staff.lastActive;
+
         }
+
+
+        staffModal?.classList.add("show");
+
+        staffModal?.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
 
     }
 
 
-    document
-        .querySelectorAll(".edit-btn")
-        .forEach(function (button) {
+    function closeStaffProfileModal() {
 
-            button.addEventListener(
-                "click",
-                function () {
+        staffModal?.classList.remove("show");
 
-                    editStaff(
-                        Number(
-                            button.dataset.id
-                        )
-                    );
+        staffModal?.setAttribute(
+            "aria-hidden",
+            "true"
+        );
 
-                }
-            );
+        document.body.style.overflow = "";
 
-        });
+    }
 
 
-    /* =====================================================
-       SAVE STAFF
-    ===================================================== */
+    document.querySelectorAll(
+        ".view-staff"
+    ).forEach((button) => {
 
-    if (staffForm) {
+        button.addEventListener(
+            "click",
+            () => {
 
-        staffForm.addEventListener(
-            "submit",
-            function (event) {
+                const index =
+                    Number(button.dataset.index);
 
-                event.preventDefault();
-
-
-                const nameInput =
-                    document.getElementById(
-                        "staffName"
-                    );
-
-                const emailInput =
-                    document.getElementById(
-                        "staffEmail"
-                    );
-
-                const roleInput =
-                    document.getElementById(
-                        "staffRole"
-                    );
-
-                const statusInput =
-                    document.getElementById(
-                        "staffStatus"
-                    );
-
-                const departmentInput =
-                    document.getElementById(
-                        "staffDepartment"
-                    );
-
-
-                const name =
-                    nameInput
-                        ? nameInput.value.trim()
-                        : "";
-
-
-                const email =
-                    emailInput
-                        ? emailInput.value.trim()
-                        : "";
-
-
-                const role =
-                    roleInput
-                        ? roleInput.value
-                        : "";
-
-
-                const status =
-                    statusInput
-                        ? statusInput.value
-                        : "active";
-
-
-                const department =
-                    departmentInput
-                        ? departmentInput.value.trim()
-                        : "";
-
-
-                if (
-                    !name ||
-                    !email ||
-                    !role ||
-                    !department
-                ) {
-
-                    showToast(
-                        "Incomplete Form",
-                        "Please fill in all required fields."
-                    );
-
-                    return;
-
-                }
-
-
-                /* =================================================
-                   EDIT EXISTING
-                ================================================= */
-
-                if (editingId !== null) {
-
-                    const staff =
-                        staffData.find(
-                            function (item) {
-
-                                return item.id === editingId;
-
-                            }
-                        );
-
-
-                    if (staff) {
-
-                        staff.name =
-                            name;
-
-                        staff.email =
-                            email;
-
-                        staff.role =
-                            role;
-
-                        staff.status =
-                            status;
-
-                        staff.department =
-                            department;
-
-                    }
-
-
-                    const row =
-                        staffTableBody
-                            ? staffTableBody.querySelector(
-                                `tr[data-id="${editingId}"]`
-                            )
-                            : null;
-
-
-                    if (row) {
-
-                        row.dataset.name =
-                            name;
-
-                        row.dataset.role =
-                            role;
-
-                        row.dataset.status =
-                            status;
-
-
-                        const personName =
-                            row.querySelector(
-                                ".staff-person strong"
-                            );
-
-                        const personEmail =
-                            row.querySelector(
-                                ".staff-person small"
-                            );
-
-                        const departmentCell =
-                            row.cells[2];
-
-                        const statusBadge =
-                            row.querySelector(
-                                ".status-badge"
-                            );
-
-
-                        if (personName) {
-                            personName.textContent =
-                                name;
-                        }
-
-
-                        if (personEmail) {
-                            personEmail.textContent =
-                                email;
-                        }
-
-
-                        if (departmentCell) {
-                            departmentCell.textContent =
-                                department;
-                        }
-
-
-                        if (statusBadge) {
-
-                            statusBadge.className =
-                                "status-badge " +
-                                status;
-
-                            statusBadge.textContent =
-                                capitalize(
-                                    status
-                                );
-
-                        }
-
-                    }
-
-
-                    showToast(
-                        "Staff Updated",
-                        `${name}'s details were updated.`
-                    );
-
-                }
-
-
-                /* =================================================
-                   ADD NEW
-                ================================================= */
-
-                else {
-
-                    const nextId =
-                        staffData.length
-                            ? Math.max(
-                                ...staffData.map(
-                                    function (item) {
-                                        return item.id;
-                                    }
-                                )
-                            ) + 1
-                            : 1;
-
-
-                    staffData.push({
-
-                        id:nextId,
-
-                        name:name,
-
-                        email:email,
-
-                        role:role,
-
-                        department:department,
-
-                        status:status,
-
-                        lastLogin:
-                            status === "pending"
-                                ? "Never"
-                                : "Just now"
-
-                    });
-
-
-                    showToast(
-                        "Staff Added",
-                        `${name} was added to the team.`
-                    );
-
-                }
-
-
-                if (staffModal) {
-                    staffModal.hide();
-                }
-
-
-                resetForm();
-
-                applyFilters();
+                openStaffModal(index);
 
             }
         );
 
+    });
+
+
+    closeStaffModal?.addEventListener(
+        "click",
+        closeStaffProfileModal
+    );
+
+
+    cancelModalBtn?.addEventListener(
+        "click",
+        closeStaffProfileModal
+    );
+
+
+    staffModal?.querySelector(
+        ".staff-modal-backdrop"
+    )?.addEventListener(
+        "click",
+        closeStaffProfileModal
+    );
+
+
+    /* =========================================================
+       EDIT STAFF
+    ========================================================= */
+
+    editStaffBtn?.addEventListener(
+        "click",
+        () => {
+
+            closeStaffProfileModal();
+
+            showToast(
+                "Staff edit action opened."
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+       ADD STAFF MODAL
+    ========================================================= */
+
+    function openAddStaffModal() {
+
+        addStaffModal?.classList.add("show");
+
+        addStaffModal?.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
+
     }
 
 
-    /* =====================================================
-       MANAGE ROLES
-    ===================================================== */
+    function closeAddStaffModalFn() {
 
-    if (manageRolesBtn) {
+        addStaffModal?.classList.remove("show");
 
-        manageRolesBtn.addEventListener(
-            "click",
-            function () {
+        addStaffModal?.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    addStaffBtn?.addEventListener(
+        "click",
+        openAddStaffModal
+    );
+
+
+    closeAddStaffModal?.addEventListener(
+        "click",
+        closeAddStaffModalFn
+    );
+
+
+    cancelAddStaff?.addEventListener(
+        "click",
+        closeAddStaffModalFn
+    );
+
+
+    addStaffModal?.querySelector(
+        ".staff-modal-backdrop"
+    )?.addEventListener(
+        "click",
+        closeAddStaffModalFn
+    );
+
+
+    /* =========================================================
+       ADD STAFF FORM
+    ========================================================= */
+
+    addStaffForm?.addEventListener(
+        "submit",
+        (event) => {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById(
+                    "staffName"
+                )?.value.trim();
+
+            const email =
+                document.getElementById(
+                    "staffEmail"
+                )?.value.trim();
+
+            if (!name || !email) {
 
                 showToast(
-                    "Roles",
-                    "Role permission management opened."
+                    "Please complete the staff details."
+                );
+
+                return;
+
+            }
+
+
+            addStaffForm.reset();
+
+            closeAddStaffModalFn();
+
+            showToast(
+                `Invitation sent to ${name}.`
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+       MANAGE ROLES
+    ========================================================= */
+
+    manageRolesBtn?.addEventListener(
+        "click",
+        () => {
+
+            showToast(
+                "Role management opened."
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+       AUDIT LOGS
+    ========================================================= */
+
+    auditLogsBtn?.addEventListener(
+        "click",
+        () => {
+
+            window.location.href =
+                "../Audit_logs/Audit_logs.html";
+
+        }
+    );
+
+
+    /* =========================================================
+       PAGINATION DEMO
+    ========================================================= */
+
+    document.querySelectorAll(
+        ".page-btn"
+    ).forEach((button) => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    button.classList.contains(
+                        "disabled"
+                    ) ||
+                    button.classList.contains(
+                        "current"
+                    )
+                ) {
+                    return;
+                }
+
+
+                document.querySelectorAll(
+                    ".page-btn"
+                ).forEach((item) => {
+
+                    item.classList.remove(
+                        "current"
+                    );
+
+                });
+
+
+                button.classList.add(
+                    "current"
+                );
+
+
+                showToast(
+                    `Page ${button.textContent.trim()} selected.`
                 );
 
             }
         );
 
-    }
+    });
 
 
-    /* =====================================================
-       LOGOUT
-    ===================================================== */
+    /* =========================================================
+       ESCAPE KEY
+    ========================================================= */
 
-    if (logoutBtn) {
+    document.addEventListener(
+        "keydown",
+        (event) => {
 
-        logoutBtn.addEventListener(
+            if (event.key !== "Escape") {
+                return;
+            }
+
+
+            closeSidebar();
+
+
+            notificationPanel?.classList.remove(
+                "show"
+            );
+
+
+            closeStaffProfileModal();
+
+            closeAddStaffModalFn();
+
+        }
+    );
+
+
+    /* =========================================================
+       NAVIGATION ON MOBILE
+    ========================================================= */
+
+    document.querySelectorAll(
+        ".admin-nav-link[href]"
+    ).forEach((link) => {
+
+        link.addEventListener(
             "click",
-            function () {
+            () => {
 
-                const confirmed =
-                    window.confirm(
-                        "Are you sure you want to logout?"
-                    );
+                if (
+                    window.innerWidth <= 991 &&
+                    link.tagName.toLowerCase() === "a"
+                ) {
 
-
-                if (confirmed) {
-
-                    showToast(
-                        "Logout",
-                        "Logout action has been triggered."
-                    );
+                    closeSidebar();
 
                 }
 
             }
         );
 
-    }
+    });
 
-
-    /* =====================================================
-       HELPERS
-    ===================================================== */
-
-    function capitalize(value) {
-
-        if (!value) {
-            return "";
-        }
-
-        return (
-            value.charAt(0).toUpperCase() +
-            value.slice(1)
-        );
-
-    }
-
-
-    /* =====================================================
-       TOAST
-    ===================================================== */
-
-    function showToast(
-        title,
-        message
-    ) {
-
-        const toast =
-            document.getElementById(
-                "ozzoToast"
-            );
-
-
-        if (!toast) {
-            return;
-        }
-
-
-        const titleElement =
-            toast.querySelector(
-                "strong"
-            );
-
-        const messageElement =
-            toast.querySelector(
-                "span"
-            );
-
-
-        if (titleElement) {
-
-            titleElement.textContent =
-                title;
-
-        }
-
-
-        if (messageElement) {
-
-            messageElement.textContent =
-                message;
-
-        }
-
-
-        toast.classList.add(
-            "show"
-        );
-
-
-        clearTimeout(
-            toast._timer
-        );
-
-
-        toast._timer =
-            setTimeout(
-                function () {
-
-                    toast.classList.remove(
-                        "show"
-                    );
-
-                },
-                3000
-            );
-
-    }
-
-
-    /* =====================================================
-       INITIALIZE
-    ===================================================== */
-
-    applyFilters();
 
 });

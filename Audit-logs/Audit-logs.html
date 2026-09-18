@@ -10,29 +10,57 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>OZZO Admin | Audit Logs</title>
+    <meta
+        name="description"
+        content="OZZO Admin Audit Logs"
+    >
+
+    <title>
+        OZZO | Audit Logs
+    </title>
 
 
-    <!-- Bootstrap -->
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
 
-    <!-- Font Awesome -->
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
 
-    <!-- Google Fonts -->
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
 
+
+    <!-- =====================================================
+         AUDIT LOGS CSS
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -45,9 +73,9 @@
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      MOBILE HEADER
-===================================================== -->
+========================================================= -->
 
 <header class="admin-mobile-header d-lg-none">
 
@@ -59,7 +87,10 @@
         title="Open admin menu"
     >
 
-        <i class="fa-solid fa-bars"></i>
+        <i
+            class="fa-solid fa-bars"
+            aria-hidden="true"
+        ></i>
 
     </button>
 
@@ -85,7 +116,10 @@
         title="Notifications"
     >
 
-        <i class="fa-regular fa-bell"></i>
+        <i
+            class="fa-regular fa-bell"
+            aria-hidden="true"
+        ></i>
 
         <span>
             4
@@ -96,21 +130,19 @@
 </header>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      SIDEBAR OVERLAY
-===================================================== -->
+========================================================= -->
 
 <div
-    class="admin-overlay"
-    id="adminOverlay"
+    class="sidebar-overlay"
+    id="sidebarOverlay"
 ></div>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      SIDEBAR
-===================================================== -->
+========================================================= -->
 
 <aside
     class="admin-sidebar"
@@ -118,7 +150,9 @@
 >
 
 
-    <!-- LOGO -->
+    <!-- =====================================================
+         LOGO
+    ====================================================== -->
 
     <div class="admin-logo">
 
@@ -133,7 +167,9 @@
     </div>
 
 
-    <!-- ADMIN USER -->
+    <!-- =====================================================
+         USER
+    ====================================================== -->
 
     <div class="admin-user">
 
@@ -156,11 +192,14 @@
     </div>
 
 
-    <!-- =================================================
-         NAVIGATION
-    ================================================= -->
+    <!-- =====================================================
+         EXACT OZZO ADMIN NAV
+    ====================================================== -->
 
-    <nav class="admin-nav">
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
 
 
         <!-- MAIN -->
@@ -187,7 +226,6 @@
         </a>
 
 
-
         <!-- SALES -->
 
         <div class="admin-nav-heading">
@@ -196,7 +234,7 @@
 
 
         <a
-            href="../Sales/Orders/Orders.html"
+            href="/Orders/Orders.html"
             class="admin-nav-link"
         >
 
@@ -217,7 +255,7 @@
 
 
         <a
-            href="../Sales/Payments/Payments.html"
+            href="/Payments/Payments.html"
             class="admin-nav-link"
         >
 
@@ -234,7 +272,7 @@
 
 
         <a
-            href="../Sales/Returns/Returns.html"
+            href="/Returns/Returns.html"
             class="admin-nav-link"
         >
 
@@ -255,12 +293,12 @@
 
 
         <a
-            href="../Sales/Shipping/Shipping.html"
+            href="/Shipping/Shipping.html"
             class="admin-nav-link"
         >
 
             <i
-                class="fa-solid fa-truck"
+                class="fa-solid fa-truck-fast"
                 aria-hidden="true"
             ></i>
 
@@ -269,7 +307,6 @@
             </span>
 
         </a>
-
 
 
         <!-- CATALOG -->
@@ -334,7 +371,6 @@
         </a>
 
 
-
         <!-- CUSTOMERS -->
 
         <div class="admin-nav-heading">
@@ -382,7 +418,7 @@
         >
 
             <i
-                class="fa-solid fa-headset"
+                class="fa-regular fa-comments"
                 aria-hidden="true"
             ></i>
 
@@ -390,12 +426,7 @@
                 Support
             </span>
 
-            <b class="warning">
-                12
-            </b>
-
         </a>
-
 
 
         <!-- MARKETING -->
@@ -428,7 +459,7 @@
         >
 
             <i
-                class="fa-solid fa-percent"
+                class="fa-solid fa-bullseye"
                 aria-hidden="true"
             ></i>
 
@@ -445,7 +476,7 @@
         >
 
             <i
-                class="fa-solid fa-image"
+                class="fa-regular fa-image"
                 aria-hidden="true"
             ></i>
 
@@ -462,7 +493,7 @@
         >
 
             <i
-                class="fa-solid fa-envelope"
+                class="fa-regular fa-envelope"
                 aria-hidden="true"
             ></i>
 
@@ -473,7 +504,6 @@
         </a>
 
 
-
         <!-- BUSINESS -->
 
         <div class="admin-nav-heading">
@@ -482,29 +512,12 @@
 
 
         <a
-            href="../BulkOrders/BulkOrders.html"
-            class="admin-nav-link"
-        >
-
-            <i
-                class="fa-solid fa-boxes-stacked"
-                aria-hidden="true"
-            ></i>
-
-            <span>
-                Bulk Orders
-            </span>
-
-        </a>
-
-
-        <a
             href="../Partners/Partners.html"
             class="admin-nav-link"
         >
 
             <i
-                class="fa-solid fa-handshake"
+                class="fa-solid fa-store"
                 aria-hidden="true"
             ></i>
 
@@ -521,7 +534,7 @@
         >
 
             <i
-                class="fa-solid fa-store"
+                class="fa-solid fa-building"
                 aria-hidden="true"
             ></i>
 
@@ -532,7 +545,6 @@
         </a>
 
 
-
         <!-- REPORTS -->
 
         <div class="admin-nav-heading">
@@ -541,7 +553,7 @@
 
 
         <a
-            href="../SalesReports/SalesReports.html"
+            href="/Sales-report/Sales-report.html"
             class="admin-nav-link"
         >
 
@@ -558,7 +570,7 @@
 
 
         <a
-            href="../ProductReports/ProductReports.html"
+            href="/Product-reports/Product-reports.html"
             class="admin-nav-link"
         >
 
@@ -575,7 +587,7 @@
 
 
         <a
-            href="../CustomerReports/CustomerReports.html"
+            href="/Customer-Reports/Customer-Reports.html"
             class="admin-nav-link"
         >
 
@@ -591,7 +603,6 @@
         </a>
 
 
-
         <!-- SYSTEM -->
 
         <div class="admin-nav-heading">
@@ -600,7 +611,7 @@
 
 
         <a
-            href="../Staff-Roles/Staff-Roles.html"
+            href="/Staff-Roles/Staff-Roles.html"
             class="admin-nav-link"
         >
 
@@ -616,10 +627,8 @@
         </a>
 
 
-        <!-- AUDIT ACTIVE -->
-
         <a
-            href="Audit_logs.html"
+            href="Audit-logs.html"
             class="admin-nav-link active"
         >
 
@@ -636,7 +645,7 @@
 
 
         <a
-            href="../Settings/Settings.html"
+            href="/Settings/Settings.html"
             class="admin-nav-link"
         >
 
@@ -660,10 +669,10 @@
         <!-- VIEW WEBSITE -->
 
         <a
-            href="../../index.html"
+            href="/index.html"
             class="admin-nav-link"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
         >
 
             <i
@@ -702,18 +711,18 @@
 </aside>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      MAIN
-===================================================== -->
+========================================================= -->
 
 <main class="admin-main">
 
 
-    <!-- TOPBAR -->
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
 
-    <header class="admin-topbar d-none d-lg-flex">
-
+    <header class="admin-topbar">
 
         <div class="admin-search">
 
@@ -725,15 +734,15 @@
             <input
                 id="adminSearch"
                 type="search"
-                placeholder="Search orders, products, customers..."
-                aria-label="Search admin dashboard"
+                placeholder="Search audit logs..."
+                autocomplete="off"
+                aria-label="Search audit logs"
             >
 
         </div>
 
 
         <div class="admin-top-right">
-
 
             <button
                 class="admin-top-icon"
@@ -743,7 +752,10 @@
                 title="Notifications"
             >
 
-                <i class="fa-regular fa-bell"></i>
+                <i
+                    class="fa-regular fa-bell"
+                    aria-hidden="true"
+                ></i>
 
                 <span>
                     4
@@ -758,7 +770,6 @@
                     A
                 </div>
 
-
                 <div>
 
                     <strong>
@@ -771,8 +782,10 @@
 
                 </div>
 
-
-                <i class="fa-solid fa-chevron-down"></i>
+                <i
+                    class="fa-solid fa-chevron-down"
+                    aria-hidden="true"
+                ></i>
 
             </div>
 
@@ -781,8 +794,9 @@
     </header>
 
 
-
-    <!-- NOTIFICATIONS -->
+    <!-- =====================================================
+         NOTIFICATION PANEL
+    ====================================================== -->
 
     <div
         class="notification-panel"
@@ -808,16 +822,19 @@
 
         <div class="notification-item">
 
-            <i class="fa-solid fa-triangle-exclamation"></i>
+            <i
+                class="fa-solid fa-shield-halved"
+                aria-hidden="true"
+            ></i>
 
             <div>
 
                 <strong>
-                    3 products
+                    Security event
                 </strong>
 
                 <small>
-                    need inventory attention
+                    New administrator login detected.
                 </small>
 
             </div>
@@ -827,16 +844,19 @@
 
         <div class="notification-item">
 
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i
+                class="fa-solid fa-user-shield"
+                aria-hidden="true"
+            ></i>
 
             <div>
 
                 <strong>
-                    18 new orders
+                    Role updated
                 </strong>
 
                 <small>
-                    received today
+                    Manager permissions were reviewed.
                 </small>
 
             </div>
@@ -846,16 +866,41 @@
 
         <div class="notification-item">
 
-            <i class="fa-solid fa-ticket"></i>
+            <i
+                class="fa-solid fa-box"
+                aria-hidden="true"
+            ></i>
 
             <div>
 
                 <strong>
-                    OZZO10
+                    Product change
                 </strong>
 
                 <small>
-                    coupon expires tomorrow
+                    Product information was updated.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i
+                class="fa-solid fa-file-shield"
+                aria-hidden="true"
+            ></i>
+
+            <div>
+
+                <strong>
+                    Audit recording
+                </strong>
+
+                <small>
+                    Admin activity logging is active.
                 </small>
 
             </div>
@@ -865,30 +910,31 @@
     </div>
 
 
-
-    <!-- =================================================
+    <!-- =====================================================
          CONTENT
-    ================================================= -->
+    ====================================================== -->
 
     <div class="admin-content">
 
 
-        <!-- WELCOME -->
+        <!-- =================================================
+             PAGE INTRO
+        ================================================== -->
 
-        <section class="admin-welcome">
+        <section class="admin-welcome audit-welcome">
 
             <div>
 
                 <span>
-                    OZZO MANAGEMENT
+                    SECURITY &amp; COMPLIANCE
                 </span>
 
                 <h1>
-                    Audit <span>Logs</span>
+                    Audit Logs
                 </h1>
 
                 <p>
-                    Monitor administrative actions, security events and system activity.
+                    Review administrator activity, system changes and security events.
                 </p>
 
             </div>
@@ -901,8 +947,8 @@
                     aria-hidden="true"
                 ></i>
 
-                <span id="currentDate">
-                    September 2026
+                <span>
+                    18 September 2026
                 </span>
 
             </div>
@@ -910,36 +956,41 @@
         </section>
 
 
-
         <!-- =================================================
-             STATS
-        ================================================= -->
+             STAT CARDS
+        ================================================== -->
 
-        <div class="row g-3">
+        <div class="row g-3 mb-4">
 
 
-            <div class="col-6 col-xl-3">
+            <!-- TOTAL EVENTS -->
+
+            <div class="col-12 col-md-6 col-xl-3">
 
                 <article class="admin-stat-card">
 
                     <div class="admin-stat-icon green">
 
-                        <i class="fa-solid fa-list-check"></i>
+                        <i
+                            class="fa-solid fa-list-check"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Total Events
+                            TOTAL EVENTS
                         </span>
 
                         <strong>
-                            8,642
+                            1,248
                         </strong>
 
                         <small>
-                            All recorded activity
+                            <i class="fa-solid fa-arrow-up"></i>
+                            86 today
                         </small>
 
                     </div>
@@ -949,59 +1000,34 @@
             </div>
 
 
-            <div class="col-6 col-xl-3">
+            <!-- TODAY -->
 
-                <article class="admin-stat-card">
-
-                    <div class="admin-stat-icon orange">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                    </div>
-
-                    <div>
-
-                        <span>
-                            Successful
-                        </span>
-
-                        <strong>
-                            8,514
-                        </strong>
-
-                        <small>
-                            98.5% successful
-                        </small>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-
-            <div class="col-6 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
 
                 <article class="admin-stat-card">
 
                     <div class="admin-stat-icon blue">
 
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <i
+                            class="fa-regular fa-calendar-check"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Security Events
+                            TODAY'S EVENTS
                         </span>
 
                         <strong>
-                            18
+                            86
                         </strong>
 
                         <small>
-                            Needs review
+                            <i class="fa-solid fa-clock"></i>
+                            Since 12:00 AM
                         </small>
 
                     </div>
@@ -1011,28 +1037,71 @@
             </div>
 
 
-            <div class="col-6 col-xl-3">
+            <!-- ADMIN ACTIONS -->
+
+            <div class="col-12 col-md-6 col-xl-3">
+
+                <article class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <i
+                            class="fa-solid fa-user-gear"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ADMIN ACTIONS
+                        </span>
+
+                        <strong>
+                            52
+                        </strong>
+
+                        <small>
+                            <i class="fa-solid fa-user-shield"></i>
+                            Staff activity
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- SECURITY EVENTS -->
+
+            <div class="col-12 col-md-6 col-xl-3">
 
                 <article class="admin-stat-card">
 
                     <div class="admin-stat-icon purple">
 
-                        <i class="fa-solid fa-user-shield"></i>
+                        <i
+                            class="fa-solid fa-shield-halved"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Admin Users
+                            SECURITY EVENTS
                         </span>
 
                         <strong>
-                            24
+                            7
                         </strong>
 
                         <small>
-                            Accounts monitored
+                            <i class="fa-solid fa-lock"></i>
+                            Monitored
                         </small>
 
                     </div>
@@ -1044,1128 +1113,1110 @@
         </div>
 
 
-
         <!-- =================================================
-             ACTIVITY TABLE
-        ================================================= -->
+             AUDIT LOG CARD
+        ================================================== -->
 
-        <div class="row g-4 mt-1">
-
-
-            <div class="col-12">
-
-                <section class="admin-card">
+        <section class="admin-card audit-card">
 
 
-                    <div class="admin-card-header">
+            <!-- CARD HEADER -->
 
-                        <div>
+            <div class="admin-card-header audit-card-header">
 
-                            <span>
-                                SYSTEM MONITORING
-                            </span>
+                <div>
 
-                            <h2>
-                                Recent Activity
-                            </h2>
+                    <span>
+                        ACTIVITY MONITOR
+                    </span>
 
-                        </div>
+                    <h2>
+                        Audit Activity
+                    </h2>
 
-
-                        <div class="live-status">
-
-                            <span></span>
-
-                            Live monitoring
-
-                        </div>
-
-                    </div>
+                </div>
 
 
+                <button
+                    class="audit-export-btn"
+                    id="exportBtn"
+                    type="button"
+                >
 
-                    <!-- FILTERS -->
+                    <i
+                        class="fa-solid fa-download"
+                        aria-hidden="true"
+                    ></i>
 
-                    <div class="audit-filters">
+                    Export Logs
 
+                </button>
 
-                        <div class="audit-search">
-
-                            <i class="fa-solid fa-magnifying-glass"></i>
-
-                            <input
-                                id="auditSearch"
-                                type="search"
-                                placeholder="Search activity..."
-                                aria-label="Search audit logs"
-                            >
-
-                        </div>
+            </div>
 
 
-                        <select
-                            id="actionFilter"
-                            class="audit-select"
+            <!-- FILTER BAR -->
+
+            <div class="audit-filter-bar">
+
+
+                <div class="audit-filter-search">
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        id="auditSearch"
+                        type="search"
+                        placeholder="Search user, action or module..."
+                        autocomplete="off"
+                        aria-label="Search audit activity"
+                    >
+
+                </div>
+
+
+                <select
+                    id="userFilter"
+                    aria-label="Filter by user"
+                >
+
+                    <option value="all">
+                        All Users
+                    </option>
+
+                    <option value="Anjali Rao">
+                        Anjali Rao
+                    </option>
+
+                    <option value="Rahul Mehta">
+                        Rahul Mehta
+                    </option>
+
+                    <option value="Priya Sharma">
+                        Priya Sharma
+                    </option>
+
+                    <option value="Vikram Singh">
+                        Vikram Singh
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="actionFilter"
+                    aria-label="Filter by action"
+                >
+
+                    <option value="all">
+                        All Actions
+                    </option>
+
+                    <option value="Login">
+                        Login
+                    </option>
+
+                    <option value="Update">
+                        Update
+                    </option>
+
+                    <option value="Create">
+                        Create
+                    </option>
+
+                    <option value="Delete">
+                        Delete
+                    </option>
+
+                    <option value="Permission">
+                        Permission
+                    </option>
+
+                    <option value="Export">
+                        Export
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="dateFilter"
+                    aria-label="Filter by date"
+                >
+
+                    <option value="all">
+                        All Dates
+                    </option>
+
+                    <option value="today">
+                        Today
+                    </option>
+
+                    <option value="7">
+                        Last 7 Days
+                    </option>
+
+                    <option value="30">
+                        Last 30 Days
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="audit-clear-btn"
+                    id="clearFilters"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- AUDIT TABLE -->
+
+            <div class="audit-table-wrap">
+
+                <table
+                    class="audit-table"
+                    id="auditTable"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                TIME
+                            </th>
+
+                            <th>
+                                USER
+                            </th>
+
+                            <th>
+                                ACTION
+                            </th>
+
+                            <th>
+                                MODULE
+                            </th>
+
+                            <th>
+                                DESCRIPTION
+                            </th>
+
+                            <th>
+                                IP ADDRESS
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                VIEW
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr
+                            data-user="Anjali Rao"
+                            data-action="Login"
+                            data-days="0"
                         >
 
-                            <option value="all">
-                                All Actions
-                            </option>
+                            <td>
+                                10:42 AM
+                            </td>
 
-                            <option value="login">
-                                Login
-                            </option>
+                            <td>
 
-                            <option value="create">
-                                Create
-                            </option>
+                                <div class="audit-user">
 
-                            <option value="update">
-                                Update
-                            </option>
+                                    <span class="audit-avatar avatar-1">
+                                        AR
+                                    </span>
 
-                            <option value="delete">
-                                Delete
-                            </option>
+                                    <div>
 
-                            <option value="export">
-                                Export
-                            </option>
+                                        <strong>
+                                            Anjali Rao
+                                        </strong>
 
-                        </select>
+                                        <small>
+                                            Super Admin
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action login">
+                                    Login
+                                </span>
+
+                            </td>
+
+                            <td>
+                                Admin
+                            </td>
+
+                            <td>
+                                Logged into admin panel
+                            </td>
+
+                            <td>
+                                103.84.21.18
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="0"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
 
 
-                        <select
-                            id="moduleFilter"
-                            class="audit-select"
+                        <tr
+                            data-user="Rahul Mehta"
+                            data-action="Update"
+                            data-days="0"
                         >
 
-                            <option value="all">
-                                All Modules
-                            </option>
+                            <td>
+                                10:16 AM
+                            </td>
 
-                            <option value="orders">
-                                Orders
-                            </option>
+                            <td>
 
-                            <option value="products">
+                                <div class="audit-user">
+
+                                    <span class="audit-avatar avatar-2">
+                                        RM
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Mehta
+                                        </strong>
+
+                                        <small>
+                                            Admin
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action update">
+                                    Update
+                                </span>
+
+                            </td>
+
+                            <td>
                                 Products
-                            </option>
+                            </td>
 
-                            <option value="customers">
-                                Customers
-                            </option>
+                            <td>
+                                Updated product information
+                            </td>
 
-                            <option value="staff">
+                            <td>
+                                103.92.44.72
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="1"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-user="Priya Sharma"
+                            data-action="Permission"
+                            data-days="0"
+                        >
+
+                            <td>
+                                9:31 AM
+                            </td>
+
+                            <td>
+
+                                <div class="audit-user">
+
+                                    <span class="audit-avatar avatar-3">
+                                        PS
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Sharma
+                                        </strong>
+
+                                        <small>
+                                            Manager
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action permission">
+                                    Permission
+                                </span>
+
+                            </td>
+
+                            <td>
+                                Roles
+                            </td>
+
+                            <td>
+                                Reviewed role permissions
+                            </td>
+
+                            <td>
+                                49.204.12.61
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="2"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-user="Vikram Singh"
+                            data-action="Permission"
+                            data-days="0"
+                        >
+
+                            <td>
+                                8:47 AM
+                            </td>
+
+                            <td>
+
+                                <div class="audit-user">
+
+                                    <span class="audit-avatar avatar-4">
+                                        VS
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Vikram Singh
+                                        </strong>
+
+                                        <small>
+                                            Support
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action permission">
+                                    Permission
+                                </span>
+
+                            </td>
+
+                            <td>
+                                Support
+                            </td>
+
+                            <td>
+                                Changed support access settings
+                            </td>
+
+                            <td>
+                                106.51.72.94
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="3"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-user="Anjali Rao"
+                            data-action="Create"
+                            data-days="1"
+                        >
+
+                            <td>
+                                18 Sep · 6:14 PM
+                            </td>
+
+                            <td>
+
+                                <div class="audit-user">
+
+                                    <span class="audit-avatar avatar-1">
+                                        AR
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Anjali Rao
+                                        </strong>
+
+                                        <small>
+                                            Super Admin
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action create">
+                                    Create
+                                </span>
+
+                            </td>
+
+                            <td>
                                 Staff
-                            </option>
+                            </td>
 
-                            <option value="inventory">
-                                Inventory
-                            </option>
+                            <td>
+                                Created new staff invitation
+                            </td>
 
-                            <option value="reports">
+                            <td>
+                                103.84.21.18
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="4"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-user="Rahul Mehta"
+                            data-action="Export"
+                            data-days="1"
+                        >
+
+                            <td>
+                                18 Sep · 4:48 PM
+                            </td>
+
+                            <td>
+
+                                <div class="audit-user">
+
+                                    <span class="audit-avatar avatar-2">
+                                        RM
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Mehta
+                                        </strong>
+
+                                        <small>
+                                            Admin
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action export">
+                                    Export
+                                </span>
+
+                            </td>
+
+                            <td>
                                 Reports
-                            </option>
+                            </td>
 
-                            <option value="settings">
-                                Settings
-                            </option>
+                            <td>
+                                Exported sales report
+                            </td>
 
-                        </select>
+                            <td>
+                                103.92.44.72
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="5"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
 
 
-                        <select
-                            id="severityFilter"
-                            class="audit-select"
+                        <tr
+                            data-user="Priya Sharma"
+                            data-action="Update"
+                            data-days="2"
                         >
 
-                            <option value="all">
-                                All Severity
-                            </option>
+                            <td>
+                                17 Sep · 3:22 PM
+                            </td>
 
-                            <option value="success">
-                                Success
-                            </option>
+                            <td>
 
-                            <option value="info">
-                                Info
-                            </option>
+                                <div class="audit-user">
 
-                            <option value="warning">
-                                Warning
-                            </option>
+                                    <span class="audit-avatar avatar-3">
+                                        PS
+                                    </span>
 
-                            <option value="critical">
-                                Critical
-                            </option>
+                                    <div>
 
-                        </select>
+                                        <strong>
+                                            Priya Sharma
+                                        </strong>
+
+                                        <small>
+                                            Manager
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="audit-action update">
+                                    Update
+                                </span>
+
+                            </td>
+
+                            <td>
+                                Orders
+                            </td>
+
+                            <td>
+                                Updated order processing status
+                            </td>
+
+                            <td>
+                                49.204.12.61
+                            </td>
+
+                            <td>
+
+                                <span class="audit-status success">
+                                    Success
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="6"
+                                    aria-label="View audit event"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
 
 
-                        <button
-                            class="audit-export-btn"
-                            id="exportAuditBtn"
-                            type="button"
+                        <tr
+                            data-user="Vikram Singh"
+                            data-action="Delete"
+                            data-days="3"
                         >
 
-                            <i class="fa-solid fa-download"></i>
+                            <td>
+                                16 Sep · 1:08 PM
+                            </td>
 
-                            Export
+                            <td>
 
-                        </button>
+                                <div class="audit-user">
 
+                                    <span class="audit-avatar avatar-4">
+                                        VS
+                                    </span>
 
-                    </div>
+                                    <div>
 
+                                        <strong>
+                                            Vikram Singh
+                                        </strong>
 
+                                        <small>
+                                            Support
+                                        </small>
 
-                    <!-- TABLE -->
+                                    </div>
 
-                    <div class="admin-table-wrapper">
+                                </div>
 
-                        <table class="admin-table audit-table">
+                            </td>
 
+                            <td>
 
-                            <thead>
+                                <span class="audit-action delete">
+                                    Delete
+                                </span>
 
-                                <tr>
+                            </td>
 
-                                    <th>
-                                        Activity
-                                    </th>
+                            <td>
+                                Support
+                            </td>
 
-                                    <th>
-                                        User
-                                    </th>
+                            <td>
+                                Removed obsolete support rule
+                            </td>
 
-                                    <th>
-                                        Module
-                                    </th>
+                            <td>
+                                106.51.72.94
+                            </td>
 
-                                    <th>
-                                        Severity
-                                    </th>
+                            <td>
 
-                                    <th>
-                                        IP Address
-                                    </th>
+                                <span class="audit-status success">
+                                    Success
+                                </span>
 
-                                    <th>
-                                        Time
-                                    </th>
+                            </td>
 
-                                    <th>
-                                        Action
-                                    </th>
+                            <td>
 
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody id="auditTableBody">
-
-
-                                <tr
-                                    data-action="update"
-                                    data-module="products"
-                                    data-severity="success"
+                                <button
+                                    class="audit-view-btn"
+                                    type="button"
+                                    data-event="7"
+                                    aria-label="View audit event"
                                 >
 
-                                    <td>
+                                    <i class="fa-regular fa-eye"></i>
 
-                                        <div class="activity-cell">
+                                </button>
 
-                                            <div class="activity-icon blue">
+                            </td>
 
-                                                <i class="fa-solid fa-pen"></i>
+                        </tr>
 
-                                            </div>
+                    </tbody>
 
-                                            <div>
-
-                                                <strong>
-                                                    Product updated
-                                                </strong>
-
-                                                <small>
-                                                    Classic Beige Dress price changed
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Anjali Rao
-                                    </td>
-
-
-                                    <td>
-                                        Products
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity success">
-                                            Success
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        103.24.18.72
-                                    </td>
-
-
-                                    <td>
-                                        10:42 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="1"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="login"
-                                    data-module="staff"
-                                    data-severity="info"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon purple">
-
-                                                <i class="fa-solid fa-right-to-bracket"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Admin login
-                                                </strong>
-
-                                                <small>
-                                                    Successful administrator sign-in
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Rahul Mehta
-                                    </td>
-
-
-                                    <td>
-                                        Staff
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity info">
-                                            Info
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        49.207.86.11
-                                    </td>
-
-
-                                    <td>
-                                        09:18 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="2"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="create"
-                                    data-module="orders"
-                                    data-severity="success"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon green">
-
-                                                <i class="fa-solid fa-plus"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Order created
-                                                </strong>
-
-                                                <small>
-                                                    Order #OZ-10482 created
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Priya Sharma
-                                    </td>
-
-
-                                    <td>
-                                        Orders
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity success">
-                                            Success
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        117.201.34.92
-                                    </td>
-
-
-                                    <td>
-                                        08:56 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="3"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="delete"
-                                    data-module="inventory"
-                                    data-severity="warning"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon pink">
-
-                                                <i class="fa-solid fa-trash"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Inventory record removed
-                                                </strong>
-
-                                                <small>
-                                                    Old inventory entry deleted
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Arjun Kumar
-                                    </td>
-
-
-                                    <td>
-                                        Inventory
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity warning">
-                                            Warning
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        182.74.20.61
-                                    </td>
-
-
-                                    <td>
-                                        08:21 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="4"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="update"
-                                    data-module="settings"
-                                    data-severity="critical"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon orange">
-
-                                                <i class="fa-solid fa-shield-halved"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Permission changed
-                                                </strong>
-
-                                                <small>
-                                                    Support role permissions modified
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Admin
-                                    </td>
-
-
-                                    <td>
-                                        Settings
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity critical">
-                                            Critical
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        10.28.41.7
-                                    </td>
-
-
-                                    <td>
-                                        Yesterday
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="5"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="export"
-                                    data-module="reports"
-                                    data-severity="info"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon blue">
-
-                                                <i class="fa-solid fa-file-export"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Sales report exported
-                                                </strong>
-
-                                                <small>
-                                                    September report downloaded
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Priya Sharma
-                                    </td>
-
-
-                                    <td>
-                                        Reports
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity info">
-                                            Info
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        117.201.34.92
-                                    </td>
-
-
-                                    <td>
-                                        Yesterday
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="6"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="update"
-                                    data-module="customers"
-                                    data-severity="success"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon green">
-
-                                                <i class="fa-solid fa-user-pen"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Customer profile updated
-                                                </strong>
-
-                                                <small>
-                                                    Customer information edited
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Vikram Singh
-                                    </td>
-
-
-                                    <td>
-                                        Customers
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity success">
-                                            Success
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        49.207.86.11
-                                    </td>
-
-
-                                    <td>
-                                        Yesterday
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="7"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-action="login"
-                                    data-module="staff"
-                                    data-severity="warning"
-                                >
-
-                                    <td>
-
-                                        <div class="activity-cell">
-
-                                            <div class="activity-icon pink">
-
-                                                <i class="fa-solid fa-triangle-exclamation"></i>
-
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Failed login attempt
-                                                </strong>
-
-                                                <small>
-                                                    Invalid administrator credentials
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        Unknown User
-                                    </td>
-
-
-                                    <td>
-                                        Staff
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="severity warning">
-                                            Warning
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        45.119.73.28
-                                    </td>
-
-
-                                    <td>
-                                        14 Sep, 11:48 PM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="view-btn"
-                                            type="button"
-                                            data-id="8"
-                                        >
-                                            View
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-
-
-                    <!-- TABLE FOOTER -->
-
-                    <div class="audit-footer">
-
-                        <span id="auditCount">
-                            Showing 8 activity records
-                        </span>
-
-
-                        <div class="pagination">
-
-                            <button
-                                class="pagination-btn disabled"
-                                type="button"
-                            >
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-
-
-                            <button
-                                class="pagination-btn active"
-                                type="button"
-                            >
-                                1
-                            </button>
-
-
-                            <button
-                                class="pagination-btn"
-                                type="button"
-                            >
-                                2
-                            </button>
-
-
-                            <button
-                                class="pagination-btn"
-                                type="button"
-                            >
-                                3
-                            </button>
-
-
-                            <button
-                                class="pagination-btn"
-                                type="button"
-                            >
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </section>
+                </table>
 
             </div>
 
-        </div>
 
+            <!-- TABLE FOOTER -->
+
+            <div class="audit-footer">
+
+                <span id="auditResult">
+                    Showing 8 of 1,248 events
+                </span>
+
+
+                <div class="audit-pagination">
+
+                    <button
+                        class="audit-page-btn disabled"
+                        type="button"
+                        disabled
+                        aria-label="Previous page"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+
+                    <button
+                        class="audit-page-btn current"
+                        type="button"
+                    >
+                        1
+                    </button>
+
+
+                    <button
+                        class="audit-page-btn"
+                        type="button"
+                    >
+                        2
+                    </button>
+
+
+                    <button
+                        class="audit-page-btn"
+                        type="button"
+                    >
+                        3
+                    </button>
+
+
+                    <button
+                        class="audit-page-btn"
+                        type="button"
+                    >
+                        4
+                    </button>
+
+
+                    <button
+                        class="audit-page-btn"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
         <!-- =================================================
-             LOWER CARDS
-        ================================================= -->
+             BOTTOM CARDS
+        ================================================== -->
 
         <div class="row g-4 mt-1">
 
 
-            <!-- EVENT SUMMARY -->
+            <!-- EVENT TYPES -->
 
-            <div class="col-xl-7">
+            <div class="col-lg-7">
 
                 <section class="admin-card">
-
 
                     <div class="admin-card-header">
 
                         <div>
 
                             <span>
-                                ACTIVITY SUMMARY
+                                ACTIVITY BREAKDOWN
                             </span>
 
                             <h2>
-                                Events By Type
+                                Event Types
                             </h2>
 
                         </div>
 
-                        <span class="period-label">
-                            This Month
-                        </span>
-
                     </div>
 
 
-                    <div class="event-list">
-
+                    <div class="event-breakdown">
 
                         <div class="event-row">
 
-                            <div class="event-icon purple">
+                            <div class="event-row-left">
 
-                                <i class="fa-solid fa-right-to-bracket"></i>
+                                <span class="event-icon login">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                </span>
 
-                            </div>
+                                <div>
 
-                            <div class="event-copy">
+                                    <strong>
+                                        Login activity
+                                    </strong>
 
-                                <strong>
-                                    Login Activity
-                                </strong>
+                                    <small>
+                                        Administrator sign-ins
+                                    </small>
 
-                                <small>
-                                    Administrator sign-ins
-                                </small>
-
-                            </div>
-
-                            <div class="event-bar">
-
-                                <span style="width:82%"></span>
+                                </div>
 
                             </div>
 
-                            <strong class="event-number">
-                                2,184
+                            <strong>
+                                418
                             </strong>
 
                         </div>
 
 
-
                         <div class="event-row">
 
-                            <div class="event-icon blue">
+                            <div class="event-row-left">
 
-                                <i class="fa-solid fa-pen"></i>
+                                <span class="event-icon update">
+                                    <i class="fa-solid fa-pen"></i>
+                                </span>
 
-                            </div>
+                                <div>
 
-                            <div class="event-copy">
+                                    <strong>
+                                        Record updates
+                                    </strong>
 
-                                <strong>
-                                    Updates
-                                </strong>
+                                    <small>
+                                        Product, order and customer changes
+                                    </small>
 
-                                <small>
-                                    Records modified
-                                </small>
-
-                            </div>
-
-                            <div class="event-bar">
-
-                                <span style="width:69%"></span>
+                                </div>
 
                             </div>
 
-                            <strong class="event-number">
-                                1,842
+                            <strong>
+                                364
                             </strong>
 
                         </div>
 
 
-
                         <div class="event-row">
 
-                            <div class="event-icon green">
+                            <div class="event-row-left">
 
-                                <i class="fa-solid fa-plus"></i>
+                                <span class="event-icon permission">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </span>
 
-                            </div>
+                                <div>
 
-                            <div class="event-copy">
+                                    <strong>
+                                        Permission activity
+                                    </strong>
 
-                                <strong>
-                                    Created
-                                </strong>
+                                    <small>
+                                        Roles and access changes
+                                    </small>
 
-                                <small>
-                                    New records created
-                                </small>
-
-                            </div>
-
-                            <div class="event-bar">
-
-                                <span style="width:56%"></span>
+                                </div>
 
                             </div>
 
-                            <strong class="event-number">
-                                1,426
+                            <strong>
+                                186
                             </strong>
 
                         </div>
 
 
-
                         <div class="event-row">
 
-                            <div class="event-icon pink">
+                            <div class="event-row-left">
 
-                                <i class="fa-solid fa-trash"></i>
+                                <span class="event-icon export">
+                                    <i class="fa-solid fa-download"></i>
+                                </span>
 
-                            </div>
+                                <div>
 
-                            <div class="event-copy">
+                                    <strong>
+                                        Data exports
+                                    </strong>
 
-                                <strong>
-                                    Deleted
-                                </strong>
+                                    <small>
+                                        Report and system exports
+                                    </small>
 
-                                <small>
-                                    Records removed
-                                </small>
-
-                            </div>
-
-                            <div class="event-bar">
-
-                                <span style="width:27%"></span>
+                                </div>
 
                             </div>
 
-                            <strong class="event-number">
-                                428
+                            <strong>
+                                129
                             </strong>
 
                         </div>
 
 
-
                         <div class="event-row">
 
-                            <div class="event-icon orange">
+                            <div class="event-row-left">
 
-                                <i class="fa-solid fa-file-export"></i>
+                                <span class="event-icon security">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </span>
 
-                            </div>
+                                <div>
 
-                            <div class="event-copy">
+                                    <strong>
+                                        Security events
+                                    </strong>
 
-                                <strong>
-                                    Exports
-                                </strong>
+                                    <small>
+                                        Authentication and security alerts
+                                    </small>
 
-                                <small>
-                                    Reports and downloads
-                                </small>
-
-                            </div>
-
-                            <div class="event-bar">
-
-                                <span style="width:31%"></span>
+                                </div>
 
                             </div>
 
-                            <strong class="event-number">
-                                684
+                            <strong>
+                                151
                             </strong>
 
                         </div>
-
 
                     </div>
 
@@ -2174,24 +2225,22 @@
             </div>
 
 
+            <!-- LOGGING STATUS -->
 
-            <!-- SECURITY -->
+            <div class="col-lg-5">
 
-            <div class="col-xl-5">
-
-                <section class="admin-card">
-
+                <section class="admin-card h-100">
 
                     <div class="admin-card-header">
 
                         <div>
 
                             <span>
-                                SECURITY MONITORING
+                                SYSTEM STATUS
                             </span>
 
                             <h2>
-                                Security Status
+                                Audit Protection
                             </h2>
 
                         </div>
@@ -2199,100 +2248,42 @@
                     </div>
 
 
-                    <div class="security-list">
+                    <div class="audit-protection">
 
+                        <div class="protection-box">
 
-                        <div class="security-row">
+                            <span class="protection-icon green">
 
-                            <div class="security-icon green">
+                                <i class="fa-solid fa-circle-check"></i>
 
-                                <i class="fa-solid fa-shield-halved"></i>
-
-                            </div>
+                            </span>
 
                             <div>
 
                                 <strong>
-                                    Admin sessions
+                                    Audit logging
                                 </strong>
 
                                 <small>
-                                    24 active sessions
+                                    Recording administrator actions
                                 </small>
 
                             </div>
 
-                            <span class="security-good">
-                                Normal
-                            </span>
+                            <b>
+                                ON
+                            </b>
 
                         </div>
 
 
+                        <div class="protection-box">
 
-                        <div class="security-row">
-
-                            <div class="security-icon blue">
-
-                                <i class="fa-solid fa-key"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Permission changes
-                                </strong>
-
-                                <small>
-                                    2 changes today
-                                </small>
-
-                            </div>
-
-                            <span class="security-good">
-                                Normal
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="security-row">
-
-                            <div class="security-icon pink">
-
-                                <i class="fa-solid fa-user-lock"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Failed logins
-                                </strong>
-
-                                <small>
-                                    4 attempts today
-                                </small>
-
-                            </div>
-
-                            <span class="security-watch">
-                                Watch
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="security-row">
-
-                            <div class="security-icon purple">
+                            <span class="protection-icon blue">
 
                                 <i class="fa-solid fa-database"></i>
 
-                            </div>
+                            </span>
 
                             <div>
 
@@ -2301,29 +2292,57 @@
                                 </strong>
 
                                 <small>
-                                    365 days configured
+                                    Audit records retained securely
                                 </small>
 
                             </div>
 
-                            <span class="security-good">
-                                Active
-                            </span>
+                            <b>
+                                365D
+                            </b>
 
                         </div>
 
-                    </div>
+
+                        <div class="protection-box">
+
+                            <span class="protection-icon purple">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Data protection
+                                </strong>
+
+                                <small>
+                                    Restricted to authorized admins
+                                </small>
+
+                            </div>
+
+                            <b>
+                                SECURE
+                            </b>
+
+                        </div>
 
 
-                    <div class="security-footer">
+                        <div class="audit-note">
 
-                        <strong>
-                            Last security scan
-                        </strong>
+                            <i
+                                class="fa-solid fa-circle-info"
+                                aria-hidden="true"
+                            ></i>
 
-                        <span>
-                            Today, 09:00 AM
-                        </span>
+                            <span>
+                                Audit records should be reviewed regularly for unusual activity.
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -2333,171 +2352,179 @@
 
         </div>
 
-
     </div>
 
 </main>
 
 
-
-<!-- =====================================================
-     AUDIT MODAL
-===================================================== -->
+<!-- =========================================================
+     EVENT MODAL
+========================================================= -->
 
 <div
-    class="modal fade"
+    class="audit-modal"
     id="auditModal"
-    tabindex="-1"
     aria-hidden="true"
 >
 
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content audit-modal">
+    <div class="audit-modal-backdrop"></div>
 
 
-            <div class="modal-header">
+    <div
+        class="audit-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="auditModalTitle"
+    >
+
+        <div class="audit-modal-header">
+
+            <div>
+
+                <span>
+                    AUDIT EVENT
+                </span>
+
+                <h2 id="auditModalTitle">
+                    Event Details
+                </h2>
+
+            </div>
+
+
+            <button
+                class="audit-modal-close"
+                id="closeAuditModal"
+                type="button"
+                aria-label="Close audit event"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="audit-modal-body">
+
+            <div class="modal-event-top">
+
+                <span
+                    class="modal-event-icon"
+                    id="modalEventIcon"
+                >
+                    <i class="fa-solid fa-file-shield"></i>
+                </span>
 
                 <div>
 
-                    <span>
-                        AUDIT EVENT
-                    </span>
+                    <strong id="modalEventAction">
+                        Login
+                    </strong>
 
-                    <h2>
-                        Activity Details
-                    </h2>
-
-                </div>
-
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                ></button>
-
-            </div>
-
-
-            <div class="modal-body">
-
-
-                <div class="detail-grid">
-
-                    <div>
-
-                        <small>
-                            Activity
-                        </small>
-
-                        <strong id="modalActivity">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <small>
-                            User
-                        </small>
-
-                        <strong id="modalUser">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <small>
-                            Module
-                        </small>
-
-                        <strong id="modalModule">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <small>
-                            Severity
-                        </small>
-
-                        <strong id="modalSeverity">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <small>
-                            IP Address
-                        </small>
-
-                        <strong id="modalIP">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <small>
-                            Timestamp
-                        </small>
-
-                        <strong id="modalTime">
-                            —
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="detail-note">
-
-                    <i class="fa-solid fa-circle-info"></i>
-
-                    <div>
-
-                        <strong>
-                            Audit record
-                        </strong>
-
-                        <span>
-                            This event is recorded for system activity and security monitoring.
-                        </span>
-
-                    </div>
+                    <small id="modalEventDescription">
+                        Logged into admin panel
+                    </small>
 
                 </div>
 
             </div>
 
 
-            <div class="modal-footer">
+            <div class="modal-event-grid">
 
-                <button
-                    type="button"
-                    class="secondary-btn"
-                    data-bs-dismiss="modal"
-                >
-                    Close
-                </button>
+                <div>
+
+                    <small>
+                        User
+                    </small>
+
+                    <strong id="modalUser">
+                        Anjali Rao
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Role
+                    </small>
+
+                    <strong id="modalRole">
+                        Super Admin
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Module
+                    </small>
+
+                    <strong id="modalModule">
+                        Admin
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        IP Address
+                    </small>
+
+                    <strong id="modalIP">
+                        103.84.21.18
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Time
+                    </small>
+
+                    <strong id="modalTime">
+                        10:42 AM
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Status
+                    </small>
+
+                    <strong id="modalStatus">
+                        Success
+                    </strong>
+
+                </div>
 
             </div>
+
+        </div>
+
+
+        <div class="audit-modal-footer">
+
+            <button
+                class="audit-modal-button"
+                id="closeAuditModalBtn"
+                type="button"
+            >
+                Close
+            </button>
 
         </div>
 
@@ -2506,30 +2533,30 @@
 </div>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      TOAST
-===================================================== -->
+========================================================= -->
 
 <div
-    class="ozzo-toast"
-    id="ozzoToast"
->
-
-    <strong></strong>
-
-    <span></span>
-
-</div>
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
 
 
-
-<!-- Bootstrap JS -->
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 ></script>
 
+
+<!-- =========================================================
+     AUDIT JS
+========================================================= -->
 
 <script
     src="Audit-logs.js"

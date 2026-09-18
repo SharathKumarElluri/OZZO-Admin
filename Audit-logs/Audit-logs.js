@@ -1,29 +1,24 @@
-/* =========================================================
-   OZZO ADMIN
-   AUDIT LOGS
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =====================================================
+    /* =========================================================
        ELEMENTS
-    ===================================================== */
+    ========================================================= */
 
     const sidebar =
         document.getElementById("adminSidebar");
 
     const overlay =
-        document.getElementById("adminOverlay");
+        document.getElementById("sidebarOverlay");
 
     const mobileMenuBtn =
         document.getElementById("mobileMenuBtn");
 
-    const mobileNotificationBtn =
-        document.getElementById("mobileNotificationBtn");
-
     const notificationBtn =
         document.getElementById("notificationBtn");
+
+    const mobileNotificationBtn =
+        document.getElementById("mobileNotificationBtn");
 
     const notificationPanel =
         document.getElementById("notificationPanel");
@@ -31,154 +26,278 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeNotifications =
         document.getElementById("closeNotifications");
 
+    const logoutBtn =
+        document.getElementById("logoutBtn");
+
+    const toast =
+        document.getElementById("adminToast");
+
+
     const adminSearch =
         document.getElementById("adminSearch");
 
     const auditSearch =
         document.getElementById("auditSearch");
 
+    const userFilter =
+        document.getElementById("userFilter");
+
     const actionFilter =
         document.getElementById("actionFilter");
 
-    const moduleFilter =
-        document.getElementById("moduleFilter");
+    const dateFilter =
+        document.getElementById("dateFilter");
 
-    const severityFilter =
-        document.getElementById("severityFilter");
+    const clearFilters =
+        document.getElementById("clearFilters");
 
-    const auditTableBody =
-        document.getElementById("auditTableBody");
+    const auditResult =
+        document.getElementById("auditResult");
 
-    const auditCount =
-        document.getElementById("auditCount");
 
-    const exportAuditBtn =
-        document.getElementById("exportAuditBtn");
-
-    const logoutBtn =
-        document.getElementById("logoutBtn");
-
-    const auditModalElement =
+    const auditModal =
         document.getElementById("auditModal");
 
+    const closeAuditModal =
+        document.getElementById("closeAuditModal");
 
-    let auditModal = null;
+    const closeAuditModalBtn =
+        document.getElementById("closeAuditModalBtn");
 
 
-    if (auditModalElement) {
+    /* =========================================================
+       AUDIT DATA
+    ========================================================= */
 
-        auditModal =
-            new bootstrap.Modal(
-                auditModalElement
+    const auditEvents = [
+
+        {
+            user:"Anjali Rao",
+            role:"Super Admin",
+            action:"Login",
+            module:"Admin",
+            description:"Logged into admin panel",
+            ip:"103.84.21.18",
+            time:"10:42 AM",
+            status:"Success"
+        },
+
+        {
+            user:"Rahul Mehta",
+            role:"Admin",
+            action:"Update",
+            module:"Products",
+            description:"Updated product information",
+            ip:"103.92.44.72",
+            time:"10:16 AM",
+            status:"Success"
+        },
+
+        {
+            user:"Priya Sharma",
+            role:"Manager",
+            action:"Permission",
+            module:"Roles",
+            description:"Reviewed role permissions",
+            ip:"49.204.12.61",
+            time:"9:31 AM",
+            status:"Success"
+        },
+
+        {
+            user:"Vikram Singh",
+            role:"Support",
+            action:"Permission",
+            module:"Support",
+            description:"Changed support access settings",
+            ip:"106.51.72.94",
+            time:"8:47 AM",
+            status:"Success"
+        },
+
+        {
+            user:"Anjali Rao",
+            role:"Super Admin",
+            action:"Create",
+            module:"Staff",
+            description:"Created new staff invitation",
+            ip:"103.84.21.18",
+            time:"18 Sep · 6:14 PM",
+            status:"Success"
+        },
+
+        {
+            user:"Rahul Mehta",
+            role:"Admin",
+            action:"Export",
+            module:"Reports",
+            description:"Exported sales report",
+            ip:"103.92.44.72",
+            time:"18 Sep · 4:48 PM",
+            status:"Success"
+        },
+
+        {
+            user:"Priya Sharma",
+            role:"Manager",
+            action:"Update",
+            module:"Orders",
+            description:"Updated order processing status",
+            ip:"49.204.12.61",
+            time:"17 Sep · 3:22 PM",
+            status:"Success"
+        },
+
+        {
+            user:"Vikram Singh",
+            role:"Support",
+            action:"Delete",
+            module:"Support",
+            description:"Removed obsolete support rule",
+            ip:"106.51.72.94",
+            time:"16 Sep · 1:08 PM",
+            status:"Success"
+        }
+
+    ];
+
+
+    /* =========================================================
+       TOAST
+    ========================================================= */
+
+    function showToast(message){
+
+        if(!toast){
+            return;
+        }
+
+        toast.textContent =
+            message;
+
+        toast.classList.add(
+            "show"
+        );
+
+        clearTimeout(
+            showToast.timer
+        );
+
+        showToast.timer =
+            setTimeout(
+                function(){
+
+                    toast.classList.remove(
+                        "show"
+                    );
+
+                },
+                2200
             );
 
     }
 
 
-    /* =====================================================
-       DATE
-    ===================================================== */
+    /* =========================================================
+       SIDEBAR
+       SAME INDEX.JS BEHAVIOUR
+    ========================================================= */
 
-    const currentDate =
-        document.getElementById("currentDate");
+    function toggleSidebar(forceOpen){
 
-
-    if (currentDate) {
-
-        const today =
-            new Date();
-
-        currentDate.textContent =
-            today.toLocaleDateString(
-                "en-IN",
-                {
-                    month:"long",
-                    year:"numeric"
-                }
-            );
-
-    }
+        const shouldOpen =
+            typeof forceOpen === "boolean"
+                ? forceOpen
+                : !sidebar.classList.contains("show");
 
 
-    /* =====================================================
-       MOBILE SIDEBAR
-    ===================================================== */
+        sidebar.classList.toggle(
+            "show",
+            shouldOpen
+        );
 
-    function openSidebar() {
 
-        if (!sidebar || !overlay) {
-            return;
-        }
+        overlay.classList.toggle(
+            "show",
+            shouldOpen
+        );
 
-        sidebar.classList.add("open");
 
-        overlay.classList.add("show");
+        document.body.classList.toggle(
+            "sidebar-open",
+            shouldOpen
+        );
 
     }
 
 
-    function closeSidebar() {
-
-        if (!sidebar || !overlay) {
-            return;
-        }
-
-        sidebar.classList.remove("open");
-
-        overlay.classList.remove("show");
-
-    }
-
-
-    if (mobileMenuBtn) {
+    if(mobileMenuBtn){
 
         mobileMenuBtn.addEventListener(
             "click",
-            openSidebar
+            function(){
+
+                toggleSidebar();
+
+            }
         );
 
     }
 
 
-    if (overlay) {
+    if(overlay){
 
         overlay.addEventListener(
             "click",
-            closeSidebar
+            function(){
+
+                toggleSidebar(false);
+
+            }
         );
 
     }
 
 
+    /* =========================================================
+       CLOSE SIDEBAR AFTER MOBILE NAVIGATION
+    ========================================================= */
+
     document
-        .querySelectorAll(".admin-nav-link")
-        .forEach(function (link) {
+        .querySelectorAll(
+            ".admin-nav-link"
+        )
+        .forEach(
+            function(link){
 
-            link.addEventListener(
-                "click",
-                function () {
+                link.addEventListener(
+                    "click",
+                    function(){
 
-                    if (
-                        window.innerWidth <= 991.98
-                    ) {
+                        if(
+                            window.innerWidth <
+                            992
+                        ){
 
-                        closeSidebar();
+                            toggleSidebar(false);
+
+                        }
 
                     }
+                );
 
-                }
-            );
-
-        });
+            }
+        );
 
 
-    /* =====================================================
+    /* =========================================================
        NOTIFICATIONS
-    ===================================================== */
+       SAME INDEX EFFECT
+    ========================================================= */
 
-    function toggleNotifications() {
+    function toggleNotifications(){
 
-        if (!notificationPanel) {
+        if(!notificationPanel){
             return;
         }
 
@@ -189,44 +308,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    function hideNotifications() {
-
-        if (!notificationPanel) {
-            return;
-        }
-
-        notificationPanel.classList.remove(
-            "show"
-        );
-
-    }
-
-
-    if (notificationBtn) {
+    if(notificationBtn){
 
         notificationBtn.addEventListener(
             "click",
-            toggleNotifications
+            function(event){
+
+                event.stopPropagation();
+
+                toggleNotifications();
+
+            }
         );
 
     }
 
 
-    if (mobileNotificationBtn) {
+    if(mobileNotificationBtn){
 
         mobileNotificationBtn.addEventListener(
             "click",
-            toggleNotifications
+            function(event){
+
+                event.stopPropagation();
+
+                toggleNotifications();
+
+            }
         );
 
     }
 
 
-    if (closeNotifications) {
+    if(closeNotifications){
 
         closeNotifications.addEventListener(
             "click",
-            hideNotifications
+            function(){
+
+                notificationPanel.classList.remove(
+                    "show"
+                );
+
+            }
         );
 
     }
@@ -234,37 +358,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener(
         "click",
-        function (event) {
+        function(event){
 
-            if (!notificationPanel) {
+            if(!notificationPanel){
                 return;
             }
 
-            const panelClicked =
+
+            const clickedInside =
                 notificationPanel.contains(
                     event.target
                 );
 
-            const desktopClicked =
+
+            const clickedDesktopButton =
                 notificationBtn &&
                 notificationBtn.contains(
                     event.target
                 );
 
-            const mobileClicked =
+
+            const clickedMobileButton =
                 mobileNotificationBtn &&
                 mobileNotificationBtn.contains(
                     event.target
                 );
 
 
-            if (
-                !panelClicked &&
-                !desktopClicked &&
-                !mobileClicked
-            ) {
+            if(
+                !clickedInside &&
+                !clickedDesktopButton &&
+                !clickedMobileButton
+            ){
 
-                hideNotifications();
+                notificationPanel.classList.remove(
+                    "show"
+                );
 
             }
 
@@ -272,211 +401,18 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* =====================================================
-       FILTER FUNCTION
-    ===================================================== */
-
-    function applyFilters() {
-
-        if (!auditTableBody) {
-            return;
-        }
-
-
-        const search =
-            auditSearch
-                ? auditSearch.value
-                    .trim()
-                    .toLowerCase()
-                : "";
-
-
-        const selectedAction =
-            actionFilter
-                ? actionFilter.value
-                : "all";
-
-
-        const selectedModule =
-            moduleFilter
-                ? moduleFilter.value
-                : "all";
-
-
-        const selectedSeverity =
-            severityFilter
-                ? severityFilter.value
-                : "all";
-
-
-        const rows =
-            auditTableBody.querySelectorAll(
-                "tr"
-            );
-
-
-        let visibleRows = 0;
-
-
-        rows.forEach(function (row) {
-
-
-            const rowText =
-                row.textContent
-                    .toLowerCase();
-
-
-            const rowAction =
-                row.dataset.action || "";
-
-
-            const rowModule =
-                row.dataset.module || "";
-
-
-            const rowSeverity =
-                row.dataset.severity || "";
-
-
-            const matchesSearch =
-                !search ||
-                rowText.includes(search);
-
-
-            const matchesAction =
-                selectedAction === "all" ||
-                rowAction === selectedAction;
-
-
-            const matchesModule =
-                selectedModule === "all" ||
-                rowModule === selectedModule;
-
-
-            const matchesSeverity =
-                selectedSeverity === "all" ||
-                rowSeverity === selectedSeverity;
-
-
-            if (
-                matchesSearch &&
-                matchesAction &&
-                matchesModule &&
-                matchesSeverity
-            ) {
-
-                row.style.display = "";
-
-                visibleRows++;
-
-            }
-            else {
-
-                row.style.display = "none";
-
-            }
-
-        });
-
-
-        if (auditCount) {
-
-            auditCount.textContent =
-                `Showing ${visibleRows} activity records`;
-
-        }
-
-    }
-
-
-    if (auditSearch) {
-
-        auditSearch.addEventListener(
-            "input",
-            applyFilters
-        );
-
-    }
-
-
-    if (actionFilter) {
-
-        actionFilter.addEventListener(
-            "change",
-            applyFilters
-        );
-
-    }
-
-
-    if (moduleFilter) {
-
-        moduleFilter.addEventListener(
-            "change",
-            applyFilters
-        );
-
-    }
-
-
-    if (severityFilter) {
-
-        severityFilter.addEventListener(
-            "change",
-            applyFilters
-        );
-
-    }
-
-
-    /* =====================================================
-       TOP SEARCH
-    ===================================================== */
-
-    if (adminSearch) {
-
-        adminSearch.addEventListener(
-            "input",
-            function () {
-
-                const value =
-                    adminSearch.value
-                        .trim()
-                        .toLowerCase();
-
-
-                if (!value) {
-                    return;
-                }
-
-
-                const rows =
-                    auditTableBody
-                        ? auditTableBody.querySelectorAll("tr")
-                        : [];
-
-
-                let matches = 0;
-
-
-                rows.forEach(function (row) {
-
-                    if (
-                        row.textContent
-                            .toLowerCase()
-                            .includes(value)
-                    ) {
-
-                        matches++;
-
-                    }
-
-                });
-
+    /* =========================================================
+       LOGOUT
+    ========================================================= */
+
+    if(logoutBtn){
+
+        logoutBtn.addEventListener(
+            "click",
+            function(){
 
                 showToast(
-                    "Audit Search",
-                    `${matches} matching record(s) found.`
+                    "Logout action triggered."
                 );
 
             }
@@ -485,357 +421,534 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================================
-       AUDIT DETAILS
-    ===================================================== */
+    /* =========================================================
+       FILTERING
+    ========================================================= */
 
-    const auditDetails = {
+    function applyFilters(){
 
-        1:{
-            activity:"Product updated",
-            user:"Anjali Rao",
-            module:"Products",
-            severity:"Success",
-            ip:"103.24.18.72",
-            time:"15 Sep 2026, 10:42 AM"
-        },
-
-        2:{
-            activity:"Admin login",
-            user:"Rahul Mehta",
-            module:"Staff",
-            severity:"Info",
-            ip:"49.207.86.11",
-            time:"15 Sep 2026, 09:18 AM"
-        },
-
-        3:{
-            activity:"Order created",
-            user:"Priya Sharma",
-            module:"Orders",
-            severity:"Success",
-            ip:"117.201.34.92",
-            time:"15 Sep 2026, 08:56 AM"
-        },
-
-        4:{
-            activity:"Inventory record removed",
-            user:"Arjun Kumar",
-            module:"Inventory",
-            severity:"Warning",
-            ip:"182.74.20.61",
-            time:"15 Sep 2026, 08:21 AM"
-        },
-
-        5:{
-            activity:"Permission changed",
-            user:"Admin",
-            module:"Settings",
-            severity:"Critical",
-            ip:"10.28.41.7",
-            time:"14 Sep 2026, 06:42 PM"
-        },
-
-        6:{
-            activity:"Sales report exported",
-            user:"Priya Sharma",
-            module:"Reports",
-            severity:"Info",
-            ip:"117.201.34.92",
-            time:"14 Sep 2026, 04:18 PM"
-        },
-
-        7:{
-            activity:"Customer profile updated",
-            user:"Vikram Singh",
-            module:"Customers",
-            severity:"Success",
-            ip:"49.207.86.11",
-            time:"14 Sep 2026, 03:12 PM"
-        },
-
-        8:{
-            activity:"Failed login attempt",
-            user:"Unknown User",
-            module:"Staff",
-            severity:"Warning",
-            ip:"45.119.73.28",
-            time:"14 Sep 2026, 11:48 PM"
-        }
-
-    };
+        const globalQuery =
+            adminSearch?.value
+                .trim()
+                .toLowerCase() || "";
 
 
-    /* =====================================================
-       OPEN DETAILS MODAL
-    ===================================================== */
-
-    function openAuditDetails(id) {
-
-        const data =
-            auditDetails[id];
+        const tableQuery =
+            auditSearch?.value
+                .trim()
+                .toLowerCase() || "";
 
 
-        if (!data || !auditModal) {
+        const query =
+            `${globalQuery} ${tableQuery}`
+                .trim()
+                .toLowerCase();
+
+
+        const selectedUser =
+            userFilter.value;
+
+
+        const selectedAction =
+            actionFilter.value;
+
+
+        const selectedDate =
+            dateFilter.value;
+
+
+        let visibleCount = 0;
+
+
+        const rows =
+            document.querySelectorAll(
+                "#auditTable tbody tr"
+            );
+
+
+        rows.forEach(
+            function(row, index){
+
+                const event =
+                    auditEvents[index];
+
+
+                if(!event){
+                    return;
+                }
+
+
+                const searchableText =
+                    `
+                        ${event.user}
+                        ${event.role}
+                        ${event.action}
+                        ${event.module}
+                        ${event.description}
+                        ${event.ip}
+                    `
+                    .toLowerCase();
+
+
+                const searchMatch =
+                    !query ||
+                    query
+                        .split(/\s+/)
+                        .filter(Boolean)
+                        .every(
+                            function(token){
+
+                                return searchableText.includes(
+                                    token
+                                );
+
+                            }
+                        );
+
+
+                const userMatch =
+                    selectedUser === "all" ||
+                    event.user === selectedUser;
+
+
+                const actionMatch =
+                    selectedAction === "all" ||
+                    event.action === selectedAction;
+
+
+                let dateMatch = true;
+
+
+                if(
+                    selectedDate === "today"
+                ){
+
+                    dateMatch =
+                        Number(
+                            row.dataset.days
+                        ) === 0;
+
+                }
+                else if(
+                    selectedDate !== "all"
+                ){
+
+                    dateMatch =
+                        Number(
+                            row.dataset.days
+                        ) <=
+                        Number(
+                            selectedDate
+                        );
+
+                }
+
+
+                const visible =
+                    searchMatch &&
+                    userMatch &&
+                    actionMatch &&
+                    dateMatch;
+
+
+                row.classList.toggle(
+                    "audit-row-hidden",
+                    !visible
+                );
+
+
+                if(visible){
+
+                    visibleCount++;
+
+                }
+
+            }
+        );
+
+
+        auditResult.textContent =
+            `Showing ${visibleCount} of 1,248 events`;
+
+    }
+
+
+    if(adminSearch){
+
+        adminSearch.addEventListener(
+            "input",
+            function(){
+
+                applyFilters();
+
+                if(
+                    auditSearch
+                ){
+
+                    auditSearch.value =
+                        adminSearch.value;
+
+                }
+
+            }
+        );
+
+    }
+
+
+    if(auditSearch){
+
+        auditSearch.addEventListener(
+            "input",
+            function(){
+
+                applyFilters();
+
+                if(
+                    adminSearch &&
+                    adminSearch.value !==
+                    auditSearch.value
+                ){
+
+                    adminSearch.value =
+                        auditSearch.value;
+
+                }
+
+            }
+        );
+
+    }
+
+
+    userFilter.addEventListener(
+        "change",
+        applyFilters
+    );
+
+
+    actionFilter.addEventListener(
+        "change",
+        applyFilters
+    );
+
+
+    dateFilter.addEventListener(
+        "change",
+        applyFilters
+    );
+
+
+    /* =========================================================
+       CLEAR FILTERS
+    ========================================================= */
+
+    if(clearFilters){
+
+        clearFilters.addEventListener(
+            "click",
+            function(){
+
+                if(adminSearch){
+                    adminSearch.value = "";
+                }
+
+                if(auditSearch){
+                    auditSearch.value = "";
+                }
+
+                userFilter.value = "all";
+                actionFilter.value = "all";
+                dateFilter.value = "all";
+
+                applyFilters();
+
+                showToast(
+                    "Audit filters cleared."
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       EVENT MODAL
+    ========================================================= */
+
+    const modalUser =
+        document.getElementById(
+            "modalUser"
+        );
+
+    const modalRole =
+        document.getElementById(
+            "modalRole"
+        );
+
+    const modalModule =
+        document.getElementById(
+            "modalModule"
+        );
+
+    const modalIP =
+        document.getElementById(
+            "modalIP"
+        );
+
+    const modalTime =
+        document.getElementById(
+            "modalTime"
+        );
+
+    const modalStatus =
+        document.getElementById(
+            "modalStatus"
+        );
+
+    const modalEventAction =
+        document.getElementById(
+            "modalEventAction"
+        );
+
+    const modalEventDescription =
+        document.getElementById(
+            "modalEventDescription"
+        );
+
+
+    function openAuditModal(index){
+
+        const event =
+            auditEvents[index];
+
+
+        if(!event){
             return;
         }
 
 
-        const activity =
-            document.getElementById(
-                "modalActivity"
-            );
-
-        const user =
-            document.getElementById(
-                "modalUser"
-            );
-
-        const module =
-            document.getElementById(
-                "modalModule"
-            );
-
-        const severity =
-            document.getElementById(
-                "modalSeverity"
-            );
-
-        const ip =
-            document.getElementById(
-                "modalIP"
-            );
-
-        const time =
-            document.getElementById(
-                "modalTime"
-            );
+        modalUser.textContent =
+            event.user;
 
 
-        if (activity) {
-            activity.textContent =
-                data.activity;
-        }
+        modalRole.textContent =
+            event.role;
 
 
-        if (user) {
-            user.textContent =
-                data.user;
-        }
+        modalModule.textContent =
+            event.module;
 
 
-        if (module) {
-            module.textContent =
-                data.module;
-        }
+        modalIP.textContent =
+            event.ip;
 
 
-        if (severity) {
-            severity.textContent =
-                data.severity;
-        }
+        modalTime.textContent =
+            event.time;
 
 
-        if (ip) {
-            ip.textContent =
-                data.ip;
-        }
+        modalStatus.textContent =
+            event.status;
 
 
-        if (time) {
-            time.textContent =
-                data.time;
-        }
+        modalEventAction.textContent =
+            event.action;
 
 
-        auditModal.show();
+        modalEventDescription.textContent =
+            event.description;
+
+
+        auditModal.classList.add(
+            "show"
+        );
+
+
+        auditModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    function closeAudit(){
+
+        auditModal.classList.remove(
+            "show"
+        );
+
+
+        auditModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            "";
 
     }
 
 
     document
-        .querySelectorAll(".view-btn")
-        .forEach(function (button) {
+        .querySelectorAll(
+            ".audit-view-btn"
+        )
+        .forEach(
+            function(button){
 
-            button.addEventListener(
-                "click",
-                function () {
+                button.addEventListener(
+                    "click",
+                    function(){
 
-                    openAuditDetails(
-                        Number(
-                            button.dataset.id
-                        )
-                    );
-
-                }
-            );
-
-        });
-
-
-    /* =====================================================
-       EXPORT CSV
-    ===================================================== */
-
-    if (exportAuditBtn) {
-
-        exportAuditBtn.addEventListener(
-            "click",
-            function () {
-
-
-                if (!auditTableBody) {
-                    return;
-                }
-
-
-                const rows =
-                    Array.from(
-                        auditTableBody.querySelectorAll("tr")
-                    ).filter(
-                        function (row) {
-
-                            return (
-                                row.style.display !== "none"
+                        const index =
+                            Number(
+                                button.dataset.event
                             );
 
-                        }
-                    );
+                        openAuditModal(
+                            index
+                        );
 
-
-                const csvRows = [];
-
-
-                csvRows.push([
-                    "Activity",
-                    "User",
-                    "Module",
-                    "Severity",
-                    "IP Address",
-                    "Time"
-                ]);
-
-
-                rows.forEach(function (row) {
-
-                    const activity =
-                        row.querySelector(
-                            ".activity-cell strong"
-                        )?.textContent
-                        || "";
-
-
-                    const user =
-                        row.cells[1]?.textContent
-                        || "";
-
-
-                    const module =
-                        row.cells[2]?.textContent
-                        || "";
-
-
-                    const severity =
-                        row.querySelector(
-                            ".severity"
-                        )?.textContent
-                        || "";
-
-
-                    const ip =
-                        row.cells[4]?.textContent
-                        || "";
-
-
-                    const time =
-                        row.cells[5]?.textContent
-                        || "";
-
-
-                    csvRows.push([
-
-                        activity.trim(),
-
-                        user.trim(),
-
-                        module.trim(),
-
-                        severity.trim(),
-
-                        ip.trim(),
-
-                        time.trim()
-
-                    ]);
-
-                });
-
-
-                const csv =
-                    csvRows
-                        .map(function (row) {
-
-                            return row
-                                .map(function (value) {
-
-                                    return `"${String(value)
-                                        .replace(/"/g, '""')}"`;
-
-                                })
-                                .join(",");
-
-                        })
-                        .join("\n");
-
-
-                const blob =
-                    new Blob(
-                        [csv],
-                        {
-                            type:
-                                "text/csv;charset=utf-8;"
-                        }
-                    );
-
-
-                const url =
-                    URL.createObjectURL(
-                        blob
-                    );
-
-
-                const link =
-                    document.createElement(
-                        "a"
-                    );
-
-
-                link.href =
-                    url;
-
-                link.download =
-                    "ozzo-audit-logs.csv";
-
-
-                document.body.appendChild(
-                    link
+                    }
                 );
 
-
-                link.click();
-
-
-                link.remove();
+            }
+        );
 
 
-                URL.revokeObjectURL(
-                    url
+    closeAuditModal?.addEventListener(
+        "click",
+        closeAudit
+    );
+
+
+    closeAuditModalBtn?.addEventListener(
+        "click",
+        closeAudit
+    );
+
+
+    auditModal
+        ?.querySelector(
+            ".audit-modal-backdrop"
+        )
+        ?.addEventListener(
+            "click",
+            closeAudit
+        );
+
+
+    /* =========================================================
+       PAGINATION DEMO
+    ========================================================= */
+
+    document
+        .querySelectorAll(
+            ".audit-page-btn"
+        )
+        .forEach(
+            function(button){
+
+                button.addEventListener(
+                    "click",
+                    function(){
+
+                        if(
+                            button.classList.contains(
+                                "disabled"
+                            )
+                        ){
+
+                            return;
+
+                        }
+
+
+                        if(
+                            button.classList.contains(
+                                "current"
+                            )
+                        ){
+
+                            return;
+
+                        }
+
+
+                        const page =
+                            button.textContent.trim();
+
+
+                        if(
+                            page === ""
+                        ){
+
+                            showToast(
+                                "Pagination action triggered."
+                            );
+
+                            return;
+
+                        }
+
+
+                        document
+                            .querySelectorAll(
+                                ".audit-page-btn"
+                            )
+                            .forEach(
+                                function(item){
+
+                                    item.classList.remove(
+                                        "current"
+                                    );
+
+                                }
+                            );
+
+
+                        button.classList.add(
+                            "current"
+                        );
+
+
+                        showToast(
+                            `Audit page ${page} selected.`
+                        );
+
+                    }
                 );
 
+            }
+        );
+
+
+    /* =========================================================
+       EXPORT
+    ========================================================= */
+
+    const exportBtn =
+        document.getElementById(
+            "exportBtn"
+        );
+
+
+    if(exportBtn){
+
+        exportBtn.addEventListener(
+            "click",
+            function(){
 
                 showToast(
-                    "Export Complete",
-                    "Audit logs exported successfully."
+                    "Audit log export started."
                 );
 
             }
@@ -844,114 +957,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================================
-       LOGOUT
-    ===================================================== */
+    /* =========================================================
+       ESCAPE KEY
+    ========================================================= */
 
-    if (logoutBtn) {
+    document.addEventListener(
+        "keydown",
+        function(event){
 
-        logoutBtn.addEventListener(
-            "click",
-            function () {
+            if(
+                event.key !== "Escape"
+            ){
 
-                const confirmed =
-                    window.confirm(
-                        "Are you sure you want to logout?"
-                    );
-
-
-                if (confirmed) {
-
-                    showToast(
-                        "Logout",
-                        "Logout action has been triggered."
-                    );
-
-                }
+                return;
 
             }
-        );
-
-    }
 
 
-    /* =====================================================
-       TOAST
-    ===================================================== */
+            toggleSidebar(false);
 
-    function showToast(
-        title,
-        message
-    ) {
 
-        const toast =
-            document.getElementById(
-                "ozzoToast"
+            notificationPanel?.classList.remove(
+                "show"
             );
 
 
-        if (!toast) {
-            return;
-        }
-
-
-        const titleElement =
-            toast.querySelector(
-                "strong"
-            );
-
-
-        const messageElement =
-            toast.querySelector(
-                "span"
-            );
-
-
-        if (titleElement) {
-
-            titleElement.textContent =
-                title;
+            closeAudit();
 
         }
-
-
-        if (messageElement) {
-
-            messageElement.textContent =
-                message;
-
-        }
-
-
-        toast.classList.add(
-            "show"
-        );
-
-
-        clearTimeout(
-            toast._timer
-        );
-
-
-        toast._timer =
-            setTimeout(
-                function () {
-
-                    toast.classList.remove(
-                        "show"
-                    );
-
-                },
-                3000
-            );
-
-    }
-
-
-    /* =====================================================
-       INITIALIZE
-    ===================================================== */
-
-    applyFilters();
+    );
 
 });

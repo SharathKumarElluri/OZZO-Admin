@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
+        name="description"
+        content="OZZO Admin Staff and Roles Management"
     >
 
-    <title>OZZO Admin | Staff & Roles</title>
-
+    <title>OZZO | Staff & Roles</title>
 
     <!-- Bootstrap -->
     <link
@@ -19,36 +17,33 @@
         rel="stylesheet"
     >
 
-
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- Page CSS -->
+    <!-- Staff Roles CSS -->
     <link
         rel="stylesheet"
         href="Staff-Roles.css"
     >
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
+<!-- =========================================================
      MOBILE HEADER
-===================================================== -->
+========================================================= -->
 
 <header class="admin-mobile-header d-lg-none">
 
@@ -59,22 +54,21 @@
         aria-label="Open admin menu"
         title="Open admin menu"
     >
-        <i class="fa-solid fa-bars"></i>
+        <i
+            class="fa-solid fa-bars"
+            aria-hidden="true"
+        ></i>
     </button>
-
 
     <div class="mobile-brand">
 
-        <strong>
-            OZZO
-        </strong>
+        <strong>OZZO</strong>
 
         <small>
             ADMIN PANEL
         </small>
 
     </div>
-
 
     <button
         class="mobile-notification"
@@ -83,39 +77,35 @@
         aria-label="Notifications"
         title="Notifications"
     >
+        <i
+            class="fa-regular fa-bell"
+            aria-hidden="true"
+        ></i>
 
-        <i class="fa-regular fa-bell"></i>
-
-        <span>
-            4
-        </span>
-
+        <span>4</span>
     </button>
 
 </header>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      SIDEBAR OVERLAY
-===================================================== -->
+========================================================= -->
 
 <div
-    class="admin-overlay"
-    id="adminOverlay"
+    class="sidebar-overlay"
+    id="sidebarOverlay"
 ></div>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      SIDEBAR
-===================================================== -->
+========================================================= -->
 
 <aside
     class="admin-sidebar"
     id="adminSidebar"
 >
-
 
     <!-- LOGO -->
 
@@ -155,27 +145,25 @@
     </div>
 
 
-    <!-- =================================================
-         NAVIGATION
-    ================================================= -->
+    <!-- =====================================================
+         EXACT OZZO ADMIN NAVIGATION
+    ====================================================== -->
 
-    <nav class="admin-nav">
+    <nav
+        class="admin-nav"
+        aria-label="Admin navigation"
+    >
 
-
-        <!-- =================================================
-             MAIN
-        ================================================= -->
+        <!-- MAIN -->
 
         <div class="admin-nav-heading">
             MAIN
         </div>
 
-
         <a
             href="../index.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-chart-pie"
                 aria-hidden="true"
@@ -184,25 +172,19 @@
             <span>
                 Dashboard
             </span>
-
         </a>
 
 
-
-        <!-- =================================================
-             SALES
-        ================================================= -->
+        <!-- SALES -->
 
         <div class="admin-nav-heading">
             SALES
         </div>
 
-
         <a
-            href="../Sales/Orders/Orders.html"
+            href="/Orders/Orders.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-bag-shopping"
                 aria-hidden="true"
@@ -215,15 +197,13 @@
             <b>
                 18
             </b>
-
         </a>
 
 
         <a
-            href="../Sales/Payments/Payments.html"
+            href="/Payments/Payments.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-credit-card"
                 aria-hidden="true"
@@ -232,15 +212,13 @@
             <span>
                 Payments
             </span>
-
         </a>
 
 
         <a
-            href="../Sales/Returns/Returns.html"
+            href="/Returns/Returns.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-rotate-left"
                 aria-hidden="true"
@@ -253,42 +231,34 @@
             <b class="warning">
                 5
             </b>
-
         </a>
 
 
         <a
-            href="../Sales/Shipping/Shipping.html"
+            href="/Shipping/Shipping.html"
             class="admin-nav-link"
         >
-
             <i
-                class="fa-solid fa-truck"
+                class="fa-solid fa-truck-fast"
                 aria-hidden="true"
             ></i>
 
             <span>
                 Shipping
             </span>
-
         </a>
 
 
-
-        <!-- =================================================
-             CATALOG
-        ================================================= -->
+        <!-- CATALOG -->
 
         <div class="admin-nav-heading">
             CATALOG
         </div>
 
-
         <a
-            href="../Products/Products.html"
+            href="/Products/Products.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-box"
                 aria-hidden="true"
@@ -297,15 +267,13 @@
             <span>
                 Products
             </span>
-
         </a>
 
 
         <a
-            href="../Categories/Categories.html"
+            href="/Categories/Categories.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-layer-group"
                 aria-hidden="true"
@@ -314,15 +282,13 @@
             <span>
                 Categories
             </span>
-
         </a>
 
 
         <a
-            href="../Inventory/Inventory.html"
+            href="/Inventory/Inventory.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-warehouse"
                 aria-hidden="true"
@@ -335,25 +301,19 @@
             <b class="warning">
                 3
             </b>
-
         </a>
 
 
-
-        <!-- =================================================
-             CUSTOMERS
-        ================================================= -->
+        <!-- CUSTOMERS -->
 
         <div class="admin-nav-heading">
             CUSTOMERS
         </div>
 
-
         <a
-            href="../Customers/Customers.html"
+            href="/Customers/Customers.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-users"
                 aria-hidden="true"
@@ -362,15 +322,13 @@
             <span>
                 Customers
             </span>
-
         </a>
 
 
         <a
-            href="../Reviews/Reviews.html"
+            href="/Reviews/Reviews.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-regular fa-star"
                 aria-hidden="true"
@@ -379,46 +337,34 @@
             <span>
                 Reviews
             </span>
-
         </a>
 
 
         <a
-            href="../Support/Support.html"
+            href="/Support/Support.html"
             class="admin-nav-link"
         >
-
             <i
-                class="fa-solid fa-headset"
+                class="fa-regular fa-comments"
                 aria-hidden="true"
             ></i>
 
             <span>
                 Support
             </span>
-
-            <b class="warning">
-                12
-            </b>
-
         </a>
 
 
-
-        <!-- =================================================
-             MARKETING
-        ================================================= -->
+        <!-- MARKETING -->
 
         <div class="admin-nav-heading">
             MARKETING
         </div>
 
-
         <a
-            href="../Coupons/Coupons.html"
+            href="/Coupons/Coupons.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-ticket"
                 aria-hidden="true"
@@ -427,65 +373,55 @@
             <span>
                 Coupons
             </span>
-
         </a>
 
 
         <a
-            href="../Offers/Offers.html"
+            href="/Offers/Offers.html"
             class="admin-nav-link"
         >
-
             <i
-                class="fa-solid fa-percent"
+                class="fa-solid fa-bullseye"
                 aria-hidden="true"
             ></i>
 
             <span>
                 Offers
             </span>
-
         </a>
 
 
         <a
-            href="../Banners/Banners.html"
+            href="/Banners/Banners.html"
             class="admin-nav-link"
         >
-
             <i
-                class="fa-solid fa-image"
+                class="fa-regular fa-image"
                 aria-hidden="true"
             ></i>
 
             <span>
                 Banners
             </span>
-
         </a>
 
 
         <a
-            href="../Newsletter/Newsletter.html"
+            href="/Newsletter/Newsletter.html"
             class="admin-nav-link"
         >
-
             <i
-                class="fa-solid fa-envelope"
+                class="fa-regular fa-envelope"
                 aria-hidden="true"
             ></i>
 
             <span>
                 Newsletter
             </span>
-
         </a>
 
 
-
-        <!-- =================================================
-             BUSINESS
-        ================================================= -->
+        <!-- BUSINESS -->
 
         <div class="admin-nav-heading">
             BUSINESS
@@ -493,71 +429,45 @@
 
 
         <a
-            href="../BulkOrders/BulkOrders.html"
+            href="/Partners/Partners.html"
             class="admin-nav-link"
         >
-
-            <i
-                class="fa-solid fa-boxes-stacked"
-                aria-hidden="true"
-            ></i>
-
-            <span>
-                Bulk Orders
-            </span>
-
-        </a>
-
-
-        <a
-            href="../Partners/Partners.html"
-            class="admin-nav-link"
-        >
-
-            <i
-                class="fa-solid fa-handshake"
-                aria-hidden="true"
-            ></i>
-
-            <span>
-                Partners
-            </span>
-
-        </a>
-
-
-        <a
-            href="../Franchise/Franchise.html"
-            class="admin-nav-link"
-        >
-
             <i
                 class="fa-solid fa-store"
                 aria-hidden="true"
             ></i>
 
             <span>
-                Franchise
+                Partners
             </span>
-
         </a>
 
 
+        <a
+            href="/Franchise/Franchise.html"
+            class="admin-nav-link"
+        >
+            <i
+                class="fa-solid fa-building"
+                aria-hidden="true"
+            ></i>
 
-        <!-- =================================================
-             REPORTS
-        ================================================= -->
+            <span>
+                Franchise
+            </span>
+        </a>
+
+
+        <!-- REPORTS -->
 
         <div class="admin-nav-heading">
             REPORTS
         </div>
 
-
         <a
-            href="../SalesReports/SalesReports.html"
+            href="/Sales-report/Sales-report.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-chart-line"
                 aria-hidden="true"
@@ -566,15 +476,13 @@
             <span>
                 Sales Reports
             </span>
-
         </a>
 
 
         <a
-            href="../ProductReports/ProductReports.html"
+            href="/Product-reports/Product-reports.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-chart-column"
                 aria-hidden="true"
@@ -583,15 +491,13 @@
             <span>
                 Product Reports
             </span>
-
         </a>
 
 
         <a
-            href="../CustomerReports/CustomerReports.html"
+            href="/Customer-Reports/Customer-Reports.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-user-group"
                 aria-hidden="true"
@@ -600,27 +506,20 @@
             <span>
                 Customer Reports
             </span>
-
         </a>
 
 
-
-        <!-- =================================================
-             SYSTEM
-        ================================================= -->
+        <!-- SYSTEM -->
 
         <div class="admin-nav-heading">
             SYSTEM
         </div>
 
 
-        <!-- STAFF ACTIVE -->
-
         <a
             href="Staff-Roles.html"
             class="admin-nav-link active"
         >
-
             <i
                 class="fa-solid fa-user-shield"
                 aria-hidden="true"
@@ -629,15 +528,13 @@
             <span>
                 Staff &amp; Roles
             </span>
-
         </a>
 
 
         <a
-            href="../Audit-Logs/Audit-Logs.html"
+            href="/Audit-logs/Audit-logs.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-file-shield"
                 aria-hidden="true"
@@ -646,15 +543,13 @@
             <span>
                 Audit Logs
             </span>
-
         </a>
 
 
         <a
-            href="../Settings/Settings.html"
+            href="/Settings/Settings.html"
             class="admin-nav-link"
         >
-
             <i
                 class="fa-solid fa-gear"
                 aria-hidden="true"
@@ -663,7 +558,6 @@
             <span>
                 Settings
             </span>
-
         </a>
 
 
@@ -672,15 +566,14 @@
         <div class="admin-nav-divider"></div>
 
 
-        <!-- VIEW WEBSITE -->
+        <!-- WEBSITE -->
 
         <a
             href="../../index.html"
             class="admin-nav-link"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
         >
-
             <i
                 class="fa-solid fa-arrow-up-right-from-square"
                 aria-hidden="true"
@@ -689,7 +582,6 @@
             <span>
                 View Website
             </span>
-
         </a>
 
 
@@ -717,20 +609,18 @@
 </aside>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      MAIN
-===================================================== -->
+========================================================= -->
 
 <main class="admin-main">
 
 
-    <!-- =================================================
+    <!-- =====================================================
          TOPBAR
-    ================================================= -->
+    ====================================================== -->
 
-    <header class="admin-topbar d-none d-lg-flex">
-
+    <header class="admin-topbar">
 
         <div class="admin-search">
 
@@ -740,17 +630,16 @@
             ></i>
 
             <input
-                id="adminSearch"
                 type="search"
-                placeholder="Search orders, products, customers..."
-                aria-label="Search admin dashboard"
+                id="topSearch"
+                placeholder="Search staff, roles..."
+                aria-label="Search staff and roles"
             >
 
         </div>
 
 
         <div class="admin-top-right">
-
 
             <button
                 class="admin-top-icon"
@@ -760,7 +649,10 @@
                 title="Notifications"
             >
 
-                <i class="fa-regular fa-bell"></i>
+                <i
+                    class="fa-regular fa-bell"
+                    aria-hidden="true"
+                ></i>
 
                 <span>
                     4
@@ -775,7 +667,6 @@
                     A
                 </div>
 
-
                 <div>
 
                     <strong>
@@ -788,8 +679,10 @@
 
                 </div>
 
-
-                <i class="fa-solid fa-chevron-down"></i>
+                <i
+                    class="fa-solid fa-chevron-down"
+                    aria-hidden="true"
+                ></i>
 
             </div>
 
@@ -798,118 +691,29 @@
     </header>
 
 
-
-    <!-- =================================================
-         NOTIFICATION PANEL
-    ================================================= -->
-
-    <div
-        class="notification-panel"
-        id="notificationPanel"
-    >
-
-        <div class="notification-panel-head">
-
-            <strong>
-                Notifications
-            </strong>
-
-            <button
-                id="closeNotifications"
-                type="button"
-                aria-label="Close notifications"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div class="notification-item">
-
-            <i class="fa-solid fa-triangle-exclamation"></i>
-
-            <div>
-
-                <strong>
-                    3 products
-                </strong>
-
-                <small>
-                    need inventory attention
-                </small>
-
-            </div>
-
-        </div>
-
-
-        <div class="notification-item">
-
-            <i class="fa-solid fa-bag-shopping"></i>
-
-            <div>
-
-                <strong>
-                    18 new orders
-                </strong>
-
-                <small>
-                    received today
-                </small>
-
-            </div>
-
-        </div>
-
-
-        <div class="notification-item">
-
-            <i class="fa-solid fa-ticket"></i>
-
-            <div>
-
-                <strong>
-                    OZZO10
-                </strong>
-
-                <small>
-                    coupon expires tomorrow
-                </small>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =================================================
+    <!-- =====================================================
          CONTENT
-    ================================================= -->
+    ====================================================== -->
 
-    <div class="admin-content">
+    <section class="admin-content">
 
 
-        <!-- =================================================
-             WELCOME
-        ================================================= -->
+        <!-- PAGE INTRO -->
 
-        <section class="admin-welcome">
+        <div class="admin-welcome staff-page-welcome">
 
             <div>
 
                 <span>
-                    OZZO MANAGEMENT
+                    SYSTEM MANAGEMENT
                 </span>
 
                 <h1>
-                    Staff <span>&amp;</span> Roles
+                    Staff &amp; Roles
                 </h1>
 
                 <p>
-                    Manage staff members, roles and access permissions across your store.
+                    Manage team members, access levels and security permissions.
                 </p>
 
             </div>
@@ -922,37 +726,38 @@
                     aria-hidden="true"
                 ></i>
 
-                <span id="currentDate">
-                    September 2026
+                <span>
+                    18 September 2026
                 </span>
 
             </div>
 
-        </section>
-
+        </div>
 
 
         <!-- =================================================
-             STATS
-        ================================================= -->
+             STAT CARDS
+        ================================================== -->
 
-        <div class="row g-3">
+        <div class="row g-3 mb-4">
 
+            <div class="col-12 col-md-6 col-xl-3">
 
-            <div class="col-6 col-xl-3">
-
-                <article class="admin-stat-card">
+                <div class="admin-stat-card">
 
                     <div class="admin-stat-icon green">
 
-                        <i class="fa-solid fa-users-gear"></i>
+                        <i
+                            class="fa-solid fa-users"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Total Staff
+                            TOTAL STAFF
                         </span>
 
                         <strong>
@@ -960,30 +765,34 @@
                         </strong>
 
                         <small>
-                            21 active members
+                            <i class="fa-solid fa-arrow-up"></i>
+                            2 this month
                         </small>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
 
-            <div class="col-6 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
 
-                <article class="admin-stat-card">
+                <div class="admin-stat-card">
 
-                    <div class="admin-stat-icon orange">
+                    <div class="admin-stat-icon blue">
 
-                        <i class="fa-solid fa-user-check"></i>
+                        <i
+                            class="fa-solid fa-user-check"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Active Staff
+                            ACTIVE STAFF
                         </span>
 
                         <strong>
@@ -991,30 +800,34 @@
                         </strong>
 
                         <small>
-                            87.5% of team
+                            <i class="fa-solid fa-circle"></i>
+                            87.5% active
                         </small>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
 
-            <div class="col-6 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
 
-                <article class="admin-stat-card">
+                <div class="admin-stat-card">
 
-                    <div class="admin-stat-icon blue">
+                    <div class="admin-stat-icon orange">
 
-                        <i class="fa-solid fa-user-clock"></i>
+                        <i
+                            class="fa-regular fa-envelope"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Pending Invites
+                            PENDING INVITES
                         </span>
 
                         <strong>
@@ -1022,30 +835,34 @@
                         </strong>
 
                         <small>
+                            <i class="fa-solid fa-clock"></i>
                             Awaiting response
                         </small>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
 
-            <div class="col-6 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
 
-                <article class="admin-stat-card">
+                <div class="admin-stat-card">
 
                     <div class="admin-stat-icon purple">
 
-                        <i class="fa-solid fa-user-shield"></i>
+                        <i
+                            class="fa-solid fa-user-shield"
+                            aria-hidden="true"
+                        ></i>
 
                     </div>
 
                     <div>
 
                         <span>
-                            Roles
+                            ROLES
                         </span>
 
                         <strong>
@@ -1053,776 +870,763 @@
                         </strong>
 
                         <small>
-                            Access groups
+                            <i class="fa-solid fa-lock"></i>
+                            Permission groups
                         </small>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
         </div>
 
 
-
         <!-- =================================================
-             STAFF + ROLES
-        ================================================= -->
+             TOOLBAR
+        ================================================== -->
 
-        <div class="row g-4 mt-1">
+        <section class="admin-card mb-4">
 
+            <div class="staff-toolbar">
 
-            <!-- STAFF TABLE -->
+                <div class="staff-toolbar-left">
 
-            <div class="col-xl-8">
+                    <div class="staff-section-label">
 
-                <section class="admin-card h-100">
-
-
-                    <div class="admin-card-header">
-
-                        <div>
-
-                            <span>
-                                TEAM MANAGEMENT
-                            </span>
-
-                            <h2>
-                                Staff Members
-                            </h2>
-
-                        </div>
-
-
-                        <button
-                            class="plain-link"
-                            id="addStaffBtn"
-                            type="button"
-                        >
-
-                            <i class="fa-solid fa-plus"></i>
-
-                            Add Staff
-
-                        </button>
-
-                    </div>
-
-
-
-                    <!-- FILTERS -->
-
-                    <div class="staff-filters">
-
-                        <div class="staff-search">
-
-                            <i class="fa-solid fa-magnifying-glass"></i>
-
-                            <input
-                                id="staffSearch"
-                                type="search"
-                                placeholder="Search staff..."
-                                aria-label="Search staff"
-                            >
-
-                        </div>
-
-
-                        <select
-                            id="roleFilter"
-                            class="staff-select"
-                            aria-label="Filter by role"
-                        >
-
-                            <option value="all">
-                                All Roles
-                            </option>
-
-                            <option value="super-admin">
-                                Super Admin
-                            </option>
-
-                            <option value="admin">
-                                Admin
-                            </option>
-
-                            <option value="manager">
-                                Manager
-                            </option>
-
-                            <option value="support">
-                                Support
-                            </option>
-
-                            <option value="operations">
-                                Operations
-                            </option>
-
-                        </select>
-
-
-                        <select
-                            id="statusFilter"
-                            class="staff-select"
-                            aria-label="Filter by status"
-                        >
-
-                            <option value="all">
-                                All Status
-                            </option>
-
-                            <option value="active">
-                                Active
-                            </option>
-
-                            <option value="pending">
-                                Pending
-                            </option>
-
-                            <option value="inactive">
-                                Inactive
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <!-- TABLE -->
-
-                    <div class="admin-table-wrapper">
-
-                        <table class="admin-table">
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        Staff
-                                    </th>
-
-                                    <th>
-                                        Role
-                                    </th>
-
-                                    <th>
-                                        Department
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
-                                    <th>
-                                        Last Login
-                                    </th>
-
-                                    <th>
-                                        Action
-                                    </th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody id="staffTableBody">
-
-
-                                <tr
-                                    data-id="1"
-                                    data-name="Anjali Rao"
-                                    data-role="super-admin"
-                                    data-status="active"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar green">
-                                                AR
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Anjali Rao
-                                                </strong>
-
-                                                <small>
-                                                    anjali@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge super">
-                                            Super Admin
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Administration
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge active">
-                                            Active
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Today, 10:42 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="1"
-                                            aria-label="Edit Anjali Rao"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-id="2"
-                                    data-name="Rahul Mehta"
-                                    data-role="admin"
-                                    data-status="active"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar blue">
-                                                RM
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Rahul Mehta
-                                                </strong>
-
-                                                <small>
-                                                    rahul@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge admin">
-                                            Admin
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Operations
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge active">
-                                            Active
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Today, 09:18 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="2"
-                                            aria-label="Edit Rahul Mehta"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-id="3"
-                                    data-name="Priya Sharma"
-                                    data-role="manager"
-                                    data-status="active"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar pink">
-                                                PS
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Priya Sharma
-                                                </strong>
-
-                                                <small>
-                                                    priya@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge manager">
-                                            Manager
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Sales
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge active">
-                                            Active
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Today, 08:56 AM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="3"
-                                            aria-label="Edit Priya Sharma"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-id="4"
-                                    data-name="Vikram Singh"
-                                    data-role="support"
-                                    data-status="active"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar purple">
-                                                VS
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Vikram Singh
-                                                </strong>
-
-                                                <small>
-                                                    vikram@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge support">
-                                            Support
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Customer Care
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge active">
-                                            Active
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Yesterday, 06:34 PM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="4"
-                                            aria-label="Edit Vikram Singh"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-id="5"
-                                    data-name="Sneha Patel"
-                                    data-role="operations"
-                                    data-status="pending"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar orange">
-                                                SP
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Sneha Patel
-                                                </strong>
-
-                                                <small>
-                                                    sneha@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge operations">
-                                            Operations
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Logistics
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge pending">
-                                            Pending
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Never
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="5"
-                                            aria-label="Edit Sneha Patel"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-id="6"
-                                    data-name="Arjun Kumar"
-                                    data-role="manager"
-                                    data-status="active"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar green">
-                                                AK
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Arjun Kumar
-                                                </strong>
-
-                                                <small>
-                                                    arjun@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge manager">
-                                            Manager
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Marketing
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge active">
-                                            Active
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Yesterday, 04:18 PM
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="6"
-                                            aria-label="Edit Arjun Kumar"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-
-                                <tr
-                                    data-id="7"
-                                    data-name="Neha Reddy"
-                                    data-role="support"
-                                    data-status="inactive"
-                                >
-
-                                    <td>
-
-                                        <div class="staff-person">
-
-                                            <div class="staff-avatar blue">
-                                                NR
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Neha Reddy
-                                                </strong>
-
-                                                <small>
-                                                    neha@ozzo.com
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="role-badge support">
-                                            Support
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Customer Care
-                                    </td>
-
-
-                                    <td>
-
-                                        <span class="status-badge inactive">
-                                            Inactive
-                                        </span>
-
-                                    </td>
-
-
-                                    <td>
-                                        Aug 28, 2026
-                                    </td>
-
-
-                                    <td>
-
-                                        <button
-                                            class="table-action edit-btn"
-                                            type="button"
-                                            data-id="7"
-                                            aria-label="Edit Neha Reddy"
-                                        >
-
-                                            <i class="fa-solid fa-pen"></i>
-
-                                        </button>
-
-                                    </td>
-
-                                </tr>
-
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-
-                    <div class="staff-table-footer">
-
-                        <span id="staffCount">
-                            Showing 7 staff members
+                        <span>
+                            TEAM DIRECTORY
                         </span>
 
+                        <h2>
+                            All Staff
+                        </h2>
 
-                        <button
-                            class="plain-link"
-                            id="clearFiltersBtn"
-                            type="button"
+                    </div>
+
+                </div>
+
+
+                <div class="staff-toolbar-actions">
+
+                    <div class="staff-search">
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="search"
+                            id="staffSearch"
+                            placeholder="Search staff..."
+                            aria-label="Search staff"
                         >
-                            Clear filters
-                        </button>
 
                     </div>
 
 
-                </section>
+                    <select
+                        id="roleFilter"
+                        class="staff-filter"
+                        aria-label="Filter by role"
+                    >
+
+                        <option value="all">
+                            All Roles
+                        </option>
+
+                        <option value="Super Admin">
+                            Super Admin
+                        </option>
+
+                        <option value="Admin">
+                            Admin
+                        </option>
+
+                        <option value="Manager">
+                            Manager
+                        </option>
+
+                        <option value="Support">
+                            Support
+                        </option>
+
+                        <option value="Operations">
+                            Operations
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="statusFilter"
+                        class="staff-filter"
+                        aria-label="Filter by status"
+                    >
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                        <option value="Inactive">
+                            Inactive
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="staff-primary-btn"
+                        id="addStaffBtn"
+                        type="button"
+                    >
+
+                        <i
+                            class="fa-solid fa-plus"
+                            aria-hidden="true"
+                        ></i>
+
+                        Add Staff
+
+                    </button>
+
+                </div>
 
             </div>
 
 
-
             <!-- =================================================
-                 ROLES
-            ================================================= -->
+                 STAFF TABLE
+            ================================================== -->
 
-            <div class="col-xl-4">
+            <div class="staff-table-wrap">
+
+                <table
+                    class="staff-table"
+                    id="staffTable"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                STAFF MEMBER
+                            </th>
+
+                            <th>
+                                ROLE
+                            </th>
+
+                            <th>
+                                DEPARTMENT
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                LAST ACTIVE
+                            </th>
+
+                            <th class="text-end">
+                                ACTION
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr
+                            data-name="Anjali Rao"
+                            data-role="Super Admin"
+                            data-status="Active"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-a">
+                                        AR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Anjali Rao
+                                        </strong>
+
+                                        <small>
+                                            anjali.rao@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge super-admin">
+                                    Super Admin
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Management
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge active">
+                                    Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Today 10:42 AM
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="0"
+                                    title="View staff"
+                                    aria-label="View Anjali Rao"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-name="Rahul Mehta"
+                            data-role="Admin"
+                            data-status="Active"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-b">
+                                        RM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Mehta
+                                        </strong>
+
+                                        <small>
+                                            rahul.mehta@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge admin">
+                                    Admin
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Operations
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge active">
+                                    Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Today 9:58 AM
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="1"
+                                    title="View staff"
+                                    aria-label="View Rahul Mehta"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-name="Priya Sharma"
+                            data-role="Manager"
+                            data-status="Active"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-c">
+                                        PS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Sharma
+                                        </strong>
+
+                                        <small>
+                                            priya.sharma@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge manager">
+                                    Manager
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Sales
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge active">
+                                    Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Today 9:31 AM
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="2"
+                                    title="View staff"
+                                    aria-label="View Priya Sharma"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-name="Vikram Singh"
+                            data-role="Support"
+                            data-status="Active"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-d">
+                                        VS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Vikram Singh
+                                        </strong>
+
+                                        <small>
+                                            vikram.singh@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge support">
+                                    Support
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Customer Support
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge active">
+                                    Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Today 8:47 AM
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="3"
+                                    title="View staff"
+                                    aria-label="View Vikram Singh"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-name="Sneha Patel"
+                            data-role="Operations"
+                            data-status="Active"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-e">
+                                        SP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Sneha Patel
+                                        </strong>
+
+                                        <small>
+                                            sneha.patel@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge operations">
+                                    Operations
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Inventory
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge active">
+                                    Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Yesterday 6:14 PM
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="4"
+                                    title="View staff"
+                                    aria-label="View Sneha Patel"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-name="Arjun Kumar"
+                            data-role="Admin"
+                            data-status="Inactive"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-f">
+                                        AK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Arjun Kumar
+                                        </strong>
+
+                                        <small>
+                                            arjun.kumar@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge admin">
+                                    Admin
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Catalog
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge inactive">
+                                    Inactive
+                                </span>
+                            </td>
+
+
+                            <td>
+                                15 Sep 7:26 PM
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="5"
+                                    title="View staff"
+                                    aria-label="View Arjun Kumar"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-name="Neha Reddy"
+                            data-role="Manager"
+                            data-status="Pending"
+                        >
+
+                            <td>
+
+                                <div class="staff-member">
+
+                                    <div class="staff-avatar staff-avatar-g">
+                                        NR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Neha Reddy
+                                        </strong>
+
+                                        <small>
+                                            neha.reddy@ozzo.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="role-badge manager">
+                                    Manager
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Marketing
+                            </td>
+
+
+                            <td>
+                                <span class="status-badge pending">
+                                    Pending
+                                </span>
+                            </td>
+
+
+                            <td>
+                                Invitation sent 16 Sep
+                            </td>
+
+
+                            <td class="text-end">
+
+                                <button
+                                    class="table-action view-staff"
+                                    type="button"
+                                    data-index="6"
+                                    title="View staff"
+                                    aria-label="View Neha Reddy"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- TABLE FOOTER -->
+
+            <div class="staff-table-footer">
+
+                <span id="resultCount">
+                    Showing 7 of 24 staff members
+                </span>
+
+                <div class="pagination-demo">
+
+                    <button
+                        type="button"
+                        class="page-btn disabled"
+                        aria-label="Previous page"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="page-btn current"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="page-btn"
+                    >
+                        2
+                    </button>
+
+                    <button
+                        type="button"
+                        class="page-btn"
+                    >
+                        3
+                    </button>
+
+                    <button
+                        type="button"
+                        class="page-btn"
+                        aria-label="Next page"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOTTOM SECTION
+        ================================================== -->
+
+        <div class="row g-4">
+
+
+            <!-- ROLES -->
+
+            <div class="col-12 col-xl-7">
 
                 <section class="admin-card h-100">
-
 
                     <div class="admin-card-header">
 
@@ -1833,196 +1637,168 @@
                             </span>
 
                             <h2>
-                                Roles
+                                Roles &amp; Permissions
                             </h2>
 
                         </div>
 
-                    </div>
-
-
-                    <div class="role-list">
-
-
-                        <div class="role-item">
-
-                            <div class="role-icon super">
-
-                                <i class="fa-solid fa-crown"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Super Admin
-                                </strong>
-
-                                <small>
-                                    Full system access
-                                </small>
-
-                            </div>
-
-                            <span>
-                                1
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="role-item">
-
-                            <div class="role-icon admin">
-
-                                <i class="fa-solid fa-user-shield"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Admin
-                                </strong>
-
-                                <small>
-                                    Store administration
-                                </small>
-
-                            </div>
-
-                            <span>
-                                3
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="role-item">
-
-                            <div class="role-icon manager">
-
-                                <i class="fa-solid fa-user-tie"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Manager
-                                </strong>
-
-                                <small>
-                                    Department management
-                                </small>
-
-                            </div>
-
-                            <span>
-                                8
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="role-item">
-
-                            <div class="role-icon support">
-
-                                <i class="fa-solid fa-headset"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Support
-                                </strong>
-
-                                <small>
-                                    Customer support
-                                </small>
-
-                            </div>
-
-                            <span>
-                                7
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="role-item">
-
-                            <div class="role-icon operations">
-
-                                <i class="fa-solid fa-gears"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Operations
-                                </strong>
-
-                                <small>
-                                    Inventory &amp; logistics
-                                </small>
-
-                            </div>
-
-                            <span>
-                                5
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="role-footer">
 
                         <button
-                            class="primary-btn"
+                            class="staff-outline-btn"
                             id="manageRolesBtn"
                             type="button"
                         >
 
-                            <i class="fa-solid fa-sliders"></i>
+                            <i
+                                class="fa-solid fa-sliders"
+                                aria-hidden="true"
+                            ></i>
 
-                            Manage Permissions
+                            Manage Roles
 
                         </button>
 
                     </div>
 
 
+                    <div class="roles-grid">
+
+                        <div class="role-card">
+
+                            <div class="role-card-top">
+
+                                <span class="role-icon super-admin">
+                                    <i class="fa-solid fa-crown"></i>
+                                </span>
+
+                                <strong>
+                                    Super Admin
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                Full system access
+                            </span>
+
+                            <b>
+                                1 user
+                            </b>
+
+                        </div>
+
+
+                        <div class="role-card">
+
+                            <div class="role-card-top">
+
+                                <span class="role-icon admin">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </span>
+
+                                <strong>
+                                    Admin
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                Operational management
+                            </span>
+
+                            <b>
+                                5 users
+                            </b>
+
+                        </div>
+
+
+                        <div class="role-card">
+
+                            <div class="role-card-top">
+
+                                <span class="role-icon manager">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </span>
+
+                                <strong>
+                                    Manager
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                Team and department access
+                            </span>
+
+                            <b>
+                                7 users
+                            </b>
+
+                        </div>
+
+
+                        <div class="role-card">
+
+                            <div class="role-card-top">
+
+                                <span class="role-icon support">
+                                    <i class="fa-solid fa-headset"></i>
+                                </span>
+
+                                <strong>
+                                    Support
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                Customer support tools
+                            </span>
+
+                            <b>
+                                6 users
+                            </b>
+
+                        </div>
+
+
+                        <div class="role-card">
+
+                            <div class="role-card-top">
+
+                                <span class="role-icon operations">
+                                    <i class="fa-solid fa-gears"></i>
+                                </span>
+
+                                <strong>
+                                    Operations
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                Inventory and fulfilment
+                            </span>
+
+                            <b>
+                                5 users
+                            </b>
+
+                        </div>
+
+                    </div>
+
                 </section>
 
             </div>
 
-        </div>
-
-
-
-        <!-- =================================================
-             SECURITY + ACTIVITY
-        ================================================= -->
-
-        <div class="row g-4 mt-1">
-
 
             <!-- SECURITY -->
 
-            <div class="col-xl-7">
+            <div class="col-12 col-xl-5">
 
-                <section class="admin-card">
-
+                <section class="admin-card h-100">
 
                     <div class="admin-card-header">
 
@@ -2033,7 +1809,7 @@
                             </span>
 
                             <h2>
-                                Access Policies
+                                Account Protection
                             </h2>
 
                         </div>
@@ -2041,12 +1817,11 @@
                     </div>
 
 
-                    <div class="security-grid">
+                    <div class="security-list">
 
+                        <div class="security-row">
 
-                        <div class="security-item">
-
-                            <div class="security-item-icon green">
+                            <div class="security-icon">
 
                                 <i class="fa-solid fa-shield-halved"></i>
 
@@ -2059,52 +1834,23 @@
                                 </strong>
 
                                 <small>
-                                    Required for administrator accounts.
+                                    Enabled for admin accounts
                                 </small>
 
                             </div>
 
-                            <span class="security-status">
-                                Enabled
+                            <span class="security-state">
+                                ON
                             </span>
 
                         </div>
 
 
+                        <div class="security-row">
 
-                        <div class="security-item">
+                            <div class="security-icon">
 
-                            <div class="security-item-icon blue">
-
-                                <i class="fa-solid fa-key"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Password policy
-                                </strong>
-
-                                <small>
-                                    Strong password requirements enabled.
-                                </small>
-
-                            </div>
-
-                            <span class="security-status">
-                                Strong
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="security-item">
-
-                            <div class="security-item-icon purple">
-
-                                <i class="fa-solid fa-clock"></i>
+                                <i class="fa-regular fa-clock"></i>
 
                             </div>
 
@@ -2115,22 +1861,48 @@
                                 </strong>
 
                                 <small>
-                                    Admin sessions expire after inactivity.
+                                    Automatic logout after inactivity
                                 </small>
 
                             </div>
 
-                            <span class="security-status neutral">
+                            <span class="security-value">
                                 30 min
                             </span>
 
                         </div>
 
 
+                        <div class="security-row">
 
-                        <div class="security-item">
+                            <div class="security-icon">
 
-                            <div class="security-item-icon orange">
+                                <i class="fa-regular fa-bell"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Login alerts
+                                </strong>
+
+                                <small>
+                                    Security notifications are active
+                                </small>
+
+                            </div>
+
+                            <span class="security-state">
+                                ON
+                            </span>
+
+                        </div>
+
+
+                        <div class="security-row">
+
+                            <div class="security-icon">
 
                                 <i class="fa-solid fa-file-shield"></i>
 
@@ -2143,148 +1915,18 @@
                                 </strong>
 
                                 <small>
-                                    Staff activity is recorded automatically.
+                                    Admin activity is being recorded
                                 </small>
 
                             </div>
 
-                            <span class="security-status">
-                                Active
+                            <span class="security-state">
+                                ON
                             </span>
 
                         </div>
 
                     </div>
-
-                </section>
-
-            </div>
-
-
-
-            <!-- ACTIVITY -->
-
-            <div class="col-xl-5">
-
-                <section class="admin-card">
-
-
-                    <div class="admin-card-header">
-
-                        <div>
-
-                            <span>
-                                TEAM OVERVIEW
-                            </span>
-
-                            <h2>
-                                Staff Activity
-                            </h2>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="activity-summary">
-
-
-                        <div class="summary-stat">
-
-                            <div class="summary-stat-icon green">
-
-                                <i class="fa-solid fa-right-to-bracket"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    21
-                                </strong>
-
-                                <small>
-                                    Active today
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="summary-stat">
-
-                            <div class="summary-stat-icon blue">
-
-                                <i class="fa-solid fa-user-clock"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    2
-                                </strong>
-
-                                <small>
-                                    Pending invites
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="summary-stat">
-
-                            <div class="summary-stat-icon orange">
-
-                                <i class="fa-solid fa-shield-halved"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    18
-                                </strong>
-
-                                <small>
-                                    Security events
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="summary-stat">
-
-                            <div class="summary-stat-icon purple">
-
-                                <i class="fa-solid fa-user-shield"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    5
-                                </strong>
-
-                                <small>
-                                    Access roles
-                                </small>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
 
                 </section>
 
@@ -2293,212 +1935,271 @@
         </div>
 
 
-    </div>
+        <!-- =================================================
+             RECENT ACTIVITY
+        ================================================== -->
 
-</main>
+        <section class="admin-card mt-4">
 
-
-
-<!-- =====================================================
-     ADD / EDIT STAFF MODAL
-===================================================== -->
-
-<div
-    class="modal fade"
-    id="staffModal"
-    tabindex="-1"
-    aria-hidden="true"
->
-
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content">
-
-
-            <div class="modal-header">
+            <div class="admin-card-header">
 
                 <div>
 
-                    <span class="modal-kicker">
-                        TEAM MANAGEMENT
+                    <span>
+                        RECENT ACTIVITY
                     </span>
 
-                    <h2
-                        class="modal-title"
-                        id="staffModalTitle"
-                    >
-                        Add Staff Member
+                    <h2>
+                        Staff Activity
                     </h2>
 
                 </div>
 
 
                 <button
+                    class="staff-outline-btn"
+                    id="auditLogsBtn"
                     type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                ></button>
-
-            </div>
-
-
-            <div class="modal-body">
-
-                <form id="staffForm">
-
-
-                    <div class="mb-3">
-
-                        <label for="staffName">
-                            Full Name
-                        </label>
-
-                        <input
-                            id="staffName"
-                            class="form-input"
-                            type="text"
-                            placeholder="Enter full name"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="mb-3">
-
-                        <label for="staffEmail">
-                            Email Address
-                        </label>
-
-                        <input
-                            id="staffEmail"
-                            class="form-input"
-                            type="email"
-                            placeholder="name@ozzo.com"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="row g-3">
-
-
-                        <div class="col-md-6">
-
-                            <label for="staffRole">
-                                Role
-                            </label>
-
-                            <select
-                                id="staffRole"
-                                class="form-input"
-                                required
-                            >
-
-                                <option value="">
-                                    Select role
-                                </option>
-
-                                <option value="super-admin">
-                                    Super Admin
-                                </option>
-
-                                <option value="admin">
-                                    Admin
-                                </option>
-
-                                <option value="manager">
-                                    Manager
-                                </option>
-
-                                <option value="support">
-                                    Support
-                                </option>
-
-                                <option value="operations">
-                                    Operations
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="col-md-6">
-
-                            <label for="staffStatus">
-                                Status
-                            </label>
-
-                            <select
-                                id="staffStatus"
-                                class="form-input"
-                            >
-
-                                <option value="active">
-                                    Active
-                                </option>
-
-                                <option value="pending">
-                                    Pending
-                                </option>
-
-                                <option value="inactive">
-                                    Inactive
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="mt-3">
-
-                        <label for="staffDepartment">
-                            Department
-                        </label>
-
-                        <input
-                            id="staffDepartment"
-                            class="form-input"
-                            type="text"
-                            placeholder="Department"
-                            required
-                        >
-
-                    </div>
-
-
-                </form>
-
-            </div>
-
-
-            <div class="modal-footer">
-
-                <button
-                    type="button"
-                    class="secondary-btn"
-                    data-bs-dismiss="modal"
                 >
-                    Cancel
-                </button>
 
+                    <i
+                        class="fa-solid fa-file-shield"
+                        aria-hidden="true"
+                    ></i>
 
-                <button
-                    type="submit"
-                    form="staffForm"
-                    class="primary-btn modal-save-btn"
-                    id="saveStaffBtn"
-                >
-                    Save Staff
+                    Audit Logs
+
                 </button>
 
             </div>
+
+
+            <div class="activity-list">
+
+                <div class="activity-row">
+
+                    <div class="activity-avatar">
+                        RM
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Rahul Mehta
+                        </strong>
+
+                        <span>
+                            updated product information
+                        </span>
+
+                    </div>
+
+                    <small>
+                        12 min ago
+                    </small>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-avatar">
+                        AR
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Anjali Rao
+                        </strong>
+
+                        <span>
+                            logged in to the admin panel
+                        </span>
+
+                    </div>
+
+                    <small>
+                        34 min ago
+                    </small>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-avatar">
+                        PS
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Priya Sharma
+                        </strong>
+
+                        <span>
+                            reviewed role permissions
+                        </span>
+
+                    </div>
+
+                    <small>
+                        1 hr ago
+                    </small>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-avatar">
+                        VS
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Vikram Singh
+                        </strong>
+
+                        <span>
+                            changed support access settings
+                        </span>
+
+                    </div>
+
+                    <small>
+                        2 hrs ago
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     STAFF VIEW MODAL
+========================================================= -->
+
+<div
+    class="staff-modal"
+    id="staffModal"
+    aria-hidden="true"
+>
+
+    <div class="staff-modal-backdrop"></div>
+
+    <div
+        class="staff-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="staffModalTitle"
+    >
+
+        <div class="staff-modal-header">
+
+            <div>
+
+                <span>
+                    STAFF PROFILE
+                </span>
+
+                <h2 id="staffModalTitle">
+                    Staff Member
+                </h2>
+
+            </div>
+
+            <button
+                class="modal-close"
+                id="closeStaffModal"
+                type="button"
+                aria-label="Close modal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="staff-modal-body">
+
+            <div class="modal-profile">
+
+                <div
+                    class="staff-avatar modal-avatar"
+                    id="modalAvatar"
+                >
+                    AR
+                </div>
+
+                <div>
+
+                    <strong id="modalName">
+                        Anjali Rao
+                    </strong>
+
+                    <span id="modalEmail">
+                        anjali.rao@ozzo.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-details">
+
+                <div>
+                    <small>Role</small>
+                    <strong id="modalRole">Super Admin</strong>
+                </div>
+
+                <div>
+                    <small>Department</small>
+                    <strong id="modalDepartment">Management</strong>
+                </div>
+
+                <div>
+                    <small>Status</small>
+                    <strong id="modalStatus">Active</strong>
+                </div>
+
+                <div>
+                    <small>Last Active</small>
+                    <strong id="modalLastActive">Today 10:42 AM</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="staff-modal-footer">
+
+            <button
+                type="button"
+                class="staff-outline-btn"
+                id="cancelModalBtn"
+            >
+                Close
+            </button>
+
+            <button
+                type="button"
+                class="staff-primary-btn"
+                id="editStaffBtn"
+            >
+                <i class="fa-solid fa-pen"></i>
+                Edit Staff
+            </button>
 
         </div>
 
@@ -2507,39 +2208,325 @@
 </div>
 
 
-
-<!-- =====================================================
-     TOAST
-===================================================== -->
+<!-- =========================================================
+     ADD STAFF MODAL
+========================================================= -->
 
 <div
-    class="ozzo-toast"
-    id="ozzoToast"
+    class="staff-modal"
+    id="addStaffModal"
+    aria-hidden="true"
 >
 
-    <strong></strong>
+    <div class="staff-modal-backdrop"></div>
 
-    <span></span>
+    <div
+        class="staff-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="addStaffTitle"
+    >
+
+        <div class="staff-modal-header">
+
+            <div>
+
+                <span>
+                    TEAM MANAGEMENT
+                </span>
+
+                <h2 id="addStaffTitle">
+                    Invite Staff
+                </h2>
+
+            </div>
+
+            <button
+                class="modal-close"
+                id="closeAddStaffModal"
+                type="button"
+                aria-label="Close modal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <form
+            id="addStaffForm"
+            class="staff-form"
+        >
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+
+                    <label for="staffName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="staffName"
+                        required
+                        placeholder="Enter full name"
+                    >
+
+                </div>
+
+
+                <div class="col-12 col-md-6">
+
+                    <label for="staffEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="staffEmail"
+                        required
+                        placeholder="name@ozzo.com"
+                    >
+
+                </div>
+
+
+                <div class="col-12 col-md-6">
+
+                    <label for="staffRole">
+                        Role
+                    </label>
+
+                    <select
+                        id="staffRole"
+                        required
+                    >
+
+                        <option value="">
+                            Select role
+                        </option>
+
+                        <option value="Admin">
+                            Admin
+                        </option>
+
+                        <option value="Manager">
+                            Manager
+                        </option>
+
+                        <option value="Support">
+                            Support
+                        </option>
+
+                        <option value="Operations">
+                            Operations
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="col-12 col-md-6">
+
+                    <label for="staffDepartment">
+                        Department
+                    </label>
+
+                    <select
+                        id="staffDepartment"
+                        required
+                    >
+
+                        <option value="">
+                            Select department
+                        </option>
+
+                        <option>
+                            Operations
+                        </option>
+
+                        <option>
+                            Sales
+                        </option>
+
+                        <option>
+                            Catalog
+                        </option>
+
+                        <option>
+                            Marketing
+                        </option>
+
+                        <option>
+                            Inventory
+                        </option>
+
+                        <option>
+                            Customer Support
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="staff-modal-footer">
+
+                <button
+                    type="button"
+                    class="staff-outline-btn"
+                    id="cancelAddStaff"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="staff-primary-btn"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send Invite
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
 
 </div>
 
 
+<!-- =========================================================
+     NOTIFICATION PANEL
+========================================================= -->
 
-<!-- =====================================================
-     BOOTSTRAP
-===================================================== -->
+<div
+    class="notification-panel"
+    id="notificationPanel"
+>
+
+    <div class="notification-panel-header">
+
+        <strong>
+            Notifications
+        </strong>
+
+        <span>
+            4 new
+        </span>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot"></span>
+
+        <div>
+
+            <strong>
+                New staff invite
+            </strong>
+
+            <small>
+                Neha Reddy invitation is pending.
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot"></span>
+
+        <div>
+
+            <strong>
+                Security alert
+            </strong>
+
+            <small>
+                A new admin login was detected.
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot"></span>
+
+        <div>
+
+            <strong>
+                Role permissions
+            </strong>
+
+            <small>
+                Priya reviewed Manager permissions.
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot"></span>
+
+        <div>
+
+            <strong>
+                Product update
+            </strong>
+
+            <small>
+                Rahul updated product information.
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Bootstrap JS -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 ></script>
 
-
-<!-- Page JS -->
+<!-- Staff Roles JS -->
 
 <script
     src="Staff-Roles.js"
 ></script>
-
 
 </body>
 </html>
